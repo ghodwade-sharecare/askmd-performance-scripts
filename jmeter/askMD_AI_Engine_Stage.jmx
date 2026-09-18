@@ -1,0 +1,5714 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jmeterTestPlan version="1.2" properties="5.0" jmeter="5.6.3">
+  <hashTree>
+    <TestPlan guiclass="TestPlanGui" testclass="TestPlan" testname="Test Plan">
+      <elementProp name="TestPlan.user_defined_variables" elementType="Arguments" guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables">
+        <collectionProp name="Arguments.arguments"/>
+      </elementProp>
+      <boolProp name="TestPlan.functional_mode">false</boolProp>
+      <boolProp name="TestPlan.serialize_threadgroups">false</boolProp>
+    </TestPlan>
+    <hashTree>
+      <Arguments guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables">
+        <collectionProp name="Arguments.arguments">
+          <elementProp name="scheme" elementType="Argument">
+            <stringProp name="Argument.name">scheme</stringProp>
+            <stringProp name="Argument.value">https</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="HOST" elementType="Argument">
+            <stringProp name="Argument.name">HOST</stringProp>
+            <stringProp name="Argument.value">askmd-api.stage.sharecare.com</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="AUTH0_HOST_STAGE" elementType="Argument">
+            <stringProp name="Argument.name">AUTH0_HOST_STAGE</stringProp>
+            <stringProp name="Argument.value">askmd-stage.sharecare-nonprod.auth0app.com</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="chatId" elementType="Argument">
+            <stringProp name="Argument.name">chatId</stringProp>
+            <stringProp name="Argument.value">${__UUID}</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="RSC" elementType="Argument">
+            <stringProp name="Argument.name">RSC</stringProp>
+            <stringProp name="Argument.value">${__RandomString(16,ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789,)}</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="clearMemberId" elementType="Argument">
+            <stringProp name="Argument.name">clearMemberId</stringProp>
+            <stringProp name="Argument.value">CL${__RandomString(8,0123456789,)}</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+        </collectionProp>
+      </Arguments>
+      <hashTree/>
+      <ConfigTestElement guiclass="HttpDefaultsGui" testclass="ConfigTestElement" testname="HTTP Request Defaults" enabled="true">
+        <stringProp name="HTTPSampler.domain">askmd-api.stage.sharecare.com</stringProp>
+        <stringProp name="HTTPSampler.protocol">https</stringProp>
+        <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables">
+          <collectionProp name="Arguments.arguments"/>
+        </elementProp>
+        <stringProp name="HTTPSampler.implementation"></stringProp>
+      </ConfigTestElement>
+      <hashTree/>
+      <CacheManager guiclass="CacheManagerGui" testclass="CacheManager" testname="HTTP Cache Manager" enabled="true">
+        <boolProp name="clearEachIteration">false</boolProp>
+        <boolProp name="useExpires">true</boolProp>
+        <boolProp name="CacheManager.controlledByThread">false</boolProp>
+      </CacheManager>
+      <hashTree/>
+      <CookieManager guiclass="CookiePanel" testclass="CookieManager" testname="HTTP Cookie Manager" enabled="true">
+        <collectionProp name="CookieManager.cookies"/>
+        <boolProp name="CookieManager.clearEachIteration">false</boolProp>
+        <boolProp name="CookieManager.controlledByThreadGroup">false</boolProp>
+      </CookieManager>
+      <hashTree/>
+      <com.di.jmeter.config.ExtendedCsvDataSetConfig guiclass="com.di.jmeter.config.gui.ExtendedCsvDataSetConfigGui" testclass="com.di.jmeter.config.ExtendedCsvDataSetConfig" testname="Extended CSV Data Set Config" enabled="true">
+        <stringProp name="filename">registered_users_stage.csv</stringProp>
+        <stringProp name="fileEncoding">UTF-8</stringProp>
+        <stringProp name="variableNames">username,userId</stringProp>
+        <boolProp name="ignoreFirstLine">false</boolProp>
+        <stringProp name="delimiter">,</stringProp>
+        <boolProp name="quotedData">false</boolProp>
+        <stringProp name="selectRow">Unique</stringProp>
+        <stringProp name="updateValue">Each Iteration</stringProp>
+        <stringProp name="ooValue">Abort Thread</stringProp>
+        <stringProp name="shareMode">All threads</stringProp>
+        <boolProp name="autoAllocate">true</boolProp>
+        <boolProp name="allocate">false</boolProp>
+        <stringProp name="blockSize"></stringProp>
+      </com.di.jmeter.config.ExtendedCsvDataSetConfig>
+      <hashTree/>
+      <com.di.jmeter.config.ExtendedCsvDataSetConfig guiclass="com.di.jmeter.config.gui.ExtendedCsvDataSetConfigGui" testclass="com.di.jmeter.config.ExtendedCsvDataSetConfig" testname="Extended CSV Data Set Config" enabled="true">
+        <stringProp name="filename">health_questions_uat.csv</stringProp>
+        <stringProp name="fileEncoding">UTF-8</stringProp>
+        <stringProp name="variableNames">health_question</stringProp>
+        <boolProp name="ignoreFirstLine">true</boolProp>
+        <stringProp name="delimiter">,</stringProp>
+        <boolProp name="quotedData">false</boolProp>
+        <stringProp name="selectRow">Random</stringProp>
+        <stringProp name="updateValue">Each Iteration</stringProp>
+        <stringProp name="ooValue">Continue Cyclic</stringProp>
+        <stringProp name="shareMode">All threads</stringProp>
+        <boolProp name="autoAllocate">true</boolProp>
+        <boolProp name="allocate">false</boolProp>
+        <stringProp name="blockSize"></stringProp>
+      </com.di.jmeter.config.ExtendedCsvDataSetConfig>
+      <hashTree/>
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="Clinical-Reasoning" enabled="true">
+        <intProp name="ThreadGroup.num_threads">3</intProp>
+        <intProp name="ThreadGroup.ramp_time">0</intProp>
+        <longProp name="ThreadGroup.duration">1800</longProp>
+        <boolProp name="ThreadGroup.same_user_on_next_iteration">true</boolProp>
+        <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
+        <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller">
+          <stringProp name="LoopController.loops">33</stringProp>
+          <boolProp name="LoopController.continue_forever">false</boolProp>
+        </elementProp>
+      </ThreadGroup>
+      <hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Auth0_Generate_Member_Token_POST">
+          <stringProp name="HTTPSampler.domain">askmd-stage.sharecare-nonprod.auth0app.com</stringProp>
+          <stringProp name="HTTPSampler.port">443</stringProp>
+          <stringProp name="HTTPSampler.contentEncoding">UTF-8</stringProp>
+          <stringProp name="HTTPSampler.path">/oauth/token</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.postBodyRaw">false</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="grant_type" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.name">grant_type</stringProp>
+                <stringProp name="Argument.value">password</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+                <boolProp name="HTTPArgument.use_equals">true</boolProp>
+              </elementProp>
+              <elementProp name="username" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                <stringProp name="Argument.name">username</stringProp>
+                <stringProp name="Argument.value">${username}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+                <boolProp name="HTTPArgument.use_equals">true</boolProp>
+              </elementProp>
+              <elementProp name="password" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                <stringProp name="Argument.name">password</stringProp>
+                <stringProp name="Argument.value">${__P(test.password,)}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+                <boolProp name="HTTPArgument.use_equals">true</boolProp>
+              </elementProp>
+              <elementProp name="audience" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                <stringProp name="Argument.name">audience</stringProp>
+                <stringProp name="Argument.value">https://stage-askmd-api.sharecare.com</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+                <boolProp name="HTTPArgument.use_equals">true</boolProp>
+              </elementProp>
+              <elementProp name="scope" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                <stringProp name="Argument.name">scope</stringProp>
+                <stringProp name="Argument.value">read:member write:member read:insurance write:insurance</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+                <boolProp name="HTTPArgument.use_equals">true</boolProp>
+              </elementProp>
+              <elementProp name="client_secret" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.name">client_secret</stringProp>
+                <stringProp name="Argument.value">${__P(stage.client_secret,)}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+                <boolProp name="HTTPArgument.use_equals">true</boolProp>
+              </elementProp>
+              <elementProp name="client_id" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.name">client_id</stringProp>
+                <stringProp name="Argument.value">${__P(stage.client_id,)}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+                <boolProp name="HTTPArgument.use_equals">true</boolProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="true">
+            <collectionProp name="HeaderManager.headers">
+              <elementProp name="content-type" elementType="Header">
+                <stringProp name="Header.name">content-type</stringProp>
+                <stringProp name="Header.value">application/x-www-form-urlencoded</stringProp>
+              </elementProp>
+              <elementProp name="Cache-Control" elementType="Header">
+                <stringProp name="Header.name">Cache-Control</stringProp>
+                <stringProp name="Header.value">no-cache</stringProp>
+              </elementProp>
+              <elementProp name="Accept-Encoding" elementType="Header">
+                <stringProp name="Header.name">Accept-Encoding</stringProp>
+                <stringProp name="Header.value">gzip, deflate, br</stringProp>
+              </elementProp>
+              <elementProp name="User-Agent" elementType="Header">
+                <stringProp name="Header.name">User-Agent</stringProp>
+                <stringProp name="Header.value">JMeter/5.6.3</stringProp>
+              </elementProp>
+              <elementProp name="Accept" elementType="Header">
+                <stringProp name="Header.name">Accept</stringProp>
+                <stringProp name="Header.value">*/*</stringProp>
+              </elementProp>
+            </collectionProp>
+          </HeaderManager>
+          <hashTree/>
+          <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Response Assertion" enabled="true">
+            <collectionProp name="Asserion.test_strings">
+              <stringProp name="49586">200</stringProp>
+            </collectionProp>
+            <stringProp name="Assertion.custom_message"></stringProp>
+            <stringProp name="Assertion.test_field">Assertion.response_code</stringProp>
+            <boolProp name="Assertion.assume_success">false</boolProp>
+            <intProp name="Assertion.test_type">8</intProp>
+          </ResponseAssertion>
+          <hashTree/>
+          <JSONPostProcessor guiclass="JSONPostProcessorGui" testclass="JSONPostProcessor" testname="JSON Extractor" enabled="true">
+            <stringProp name="JSONPostProcessor.referenceNames">accessToken</stringProp>
+            <stringProp name="JSONPostProcessor.jsonPathExprs">$.access_token</stringProp>
+            <stringProp name="JSONPostProcessor.match_numbers">1</stringProp>
+            <stringProp name="JSONPostProcessor.defaultValues">NOT_DEFINED</stringProp>
+            <stringProp name="Scope.variable">ACC</stringProp>
+          </JSONPostProcessor>
+          <hashTree/>
+        </hashTree>
+        <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Think Time">
+          <intProp name="ActionProcessor.action">1</intProp>
+          <intProp name="ActionProcessor.target">0</intProp>
+          <stringProp name="ActionProcessor.duration">300</stringProp>
+        </TestAction>
+        <hashTree>
+          <UniformRandomTimer guiclass="UniformRandomTimerGui" testclass="UniformRandomTimer" testname="Pause" enabled="true">
+            <stringProp name="ConstantTimer.delay">1000</stringProp>
+            <stringProp name="RandomTimer.range">100</stringProp>
+          </UniformRandomTimer>
+          <hashTree/>
+        </hashTree>
+        <eu.luminis.jmeter.wssampler.OpenWebSocketSampler guiclass="eu.luminis.jmeter.wssampler.OpenWebSocketSamplerGui" testclass="eu.luminis.jmeter.wssampler.OpenWebSocketSampler" testname="AI_Chat_01_WebSocket_Open_Connection">
+          <boolProp name="TLS">true</boolProp>
+          <stringProp name="server">${HOST}</stringProp>
+          <stringProp name="port">443</stringProp>
+          <stringProp name="path">/agent?chat_id=${chatId}&amp;client_source=askmdbrowser&amp;token=${accessToken}</stringProp>
+          <stringProp name="connectTimeout">30000</stringProp>
+          <stringProp name="readTimeout">30000</stringProp>
+        </eu.luminis.jmeter.wssampler.OpenWebSocketSampler>
+        <hashTree>
+          <JSR223PostProcessor guiclass="TestBeanGUI" testclass="JSR223PostProcessor" testname="Register WebSocket Connection" enabled="true">
+            <stringProp name="scriptLanguage">groovy</stringProp>
+            <stringProp name="parameters"></stringProp>
+            <stringProp name="filename"></stringProp>
+            <stringProp name="cacheKey">true</stringProp>
+            <stringProp name="script">import java.net.URLDecoder
+import java.util.UUID
+
+long receivedTimestamp =
+    prev.getEndTime() &gt; 0L
+        ? prev.getEndTime()
+        : System.currentTimeMillis()
+
+if (prev.isSuccessful()) {
+
+    vars.put(
+        &apos;websocket_connection_id&apos;,
+        UUID.randomUUID().toString()
+    )
+
+    vars.put(
+        &apos;websocket_open_timestamp&apos;,
+        String.valueOf(receivedTimestamp)
+    )
+
+    vars.put(
+        &apos;websocket_open_success&apos;,
+        &apos;true&apos;
+    )
+
+    String samplerData =
+        prev.getSamplerData() ?: &apos;&apos;
+
+    vars.put(
+        &apos;websocket_sampler_data&apos;,
+        samplerData
+    )
+
+    def chatIdMatcher =
+        samplerData =~ /[?&amp;]chat_id=([^&amp;\s]+)/
+
+    if (chatIdMatcher.find()) {
+
+        vars.put(
+            &apos;chat_id&apos;,
+            URLDecoder.decode(
+                chatIdMatcher.group(1),
+                &apos;UTF-8&apos;
+            )
+        )
+
+    } else {
+
+        vars.put(&apos;chat_id&apos;, &apos;&apos;)
+    }
+
+    def urlMatcher =
+        samplerData =~ /(wss?:\/\/[^\s]+)/
+
+    if (urlMatcher.find()) {
+
+        vars.put(
+            &apos;websocket_url&apos;,
+            urlMatcher.group(1)
+        )
+
+    } else {
+
+        vars.put(&apos;websocket_url&apos;, &apos;&apos;)
+    }
+
+} else {
+
+    vars.put(
+        &apos;websocket_open_success&apos;,
+        &apos;false&apos;
+    )
+
+    vars.put(
+        &apos;websocket_connection_id&apos;,
+        &apos;&apos;
+    )
+
+    vars.put(&apos;chat_id&apos;, &apos;&apos;)
+    vars.put(&apos;websocket_url&apos;, &apos;&apos;)
+}</stringProp>
+          </JSR223PostProcessor>
+          <hashTree/>
+        </hashTree>
+        <JSR223Sampler guiclass="TestBeanGUI" testclass="JSR223Sampler" testname="zJSR223 Sampler - Initialize Variables">
+          <stringProp name="cacheKey">true</stringProp>
+          <stringProp name="filename"></stringProp>
+          <stringProp name="parameters"></stringProp>
+          <stringProp name="script">vars.put(&quot;last_message&quot;, &quot;START&quot;)
+vars.put(&apos;request_start&apos;, String.valueOf(System.currentTimeMillis()))
+vars.put(&apos;first_token_received&apos;, &apos;false&apos;)
+vars.put(&quot;loop_counter&quot;, &quot;0&quot;)</stringProp>
+          <stringProp name="scriptLanguage">groovy</stringProp>
+        </JSR223Sampler>
+        <hashTree/>
+        <JSR223Sampler guiclass="TestBeanGUI" testclass="JSR223Sampler" testname="Register WebSocket Connection">
+          <stringProp name="scriptLanguage">groovy</stringProp>
+          <stringProp name="parameters"></stringProp>
+          <stringProp name="filename"></stringProp>
+          <stringProp name="cacheKey">true</stringProp>
+          <stringProp name="script">import java.time.Instant
+import java.util.UUID
+
+/*
+ * ============================================================
+ * Run identification
+ * ============================================================
+ *
+ * TESTSTART.MS is shared by all threads in the same JMeter
+ * execution. A new test execution receives a new run ID.
+ */
+
+String testStartValue =
+    props.getProperty(&apos;TESTSTART.MS&apos;) ?:
+    String.valueOf(System.currentTimeMillis())
+
+long testStartEpochMs
+
+try {
+
+    testStartEpochMs =
+        testStartValue.toLong()
+
+} catch (Exception ignored) {
+
+    testStartEpochMs =
+        System.currentTimeMillis()
+}
+
+String runId =
+    Instant
+        .ofEpochMilli(testStartEpochMs)
+        .toString()
+        .replace(&apos;:&apos;, &apos;-&apos;)
+        .replace(&apos;.&apos;, &apos;-&apos;)
+
+vars.put(
+    &apos;askmd_run_id&apos;,
+    runId
+)
+
+/*
+ * ============================================================
+ * Request identification
+ * ============================================================
+ */
+
+long requestStart =
+    System.currentTimeMillis()
+
+String healthQuestion =
+    vars.get(&apos;health_question&apos;) ?: &apos;&apos;
+
+vars.put(
+    &apos;chatbot_record_id&apos;,
+    UUID.randomUUID().toString()
+)
+
+vars.put(
+    &apos;chatbot_question&apos;,
+    healthQuestion
+)
+
+vars.put(
+    &apos;scenario_name&apos;,
+    vars.get(&apos;scenario_name&apos;) ?:
+    &apos;Clinical-Reasoning&apos;
+)
+
+vars.put(
+    &apos;transaction_name&apos;,
+    vars.get(&apos;transaction_name&apos;) ?:
+    &apos;AI Chat Question&apos;
+)
+
+/*
+ * ============================================================
+ * Main timing
+ * ============================================================
+ */
+
+vars.put(
+    &apos;request_start&apos;,
+    String.valueOf(requestStart)
+)
+
+vars.put(&apos;first_progress_timestamp&apos;, &apos;&apos;)
+vars.put(&apos;first_token_timestamp&apos;, &apos;&apos;)
+vars.put(&apos;last_token_timestamp&apos;, &apos;&apos;)
+vars.put(&apos;message_complete_timestamp&apos;, &apos;&apos;)
+
+/*
+ * ============================================================
+ * Loop control
+ * ============================================================
+ */
+
+vars.put(&apos;stream_stop&apos;, &apos;false&apos;)
+vars.put(&apos;message_complete_received&apos;, &apos;false&apos;)
+vars.put(&apos;last_message_type&apos;, &apos;&apos;)
+vars.put(&apos;last_message&apos;, &apos;START&apos;)
+vars.put(&apos;loop_counter&apos;, &apos;0&apos;)
+
+/*
+ * ============================================================
+ * TTFT state
+ * ============================================================
+ */
+
+vars.put(&apos;first_token_received&apos;, &apos;false&apos;)
+vars.put(&apos;ttft&apos;, &apos;&apos;)
+
+/*
+ * ============================================================
+ * Message counters
+ * ============================================================
+ */
+
+vars.put(&apos;total_message_count&apos;, &apos;0&apos;)
+vars.put(&apos;total_response_bytes&apos;, &apos;0&apos;)
+
+vars.put(&apos;progress_message_count&apos;, &apos;0&apos;)
+vars.put(&apos;delta_message_count&apos;, &apos;0&apos;)
+vars.put(&apos;empty_delta_count&apos;, &apos;0&apos;)
+
+vars.put(&apos;llm_end_count&apos;, &apos;0&apos;)
+
+vars.put(&apos;tool_start_count&apos;, &apos;0&apos;)
+vars.put(&apos;tool_end_count&apos;, &apos;0&apos;)
+vars.put(&apos;message_content_count&apos;, &apos;0&apos;)
+
+vars.put(&apos;citation_message_count&apos;, &apos;0&apos;)
+vars.put(&apos;citation_count&apos;, &apos;0&apos;)
+
+vars.put(&apos;ping_message_count&apos;, &apos;0&apos;)
+vars.put(&apos;pong_message_count&apos;, &apos;0&apos;)
+
+vars.put(&apos;malformed_message_count&apos;, &apos;0&apos;)
+vars.put(&apos;processing_error_count&apos;, &apos;0&apos;)
+vars.put(&apos;unknown_message_count&apos;, &apos;0&apos;)
+
+vars.put(&apos;application_error_count&apos;, &apos;0&apos;)
+vars.put(&apos;application_error_received&apos;, &apos;false&apos;)
+
+/*
+ * ============================================================
+ * Streaming timing
+ * ============================================================
+ */
+
+vars.put(&apos;previous_delta_timestamp&apos;, &apos;&apos;)
+vars.put(&apos;inter_delta_gap_sum_ms&apos;, &apos;0&apos;)
+vars.put(&apos;inter_delta_gap_count&apos;, &apos;0&apos;)
+vars.put(&apos;max_inter_delta_gap_ms&apos;, &apos;0&apos;)
+
+/*
+ * ============================================================
+ * Phase and tool state
+ * ============================================================
+ */
+
+vars.put(&apos;current_llm_phase&apos;, &apos;1&apos;)
+vars.put(&apos;active_tool_index&apos;, &apos;-1&apos;)
+
+/*
+ * ============================================================
+ * Structured objects
+ * ============================================================
+ */
+
+vars.putObject(
+    &apos;message_type_counts&apos;,
+    new LinkedHashMap()
+)
+
+vars.putObject(
+    &apos;progress_events&apos;,
+    new ArrayList()
+)
+
+vars.putObject(
+    &apos;llm_phases&apos;,
+    new ArrayList()
+)
+
+vars.putObject(
+    &apos;tool_calls&apos;,
+    new ArrayList()
+)
+
+vars.putObject(
+    &apos;content_items&apos;,
+    new ArrayList()
+)
+
+vars.putObject(
+    &apos;citations&apos;,
+    new ArrayList()
+)
+
+vars.putObject(
+    &apos;application_errors&apos;,
+    new ArrayList()
+)
+
+vars.putObject(
+    &apos;processing_errors&apos;,
+    new ArrayList()
+)
+
+SampleResult.setResponseCode(&apos;200&apos;)
+
+SampleResult.setResponseMessage(
+    &apos;Chat transaction initialised&apos;
+)
+
+SampleResult.setSuccessful(true)</stringProp>
+        </JSR223Sampler>
+        <hashTree/>
+        <eu.luminis.jmeter.wssampler.RequestResponseWebSocketSampler guiclass="eu.luminis.jmeter.wssampler.RequestResponseWebSocketSamplerGui" testclass="eu.luminis.jmeter.wssampler.RequestResponseWebSocketSampler" testname="AI_Chat_02_WebSocket_request-response_Sampler">
+          <boolProp name="createNewConnection">false</boolProp>
+          <boolProp name="TLS">false</boolProp>
+          <stringProp name="server"></stringProp>
+          <stringProp name="port">80</stringProp>
+          <stringProp name="path"></stringProp>
+          <stringProp name="payloadType">Text</stringProp>
+          <stringProp name="requestData">{
+    &quot;user_message&quot;: &quot;${health_question}&quot;,
+    &quot;debug&quot;: true
+}</stringProp>
+          <stringProp name="readTimeout">30000</stringProp>
+          <boolProp name="loadDataFromFile">false</boolProp>
+          <stringProp name="dataFile"></stringProp>
+          <boolProp name="binaryPayload">false</boolProp>
+          <stringProp name="connectTimeout">20000</stringProp>
+        </eu.luminis.jmeter.wssampler.RequestResponseWebSocketSampler>
+        <hashTree>
+          <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Response Assertion" enabled="true">
+            <collectionProp name="Asserion.test_strings">
+              <stringProp name="-564821680">&quot;type&quot;: &quot;error&quot;</stringProp>
+            </collectionProp>
+            <stringProp name="Assertion.custom_message"></stringProp>
+            <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+            <boolProp name="Assertion.assume_success">false</boolProp>
+            <intProp name="Assertion.test_type">6</intProp>
+          </ResponseAssertion>
+          <hashTree/>
+          <JSR223PostProcessor guiclass="TestBeanGUI" testclass="JSR223PostProcessor" testname="AI_Chat_02_WebSocket_Request-Response" enabled="true">
+            <stringProp name="scriptLanguage">groovy</stringProp>
+            <stringProp name="parameters"></stringProp>
+            <stringProp name="filename"></stringProp>
+            <stringProp name="cacheKey">true</stringProp>
+            <stringProp name="script">import groovy.json.JsonSlurper
+
+/*
+ * ============================================================
+ * Helper functions
+ * ============================================================
+ */
+
+def toLongSafe = {
+    Object value,
+    long defaultValue = 0L -&gt;
+
+    if (
+        value == null ||
+        value.toString().trim().isEmpty()
+    ) {
+        return defaultValue
+    }
+
+    try {
+
+        return value
+            .toString()
+            .toLong()
+
+    } catch (Exception ignored) {
+
+        return defaultValue
+    }
+}
+
+def toIntSafe = {
+    Object value,
+    int defaultValue = 0 -&gt;
+
+    if (
+        value == null ||
+        value.toString().trim().isEmpty()
+    ) {
+        return defaultValue
+    }
+
+    try {
+
+        return value
+            .toString()
+            .toInteger()
+
+    } catch (Exception ignored) {
+
+        return defaultValue
+    }
+}
+
+def increment = {
+    String variableName,
+    long amount = 1L -&gt;
+
+    long currentValue =
+        toLongSafe(
+            vars.get(variableName),
+            0L
+        )
+
+    vars.put(
+        variableName,
+        String.valueOf(
+            currentValue + amount
+        )
+    )
+}
+
+/*
+ * Find or create an LLM phase.
+ */
+def getOrCreatePhase = {
+    int phaseNumber -&gt;
+
+    Object phaseListObject =
+        vars.getObject(&apos;llm_phases&apos;)
+
+    List phases =
+        phaseListObject instanceof List
+            ? (List) phaseListObject
+            : new ArrayList()
+
+    if (!(phaseListObject instanceof List)) {
+
+        vars.putObject(
+            &apos;llm_phases&apos;,
+            phases
+        )
+    }
+
+    Map matchedPhase = null
+
+    for (Object phaseObject : phases) {
+
+        if (!(phaseObject instanceof Map)) {
+            continue
+        }
+
+        Map phase =
+            (Map) phaseObject
+
+        int storedPhaseNumber =
+            toIntSafe(
+                phase.get(&apos;phaseNumber&apos;),
+                0
+            )
+
+        if (storedPhaseNumber == phaseNumber) {
+
+            matchedPhase = phase
+            break
+        }
+    }
+
+    if (matchedPhase == null) {
+
+        matchedPhase = [
+            phaseNumber         : phaseNumber,
+            deltaCount          : 0L,
+            firstDeltaTimestamp : null,
+            lastDeltaTimestamp  : null,
+            llmDurationMs       : null,
+            llmEndTimestamp     : null,
+            deltaParts          : new ArrayList()
+        ]
+
+        phases.add(matchedPhase)
+    }
+
+    return matchedPhase
+}
+
+/*
+ * ============================================================
+ * Read WebSocket response
+ * ============================================================
+ */
+
+String response =
+    prev.getResponseDataAsString()
+
+response =
+    response == null
+        ? &apos;&apos;
+        : response.trim()
+
+vars.put(
+    &apos;last_message&apos;,
+    response
+)
+
+String samplerName =
+    prev.getSampleLabel() ?: &apos;&apos;
+
+/*
+ * Increment the read-loop counter only for Single Read.
+ */
+if (samplerName.contains(&apos;Single_Read&apos;)) {
+
+    increment(&apos;loop_counter&apos;)
+}
+
+if (response.isEmpty()) {
+    return
+}
+
+long receivedTimestamp =
+    prev.getEndTime() &gt; 0L
+        ? prev.getEndTime()
+        : System.currentTimeMillis()
+
+/*
+ * ============================================================
+ * Early message_complete detection
+ * ============================================================
+ *
+ * This executes before JSON parsing and metric processing.
+ */
+
+String compactResponse =
+    response.replaceAll(
+        &apos;\\s+&apos;,
+        &apos;&apos;
+    )
+
+if (
+    compactResponse.contains(
+        &apos;&quot;type&quot;:&quot;message_complete&quot;&apos;
+    )
+) {
+
+    vars.put(
+        &apos;stream_stop&apos;,
+        &apos;true&apos;
+    )
+
+    vars.put(
+        &apos;message_complete_received&apos;,
+        &apos;true&apos;
+    )
+
+    vars.put(
+        &apos;last_message_type&apos;,
+        &apos;message_complete&apos;
+    )
+
+    vars.put(
+        &apos;message_complete_timestamp&apos;,
+        String.valueOf(
+            receivedTimestamp
+        )
+    )
+
+    log.info(
+        &apos;AskMD message_complete detected from raw response.&apos;
+    )
+}
+
+increment(
+    &apos;total_message_count&apos;
+)
+
+increment(
+    &apos;total_response_bytes&apos;,
+    response.getBytes(&apos;UTF-8&apos;).length
+)
+
+/*
+ * ============================================================
+ * Parse JSON
+ * ============================================================
+ */
+
+Object parsedResponse
+
+try {
+
+    parsedResponse =
+        new JsonSlurper()
+            .parseText(response)
+
+} catch (Exception parseException) {
+
+    increment(
+        &apos;malformed_message_count&apos;
+    )
+
+    log.error(
+        &apos;Malformed WebSocket JSON. &apos; +
+        &apos;Sampler=&apos; + samplerName +
+        &apos;, response=&apos; + response,
+        parseException
+    )
+
+    return
+}
+
+if (!(parsedResponse instanceof Map)) {
+
+    increment(
+        &apos;malformed_message_count&apos;
+    )
+
+    log.error(
+        &apos;WebSocket response is not a JSON object. &apos; +
+        &apos;Sampler=&apos; + samplerName +
+        &apos;, response=&apos; + response
+    )
+
+    return
+}
+
+Map json =
+    (Map) parsedResponse
+
+String messageType =
+    json.get(&apos;type&apos;)
+        ?.toString() ?: &apos;unknown&apos;
+
+vars.put(
+    &apos;last_message_type&apos;,
+    messageType
+)
+
+/*
+ * ============================================================
+ * Dynamic message-type count
+ * ============================================================
+ */
+
+Object countsObject =
+    vars.getObject(
+        &apos;message_type_counts&apos;
+    )
+
+Map messageTypeCounts =
+    countsObject instanceof Map
+        ? (Map) countsObject
+        : new LinkedHashMap()
+
+if (!(countsObject instanceof Map)) {
+
+    vars.putObject(
+        &apos;message_type_counts&apos;,
+        messageTypeCounts
+    )
+}
+
+int currentTypeCount =
+    toIntSafe(
+        messageTypeCounts.get(messageType),
+        0
+    )
+
+messageTypeCounts.put(
+    messageType,
+    currentTypeCount + 1
+)
+
+/*
+ * ============================================================
+ * Process WebSocket message
+ * ============================================================
+ */
+
+try {
+
+    switch (messageType) {
+
+        case &apos;message_progress&apos;:
+
+            increment(
+                &apos;progress_message_count&apos;
+            )
+
+            if (
+                !vars.get(
+                    &apos;first_progress_timestamp&apos;
+                )
+            ) {
+
+                vars.put(
+                    &apos;first_progress_timestamp&apos;,
+                    String.valueOf(
+                        receivedTimestamp
+                    )
+                )
+            }
+
+            Object progressObject =
+                vars.getObject(
+                    &apos;progress_events&apos;
+                )
+
+            List progressEvents =
+                progressObject instanceof List
+                    ? (List) progressObject
+                    : new ArrayList()
+
+            if (!(progressObject instanceof List)) {
+
+                vars.putObject(
+                    &apos;progress_events&apos;,
+                    progressEvents
+                )
+            }
+
+            progressEvents.add([
+                timestamp:
+                    receivedTimestamp,
+
+                title:
+                    json.get(&apos;title&apos;)
+                        ?.toString() ?: &apos;&apos;,
+
+                status:
+                    json.get(&apos;status&apos;)
+                        ?.toString() ?: &apos;&apos;,
+
+                showTimer:
+                    json.get(&apos;show_timer&apos;) == true
+            ])
+
+            break
+
+        case &apos;message_delta&apos;:
+
+            increment(
+                &apos;delta_message_count&apos;
+            )
+
+            String delta =
+                json.get(&apos;delta&apos;) == null
+                    ? &apos;&apos;
+                    : json.get(&apos;delta&apos;).toString()
+
+            if (delta.isEmpty()) {
+
+                increment(
+                    &apos;empty_delta_count&apos;
+                )
+            }
+
+            int currentPhaseNumber =
+                toIntSafe(
+                    vars.get(
+                        &apos;current_llm_phase&apos;
+                    ),
+                    1
+                )
+
+            Map currentPhase =
+                getOrCreatePhase(
+                    currentPhaseNumber
+                )
+
+            long phaseDeltaCount =
+                toLongSafe(
+                    currentPhase.get(
+                        &apos;deltaCount&apos;
+                    ),
+                    0L
+                )
+
+            currentPhase.put(
+                &apos;deltaCount&apos;,
+                phaseDeltaCount + 1L
+            )
+
+            if (
+                currentPhase.get(
+                    &apos;firstDeltaTimestamp&apos;
+                ) == null
+            ) {
+
+                currentPhase.put(
+                    &apos;firstDeltaTimestamp&apos;,
+                    receivedTimestamp
+                )
+            }
+
+            currentPhase.put(
+                &apos;lastDeltaTimestamp&apos;,
+                receivedTimestamp
+            )
+
+            Object deltaPartsObject =
+                currentPhase.get(
+                    &apos;deltaParts&apos;
+                )
+
+            List deltaParts =
+                deltaPartsObject instanceof List
+                    ? (List) deltaPartsObject
+                    : new ArrayList()
+
+            if (!(deltaPartsObject instanceof List)) {
+
+                currentPhase.put(
+                    &apos;deltaParts&apos;,
+                    deltaParts
+                )
+            }
+
+            deltaParts.add(delta)
+
+            /*
+             * Overall TTFT
+             */
+            if (
+                vars.get(
+                    &apos;first_token_received&apos;
+                ) != &apos;true&apos;
+            ) {
+
+                long requestStart =
+                    toLongSafe(
+                        vars.get(
+                            &apos;request_start&apos;
+                        ),
+                        0L
+                    )
+
+                if (requestStart &gt; 0L) {
+
+                    long ttft =
+                        Math.max(
+                            0L,
+                            receivedTimestamp -
+                            requestStart
+                        )
+
+                    vars.put(
+                        &apos;ttft&apos;,
+                        String.valueOf(ttft)
+                    )
+
+                    vars.put(
+                        &apos;first_token_timestamp&apos;,
+                        String.valueOf(
+                            receivedTimestamp
+                        )
+                    )
+                }
+
+                vars.put(
+                    &apos;first_token_received&apos;,
+                    &apos;true&apos;
+                )
+            }
+
+            vars.put(
+                &apos;last_token_timestamp&apos;,
+                String.valueOf(
+                    receivedTimestamp
+                )
+            )
+
+            /*
+             * Inter-delta gap
+             */
+            long previousDeltaTimestamp =
+                toLongSafe(
+                    vars.get(
+                        &apos;previous_delta_timestamp&apos;
+                    ),
+                    0L
+                )
+
+            if (previousDeltaTimestamp &gt; 0L) {
+
+                long gap =
+                    receivedTimestamp -
+                    previousDeltaTimestamp
+
+                if (gap &gt;= 0L) {
+
+                    increment(
+                        &apos;inter_delta_gap_sum_ms&apos;,
+                        gap
+                    )
+
+                    increment(
+                        &apos;inter_delta_gap_count&apos;
+                    )
+
+                    long currentMaximum =
+                        toLongSafe(
+                            vars.get(
+                                &apos;max_inter_delta_gap_ms&apos;
+                            ),
+                            0L
+                        )
+
+                    if (gap &gt; currentMaximum) {
+
+                        vars.put(
+                            &apos;max_inter_delta_gap_ms&apos;,
+                            String.valueOf(gap)
+                        )
+                    }
+                }
+            }
+
+            vars.put(
+                &apos;previous_delta_timestamp&apos;,
+                String.valueOf(
+                    receivedTimestamp
+                )
+            )
+
+            break
+
+        case &apos;llm_end&apos;:
+
+            increment(
+                &apos;llm_end_count&apos;
+            )
+
+            int currentPhaseNumber =
+                toIntSafe(
+                    vars.get(
+                        &apos;current_llm_phase&apos;
+                    ),
+                    1
+                )
+
+            Map currentPhase =
+                getOrCreatePhase(
+                    currentPhaseNumber
+                )
+
+            if (
+                json.get(&apos;duration_ms&apos;) != null
+            ) {
+
+                currentPhase.put(
+                    &apos;llmDurationMs&apos;,
+                    toLongSafe(
+                        json.get(&apos;duration_ms&apos;),
+                        0L
+                    )
+                )
+            }
+
+            currentPhase.put(
+                &apos;llmEndTimestamp&apos;,
+                receivedTimestamp
+            )
+
+            vars.put(
+                &apos;current_llm_phase&apos;,
+                String.valueOf(
+                    currentPhaseNumber + 1
+                )
+            )
+
+            /*
+             * Do not include the pause between phases
+             * in token-stream gap metrics.
+             */
+            vars.put(
+                &apos;previous_delta_timestamp&apos;,
+                &apos;&apos;
+            )
+
+            break
+
+        case &apos;tool_start&apos;:
+
+            increment(
+                &apos;tool_start_count&apos;
+            )
+
+            Object toolListObject =
+                vars.getObject(&apos;tool_calls&apos;)
+
+            List toolCalls =
+                toolListObject instanceof List
+                    ? (List) toolListObject
+                    : new ArrayList()
+
+            if (!(toolListObject instanceof List)) {
+
+                vars.putObject(
+                    &apos;tool_calls&apos;,
+                    toolCalls
+                )
+            }
+
+            Map toolInput =
+                json.get(&apos;tool_input&apos;)
+                    instanceof Map
+                    ? new LinkedHashMap(
+                        (Map) json.get(
+                            &apos;tool_input&apos;
+                        )
+                    )
+                    : [:]
+
+            Map toolCall = [
+                toolIndex:
+                    toolCalls.size() + 1,
+
+                toolName:
+                    json.get(&apos;tool_name&apos;)
+                        ?.toString() ?: &apos;&apos;,
+
+                startTimestamp:
+                    receivedTimestamp,
+
+                endTimestamp:
+                    null,
+
+                durationMs:
+                    null,
+
+                status:
+                    &apos;&apos;,
+
+                input:
+                    toolInput,
+
+                output:
+                    [:],
+
+                contentItems:
+                    new ArrayList()
+            ]
+
+            toolCalls.add(toolCall)
+
+            vars.put(
+                &apos;active_tool_index&apos;,
+                String.valueOf(
+                    toolCalls.size() - 1
+                )
+            )
+
+            break
+
+        case &apos;message_content&apos;:
+
+            increment(
+                &apos;message_content_count&apos;
+            )
+
+            Object contentListObject =
+                vars.getObject(
+                    &apos;content_items&apos;
+                )
+
+            List contentItems =
+                contentListObject instanceof List
+                    ? (List) contentListObject
+                    : new ArrayList()
+
+            if (!(contentListObject instanceof List)) {
+
+                vars.putObject(
+                    &apos;content_items&apos;,
+                    contentItems
+                )
+            }
+
+            Object toolListObject =
+                vars.getObject(&apos;tool_calls&apos;)
+
+            List toolCalls =
+                toolListObject instanceof List
+                    ? (List) toolListObject
+                    : []
+
+            int activeToolIndex =
+                toIntSafe(
+                    vars.get(
+                        &apos;active_tool_index&apos;
+                    ),
+                    -1
+                )
+
+            Object responseContent =
+                json.get(&apos;content&apos;)
+
+            if (
+                responseContent
+                    instanceof Collection
+            ) {
+
+                for (
+                    Object itemObject :
+                    (Collection) responseContent
+                ) {
+
+                    if (!(itemObject instanceof Map)) {
+                        continue
+                    }
+
+                    Map item =
+                        (Map) itemObject
+
+                    Map contentSummary = [
+                        id:
+                            item.get(&apos;id&apos;)
+                                ?.toString() ?: &apos;&apos;,
+
+                        score:
+                            item.get(&apos;score&apos;),
+
+                        contentType:
+                            item.get(&apos;type&apos;)
+                                ?.toString() ?: &apos;&apos;,
+
+                        title:
+                            item.get(&apos;title&apos;)
+                                ?.toString() ?: &apos;&apos;,
+
+                        description:
+                            item.get(&apos;description&apos;)
+                                ?.toString() ?: &apos;&apos;,
+
+                        url:
+                            item.get(&apos;url&apos;)
+                                ?.toString() ?: &apos;&apos;,
+
+                        duration:
+                            item.get(&apos;duration&apos;)
+                    ]
+
+                    contentItems.add(
+                        contentSummary
+                    )
+
+                    if (
+                        activeToolIndex &gt;= 0 &amp;&amp;
+                        activeToolIndex &lt;
+                            toolCalls.size()
+                    ) {
+
+                        Object activeToolObject =
+                            toolCalls.get(
+                                activeToolIndex
+                            )
+
+                        if (
+                            activeToolObject
+                                instanceof Map
+                        ) {
+
+                            Map activeTool =
+                                (Map) activeToolObject
+
+                            Object toolContentObject =
+                                activeTool.get(
+                                    &apos;contentItems&apos;
+                                )
+
+                            List toolContentItems =
+                                toolContentObject instanceof List
+                                    ? (List) toolContentObject
+                                    : new ArrayList()
+
+                            if (
+                                !(toolContentObject
+                                    instanceof List)
+                            ) {
+
+                                activeTool.put(
+                                    &apos;contentItems&apos;,
+                                    toolContentItems
+                                )
+                            }
+
+                            toolContentItems.add(
+                                contentSummary
+                            )
+                        }
+                    }
+                }
+            }
+
+            break
+
+        case &apos;tool_end&apos;:
+
+            increment(
+                &apos;tool_end_count&apos;
+            )
+
+            Object toolListObject =
+                vars.getObject(&apos;tool_calls&apos;)
+
+            List toolCalls =
+                toolListObject instanceof List
+                    ? (List) toolListObject
+                    : []
+
+            int activeToolIndex =
+                toIntSafe(
+                    vars.get(
+                        &apos;active_tool_index&apos;
+                    ),
+                    -1
+                )
+
+            Map activeTool = null
+
+            if (
+                activeToolIndex &gt;= 0 &amp;&amp;
+                activeToolIndex &lt;
+                    toolCalls.size()
+            ) {
+
+                Object activeToolObject =
+                    toolCalls.get(
+                        activeToolIndex
+                    )
+
+                if (
+                    activeToolObject
+                        instanceof Map
+                ) {
+
+                    activeTool =
+                        (Map) activeToolObject
+                }
+            }
+
+            if (activeTool == null) {
+
+                for (
+                    int index =
+                        toolCalls.size() - 1;
+                    index &gt;= 0;
+                    index--
+                ) {
+
+                    Object candidateObject =
+                        toolCalls.get(index)
+
+                    if (
+                        !(candidateObject
+                            instanceof Map)
+                    ) {
+                        continue
+                    }
+
+                    Map candidate =
+                        (Map) candidateObject
+
+                    if (
+                        candidate.get(
+                            &apos;endTimestamp&apos;
+                        ) == null
+                    ) {
+
+                        activeTool = candidate
+                        break
+                    }
+                }
+            }
+
+            if (activeTool != null) {
+
+                activeTool.put(
+                    &apos;endTimestamp&apos;,
+                    receivedTimestamp
+                )
+
+                activeTool.put(
+                    &apos;durationMs&apos;,
+                    json.get(&apos;duration_ms&apos;) != null
+                        ? toLongSafe(
+                            json.get(&apos;duration_ms&apos;),
+                            0L
+                        )
+                        : null
+                )
+
+                Map toolOutput =
+                    json.get(&apos;tool_output&apos;)
+                        instanceof Map
+                        ? new LinkedHashMap(
+                            (Map) json.get(
+                                &apos;tool_output&apos;
+                            )
+                        )
+                        : [:]
+
+                activeTool.put(
+                    &apos;output&apos;,
+                    toolOutput
+                )
+
+                activeTool.put(
+                    &apos;status&apos;,
+                    toolOutput.get(&apos;status&apos;)
+                        ?.toString() ?: &apos;&apos;
+                )
+            }
+
+            vars.put(
+                &apos;active_tool_index&apos;,
+                &apos;-1&apos;
+            )
+
+            break
+
+        case &apos;message_citation&apos;:
+
+            increment(
+                &apos;citation_message_count&apos;
+            )
+
+            Object citationListObject =
+                vars.getObject(&apos;citations&apos;)
+
+            List capturedCitations =
+                citationListObject instanceof List
+                    ? (List) citationListObject
+                    : new ArrayList()
+
+            if (!(citationListObject instanceof List)) {
+
+                vars.putObject(
+                    &apos;citations&apos;,
+                    capturedCitations
+                )
+            }
+
+            Object citationResponseObject =
+                json.get(&apos;citations&apos;)
+
+            Collection responseCitations =
+                citationResponseObject instanceof Collection
+                    ? (Collection) citationResponseObject
+                    : []
+
+            increment(
+                &apos;citation_count&apos;,
+                responseCitations.size()
+            )
+
+            for (
+                Object citationObject :
+                responseCitations
+            ) {
+
+                if (!(citationObject instanceof Map)) {
+                    continue
+                }
+
+                Map citation =
+                    (Map) citationObject
+
+                Map source =
+                    citation.get(&apos;source&apos;)
+                        instanceof Map
+                        ? (Map) citation.get(
+                            &apos;source&apos;
+                        )
+                        : [:]
+
+                Collection spans =
+                    citation.get(&apos;spans&apos;)
+                        instanceof Collection
+                        ? (Collection) citation.get(
+                            &apos;spans&apos;
+                        )
+                        : []
+
+                Map firstSpan = [:]
+
+                if (!spans.isEmpty()) {
+
+                    Object firstSpanObject =
+                        spans.iterator().next()
+
+                    if (
+                        firstSpanObject
+                            instanceof Map
+                    ) {
+
+                        firstSpan =
+                            (Map) firstSpanObject
+                    }
+                }
+
+                Map location =
+                    firstSpan.get(&apos;location&apos;)
+                        instanceof Map
+                        ? (Map) firstSpan.get(
+                            &apos;location&apos;
+                        )
+                        : [:]
+
+                capturedCitations.add([
+                    citationId:
+                        citation.get(&apos;id&apos;),
+
+                    sourceId:
+                        source.get(&apos;source_id&apos;)
+                            ?.toString() ?: &apos;&apos;,
+
+                    sourceType:
+                        source.get(&apos;source_type&apos;)
+                            ?.toString() ?: &apos;&apos;,
+
+                    title:
+                        source.get(&apos;title&apos;)
+                            ?.toString() ?: &apos;&apos;,
+
+                    organisation:
+                        source.get(&apos;organization&apos;)
+                            ?.toString() ?: &apos;&apos;,
+
+                    url:
+                        source.get(&apos;url&apos;)
+                            ?.toString() ?: &apos;&apos;,
+
+                    heading:
+                        location.get(&apos;heading&apos;)
+                            ?.toString() ?: &apos;&apos;,
+
+                    sectionId:
+                        location.get(&apos;section_id&apos;)
+                            ?.toString() ?: &apos;&apos;,
+
+                    icd10Code:
+                        location.get(&apos;icd10_code&apos;)
+                            ?.toString() ?: &apos;&apos;,
+
+                    conditionName:
+                        location.get(&apos;condition_name&apos;)
+                            ?.toString() ?: &apos;&apos;,
+
+                    score:
+                        location.get(&apos;score&apos;)
+                ])
+            }
+
+            break
+
+        case &apos;ping&apos;:
+
+            increment(
+                &apos;ping_message_count&apos;
+            )
+
+            break
+
+        case &apos;pong&apos;:
+
+            increment(
+                &apos;pong_message_count&apos;
+            )
+
+            break
+
+        case &apos;error&apos;:
+        case &apos;message_error&apos;:
+
+            increment(
+                &apos;application_error_count&apos;
+            )
+
+            vars.put(
+                &apos;application_error_received&apos;,
+                &apos;true&apos;
+            )
+
+            Object errorListObject =
+                vars.getObject(
+                    &apos;application_errors&apos;
+                )
+
+            List applicationErrors =
+                errorListObject instanceof List
+                    ? (List) errorListObject
+                    : new ArrayList()
+
+            if (!(errorListObject instanceof List)) {
+
+                vars.putObject(
+                    &apos;application_errors&apos;,
+                    applicationErrors
+                )
+            }
+
+            applicationErrors.add([
+                timestamp:
+                    receivedTimestamp,
+
+                type:
+                    messageType,
+
+                message:
+                    json.get(&apos;message&apos;)
+                        ?.toString() ?:
+                    json.get(&apos;error&apos;)
+                        ?.toString() ?:
+                    response
+            ])
+
+            break
+
+        case &apos;message_complete&apos;:
+
+            vars.put(
+                &apos;stream_stop&apos;,
+                &apos;true&apos;
+            )
+
+            vars.put(
+                &apos;message_complete_received&apos;,
+                &apos;true&apos;
+            )
+
+            vars.put(
+                &apos;last_message_type&apos;,
+                &apos;message_complete&apos;
+            )
+
+            vars.put(
+                &apos;message_complete_timestamp&apos;,
+                String.valueOf(
+                    receivedTimestamp
+                )
+            )
+
+            log.info(
+                &apos;AskMD message_complete received. &apos; +
+                &apos;Stopping WebSocket read loop.&apos;
+            )
+
+            break
+
+        default:
+
+            increment(
+                &apos;unknown_message_count&apos;
+            )
+
+            log.warn(
+                &apos;Unknown WebSocket message type. &apos; +
+                &apos;Type=&apos; + messageType +
+                &apos;, response=&apos; + response
+            )
+
+            break
+    }
+
+} catch (Exception processingException) {
+
+    increment(
+        &apos;processing_error_count&apos;
+    )
+
+    Object processingErrorListObject =
+        vars.getObject(
+            &apos;processing_errors&apos;
+        )
+
+    List processingErrors =
+        processingErrorListObject instanceof List
+            ? (List) processingErrorListObject
+            : new ArrayList()
+
+    if (
+        !(processingErrorListObject
+            instanceof List)
+    ) {
+
+        vars.putObject(
+            &apos;processing_errors&apos;,
+            processingErrors
+        )
+    }
+
+    if (processingErrors.size() &lt; 20) {
+
+        processingErrors.add([
+            timestamp:
+                receivedTimestamp,
+
+            type:
+                messageType,
+
+            exception:
+                processingException
+                    .getClass()
+                    .getName(),
+
+            message:
+                processingException
+                    .getMessage() ?: &apos;&apos;
+        ])
+    }
+
+    log.error(
+        &apos;WebSocket metric processing error. &apos; +
+        &apos;Type=&apos; + messageType +
+        &apos;, sampler=&apos; + samplerName +
+        &apos;, response=&apos; + response,
+        processingException
+    )
+}</stringProp>
+          </JSR223PostProcessor>
+          <hashTree/>
+        </hashTree>
+        <WhileController guiclass="WhileControllerGui" testclass="WhileController" testname="While Controller">
+          <stringProp name="WhileController.condition">${__groovy(def stop=(vars.get(&apos;stream_stop&apos;) ?: &apos;false&apos;).equalsIgnoreCase(&apos;true&apos;); def completed=(vars.get(&apos;message_complete_received&apos;) ?: &apos;false&apos;).equalsIgnoreCase(&apos;true&apos;); def lastType=vars.get(&apos;last_message_type&apos;) ?: &apos;&apos;; def loops=(vars.get(&apos;loop_counter&apos;) ?: &apos;0&apos;).toInteger(); def start=(vars.get(&apos;request_start&apos;) ?: &apos;0&apos;).toLong(); return !stop &amp;&amp; !completed &amp;&amp; lastType != &apos;message_complete&apos; &amp;&amp; loops &lt; 1000 &amp;&amp; start &gt; 0L &amp;&amp; (System.currentTimeMillis()-start) &lt; 90000L)}</stringProp>
+        </WhileController>
+        <hashTree>
+          <eu.luminis.jmeter.wssampler.SingleReadWebSocketSampler guiclass="eu.luminis.jmeter.wssampler.SingleReadWebSocketSamplerGui" testclass="eu.luminis.jmeter.wssampler.SingleReadWebSocketSampler" testname="AI_Chat_03_WebSocket_Single_Read_Sampler" enabled="true">
+            <boolProp name="TLS">false</boolProp>
+            <stringProp name="server"></stringProp>
+            <stringProp name="port">80</stringProp>
+            <stringProp name="path"></stringProp>
+            <stringProp name="dataType">Text</stringProp>
+            <boolProp name="createNewConnection">false</boolProp>
+            <stringProp name="readTimeout">4000</stringProp>
+            <boolProp name="optional">true</boolProp>
+            <boolProp name="binaryPayload">false</boolProp>
+            <stringProp name="connectTimeout">20000</stringProp>
+          </eu.luminis.jmeter.wssampler.SingleReadWebSocketSampler>
+          <hashTree>
+            <JSONPostProcessor guiclass="JSONPostProcessorGui" testclass="JSONPostProcessor" testname="JSON Extractor" enabled="true">
+              <stringProp name="JSONPostProcessor.referenceNames">current_duration</stringProp>
+              <stringProp name="JSONPostProcessor.jsonPathExprs">$.duration_ms</stringProp>
+              <stringProp name="JSONPostProcessor.match_numbers">1</stringProp>
+              <stringProp name="JSONPostProcessor.defaultValues">NOT_FOUND</stringProp>
+            </JSONPostProcessor>
+            <hashTree/>
+          </hashTree>
+        </hashTree>
+        <JSR223Sampler guiclass="TestBeanGUI" testclass="JSR223Sampler" testname="AI_Chat_Report_JSONL_Writer" enabled="true">
+          <stringProp name="scriptLanguage">groovy</stringProp>
+          <stringProp name="parameters"></stringProp>
+          <stringProp name="filename"></stringProp>
+          <stringProp name="cacheKey">true</stringProp>
+          <stringProp name="script">import groovy.json.JsonOutput
+import java.net.InetAddress
+import java.nio.charset.StandardCharsets
+import java.nio.file.Files
+import java.nio.file.Path
+import java.nio.file.Paths
+import java.nio.file.StandardOpenOption
+import java.time.Instant
+
+/*
+ * ============================================================
+ * AI_Chat_Report_JSONL_Writer
+ * ============================================================
+ *
+ * Writes a JSONL record per request for the automated
+ * performance report generator (generate_report.py).
+ *
+ * Output: report-results/askmd_report_&lt;runId&gt;_&lt;engine&gt;.jsonl
+ *
+ * This sampler is independent of the existing
+ * &quot;Final Validation and JSONL Writer&quot; which serves
+ * a different purpose.
+ * ============================================================
+ */
+
+// ---- Helpers ----
+
+def toLongSafe = { Object value, long defaultValue = 0L -&gt;
+    if (value == null || value.toString().trim().isEmpty()) return defaultValue
+    try { return value.toString().toLong() } catch (Exception e) { return defaultValue }
+}
+
+def toIsoTimestamp = { Long epochMs -&gt;
+    if (epochMs == null || epochMs &lt;= 0L) return null
+    return Instant.ofEpochMilli(epochMs).toString()
+}
+
+def getLong = { String varName -&gt;
+    String v = vars.get(varName)
+    if (v == null || v.trim().isEmpty()) return null
+    try { return v.toLong() } catch (Exception e) { return null }
+}
+
+def copyList = { String varName -&gt;
+    Object obj = vars.getObject(varName)
+    return obj instanceof List ? new ArrayList((List) obj) : []
+}
+
+def copyMap = { String varName -&gt;
+    Object obj = vars.getObject(varName)
+    return obj instanceof Map ? new LinkedHashMap((Map) obj) : [:]
+}
+
+// ---- Timestamps ----
+
+long now = System.currentTimeMillis()
+
+Long requestStart       = getLong(&apos;request_start&apos;)
+Long firstProgressTs    = getLong(&apos;first_progress_timestamp&apos;)
+Long firstTokenTs       = getLong(&apos;first_token_timestamp&apos;)
+Long lastTokenTs        = getLong(&apos;last_token_timestamp&apos;)
+Long messageCompleteTs  = getLong(&apos;message_complete_timestamp&apos;)
+Long wsOpenTs           = getLong(&apos;websocket_open_timestamp&apos;)
+
+// ---- Derived Timings ----
+
+boolean completed = vars.get(&apos;message_complete_received&apos;) == &apos;true&apos;
+Long effectiveEnd = messageCompleteTs ?: now
+
+Long responseTimeMs = requestStart != null
+    ? Math.max(0L, effectiveEnd - requestStart) : null
+
+Long timeToFirstProgressMs = (requestStart != null &amp;&amp; firstProgressTs != null)
+    ? Math.max(0L, firstProgressTs - requestStart) : null
+
+Long timeToFirstTokenMs = (requestStart != null &amp;&amp; firstTokenTs != null)
+    ? Math.max(0L, firstTokenTs - requestStart) : null
+
+Long streamDurationMs = (firstTokenTs != null &amp;&amp; lastTokenTs != null)
+    ? Math.max(0L, lastTokenTs - firstTokenTs) : null
+
+Long lastTokenToCompleteMs = (lastTokenTs != null &amp;&amp; messageCompleteTs != null)
+    ? Math.max(0L, messageCompleteTs - lastTokenTs) : null
+
+// WebSocket connection time
+Long wsConnectionTimeMs = (wsOpenTs != null &amp;&amp; requestStart != null &amp;&amp; wsOpenTs &lt; requestStart)
+    ? Math.max(0L, requestStart - wsOpenTs) : null
+
+// Inter-delta gap stats
+long interDeltaGapSum   = toLongSafe(vars.get(&apos;inter_delta_gap_sum_ms&apos;), 0L)
+long interDeltaGapCount = toLongSafe(vars.get(&apos;inter_delta_gap_count&apos;), 0L)
+long maxInterDeltaGap   = toLongSafe(vars.get(&apos;max_inter_delta_gap_ms&apos;), 0L)
+Long avgInterDeltaGapMs = interDeltaGapCount &gt; 0
+    ? Math.round(interDeltaGapSum / (double) interDeltaGapCount) : null
+
+// ---- LLM Phase Metrics ----
+
+List llmPhases = copyList(&apos;llm_phases&apos;)
+List llmDurationsMs = []
+long totalLlmDurationMs = 0L
+int llmPhaseCount = 0
+
+for (Object phaseObj : llmPhases) {
+    if (!(phaseObj instanceof Map)) continue
+    Map phase = (Map) phaseObj
+    Long dur = phase.get(&apos;llmDurationMs&apos;) != null
+        ? toLongSafe(phase.get(&apos;llmDurationMs&apos;), 0L) : null
+    long deltaCount = toLongSafe(phase.get(&apos;deltaCount&apos;), 0L)
+    if (dur != null || deltaCount &gt; 0) {
+        llmPhaseCount++
+        if (dur != null &amp;&amp; dur &gt; 0) {
+            llmDurationsMs.add(dur)
+            totalLlmDurationMs += dur
+        }
+    }
+}
+
+// Final answer TTFT (last phase with text)
+Long finalAnswerTtftMs = null
+for (int i = llmPhases.size() - 1; i &gt;= 0; i--) {
+    Object phaseObj = llmPhases.get(i)
+    if (!(phaseObj instanceof Map)) continue
+    Map phase = (Map) phaseObj
+    Long firstDelta = phase.get(&apos;firstDeltaTimestamp&apos;) != null
+        ? toLongSafe(phase.get(&apos;firstDeltaTimestamp&apos;), 0L) : null
+    if (firstDelta != null &amp;&amp; firstDelta &gt; 0 &amp;&amp; requestStart != null) {
+        finalAnswerTtftMs = Math.max(0L, firstDelta - requestStart)
+        break
+    }
+}
+
+// ---- Tool Metrics ----
+
+List toolCalls = copyList(&apos;tool_calls&apos;)
+long toolStartCount = toLongSafe(vars.get(&apos;tool_start_count&apos;), 0L)
+long toolEndCount   = toLongSafe(vars.get(&apos;tool_end_count&apos;), 0L)
+List toolDurationsMs = []
+long totalToolDurationMs = 0L
+List toolNames = []
+long toolFailureCount = 0L
+
+for (Object toolObj : toolCalls) {
+    if (!(toolObj instanceof Map)) continue
+    Map tool = (Map) toolObj
+    String tName = tool.get(&apos;toolName&apos;)?.toString() ?: &apos;&apos;
+    if (tName &amp;&amp; !toolNames.contains(tName)) toolNames.add(tName)
+
+    Long dur = tool.get(&apos;durationMs&apos;) != null
+        ? toLongSafe(tool.get(&apos;durationMs&apos;), 0L) : null
+    if (dur != null &amp;&amp; dur &gt; 0) {
+        toolDurationsMs.add(dur)
+        totalToolDurationMs += dur
+    }
+
+    String status = tool.get(&apos;status&apos;)?.toString()?.trim() ?: &apos;&apos;
+    if (status &amp;&amp; !status.equalsIgnoreCase(&apos;ok&apos;) &amp;&amp;
+        !status.equalsIgnoreCase(&apos;success&apos;) &amp;&amp;
+        !status.equalsIgnoreCase(&apos;completed&apos;)) {
+        toolFailureCount++
+    }
+}
+
+// Post-tool TTFT
+Long lastToolEnd = null
+for (Object toolObj : toolCalls) {
+    if (!(toolObj instanceof Map)) continue
+    Long te = ((Map) toolObj).get(&apos;endTimestamp&apos;) != null
+        ? toLongSafe(((Map) toolObj).get(&apos;endTimestamp&apos;), 0L) : null
+    if (te != null &amp;&amp; (lastToolEnd == null || te &gt; lastToolEnd)) lastToolEnd = te
+}
+
+Long postToolTtftMs = null
+if (lastToolEnd != null &amp;&amp; finalAnswerTtftMs != null &amp;&amp; requestStart != null) {
+    Long finalAnswerAbsTs = requestStart + finalAnswerTtftMs
+    if (finalAnswerAbsTs &gt;= lastToolEnd) {
+        postToolTtftMs = finalAnswerAbsTs - lastToolEnd
+    }
+}
+
+// ---- Counters ----
+
+long totalMessageCount    = toLongSafe(vars.get(&apos;total_message_count&apos;), 0L)
+long progressMessageCount = toLongSafe(vars.get(&apos;progress_message_count&apos;), 0L)
+long deltaMessageCount    = toLongSafe(vars.get(&apos;delta_message_count&apos;), 0L)
+long emptyDeltaCount      = toLongSafe(vars.get(&apos;empty_delta_count&apos;), 0L)
+long llmEndCount          = toLongSafe(vars.get(&apos;llm_end_count&apos;), 0L)
+long citationCount        = toLongSafe(vars.get(&apos;citation_count&apos;), 0L)
+long appErrorCount        = toLongSafe(vars.get(&apos;application_error_count&apos;), 0L)
+long malformedCount       = toLongSafe(vars.get(&apos;malformed_message_count&apos;), 0L)
+long processingErrCount   = toLongSafe(vars.get(&apos;processing_error_count&apos;), 0L)
+long totalResponseBytes   = toLongSafe(vars.get(&apos;total_response_bytes&apos;), 0L)
+long loopCount            = toLongSafe(vars.get(&apos;loop_counter&apos;), 0L)
+
+// ---- Status Classification ----
+
+boolean timeout = !completed &amp;&amp; requestStart != null &amp;&amp; (now - requestStart) &gt;= 60000L
+boolean readLimitReached = !completed &amp;&amp; loopCount &gt;= 200L
+
+String businessStatus
+String technicalStatus
+
+if (!completed || timeout || readLimitReached) {
+    businessStatus = &apos;Incomplete&apos;
+    technicalStatus = &apos;Failed&apos;
+} else if (appErrorCount &gt; 0 || malformedCount &gt; 0 || toolFailureCount &gt; 0) {
+    businessStatus = &apos;Completed&apos;
+    technicalStatus = &apos;Failed&apos;
+} else {
+    businessStatus = &apos;Completed&apos;
+    technicalStatus = &apos;Passed&apos;
+}
+
+// ---- Run Identification ----
+
+String engineName
+try { engineName = InetAddress.localHost.hostName }
+catch (Exception e) { engineName = &apos;unknown&apos; }
+
+String runId = vars.get(&apos;askmd_run_id&apos;)
+if (!runId) {
+    String tsMs = props.getProperty(&apos;TESTSTART.MS&apos;) ?: String.valueOf(System.currentTimeMillis())
+    long startMs
+    try { startMs = tsMs.toLong() } catch (Exception e) { startMs = System.currentTimeMillis() }
+    runId = Instant.ofEpochMilli(startMs).toString().replace(&apos;:&apos;, &apos;-&apos;).replace(&apos;.&apos;, &apos;-&apos;)
+    vars.put(&apos;askmd_run_id&apos;, runId)
+}
+
+// ---- Build JSONL Record ----
+
+Map record = [
+    schemaVersion              : &apos;2.0&apos;,
+    runId                      : runId,
+    timestamp                  : toIsoTimestamp(now),
+    timestampEpochMs           : now,
+    engine                     : engineName,
+    threadName                 : ctx.getThread().getThreadName(),
+    threadNumber               : ctx.getThreadNum(),
+    threadGroup                : ctx.getThreadGroup().getName(),
+    scenario                   : vars.get(&apos;scenario_name&apos;) ?: &apos;Clinical-Reasoning&apos;,
+    chatId                     : vars.get(&apos;chat_id&apos;) ?: vars.get(&apos;chatId&apos;) ?: &apos;&apos;,
+    question                   : vars.get(&apos;health_question&apos;) ?: &apos;&apos;,
+
+    // WebSocket
+    websocketOpenSuccess       : vars.get(&apos;websocket_open_success&apos;) == &apos;true&apos;,
+    websocketConnectionTimeMs  : wsConnectionTimeMs,
+
+    // Core timing (ms)
+    requestStartTimestampEpochMs : requestStart,
+    responseTimeMs             : responseTimeMs,
+    timeToFirstProgressMs      : timeToFirstProgressMs,
+    timeToFirstTokenMs         : timeToFirstTokenMs,
+    finalAnswerTimeToFirstTokenMs : finalAnswerTtftMs,
+    postToolTimeToFirstTokenMs : postToolTtftMs,
+    streamDurationMs           : streamDurationMs,
+    lastTokenToCompleteMs      : lastTokenToCompleteMs,
+    averageInterDeltaGapMs     : avgInterDeltaGapMs,
+    maxInterDeltaGapMs         : maxInterDeltaGap &gt; 0 ? maxInterDeltaGap : null,
+
+    // LLM metrics
+    llmPhaseCount              : llmPhaseCount,
+    llmEndCount                : llmEndCount,
+    llmDurationsMs             : llmDurationsMs,
+    totalLlmDurationMs         : totalLlmDurationMs &gt; 0 ? totalLlmDurationMs : null,
+
+    // Tool/RAG metrics
+    toolUsed                   : !toolCalls.isEmpty(),
+    toolCallCount              : toolCalls.size(),
+    toolStartCount             : toolStartCount,
+    toolEndCount               : toolEndCount,
+    toolNames                  : toolNames,
+    toolDurationsMs            : toolDurationsMs,
+    totalToolDurationMs        : totalToolDurationMs &gt; 0 ? totalToolDurationMs : null,
+    toolFailureCount           : toolFailureCount,
+
+    // Message counters
+    totalMessageCount          : totalMessageCount,
+    progressMessageCount       : progressMessageCount,
+    messageDeltaCount          : deltaMessageCount,
+    emptyDeltaCount            : emptyDeltaCount,
+    citationCount              : citationCount,
+    totalResponseBytes         : totalResponseBytes,
+
+    // Error counters
+    applicationErrorCount      : appErrorCount,
+    malformedMessageCount      : malformedCount,
+    processingErrorCount       : processingErrCount,
+
+    // Concurrency context
+    activeThreadsInGroup       : ctx.getThreadGroup().getNumberOfThreads(),
+    activeThreadsTotal         : org.apache.jmeter.threads.JMeterContextService.getTotalThreads(),
+
+    // Status
+    messageCompleteReceived    : completed,
+    timeout                    : timeout,
+    readLimitReached           : readLimitReached,
+    businessStatus             : businessStatus,
+    technicalStatus            : technicalStatus
+]
+
+String jsonLine = JsonOutput.toJson(record)
+
+// ---- Write to File ----
+
+String outputDir = props.getProperty(&apos;report.output.dir&apos;)
+if (!outputDir) {
+    outputDir = System.getProperty(&apos;user.dir&apos;) + File.separator + &apos;report-results&apos;
+}
+
+String safeRunId = runId.replaceAll(&apos;[^A-Za-z0-9._-]&apos;, &apos;_&apos;)
+String safeEngine = engineName.replaceAll(&apos;[^A-Za-z0-9._-]&apos;, &apos;_&apos;)
+String fileName = &quot;askmd_report_${safeRunId}.jsonl&quot;
+
+Path outputPath = Paths.get(outputDir, fileName)
+Path parentDir = outputPath.getParent()
+if (parentDir != null) Files.createDirectories(parentDir)
+
+String absPath = outputPath.toAbsolutePath().normalize().toString()
+String lockKey = &apos;REPORT_JSONL_LOCK_&apos; + absPath
+
+Object fileLock = props.get(lockKey)
+if (fileLock == null) {
+    synchronized (props) {
+        fileLock = props.get(lockKey)
+        if (fileLock == null) {
+            fileLock = new Object()
+            props.put(lockKey, fileLock)
+        }
+    }
+}
+
+synchronized (fileLock) {
+    Files.write(
+        outputPath,
+        (jsonLine + System.lineSeparator()).getBytes(StandardCharsets.UTF_8),
+        StandardOpenOption.CREATE,
+        StandardOpenOption.APPEND
+    )
+}
+
+// ---- Sampler Result ----
+
+SampleResult.setResponseData(jsonLine, &apos;UTF-8&apos;)
+SampleResult.setResponseCode(&apos;200&apos;)
+SampleResult.setResponseMessage(
+    &quot;Report JSONL written | TTFT: ${timeToFirstTokenMs ?: &apos;N/A&apos;}ms | &quot; +
+    &quot;Response: ${responseTimeMs ?: &apos;N/A&apos;}ms | Status: ${technicalStatus} | &quot; +
+    &quot;File: ${absPath}&quot;
+)
+SampleResult.setSuccessful(true)
+
+log.info(&quot;Report JSONL written to: ${absPath}&quot;)</stringProp>
+        </JSR223Sampler>
+        <hashTree/>
+        <eu.luminis.jmeter.wssampler.CloseWebSocketSampler guiclass="eu.luminis.jmeter.wssampler.CloseWebSocketSamplerGui" testclass="eu.luminis.jmeter.wssampler.CloseWebSocketSampler" testname="AI_Chat_04_WebSocket_Close" enabled="true">
+          <stringProp name="statusCode">1000</stringProp>
+          <stringProp name="readTimeout">20000</stringProp>
+        </eu.luminis.jmeter.wssampler.CloseWebSocketSampler>
+        <hashTree/>
+        <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Think Time" enabled="true">
+          <intProp name="ActionProcessor.action">1</intProp>
+          <intProp name="ActionProcessor.target">0</intProp>
+          <stringProp name="ActionProcessor.duration">2000</stringProp>
+        </TestAction>
+        <hashTree>
+          <UniformRandomTimer guiclass="UniformRandomTimerGui" testclass="UniformRandomTimer" testname="Pause" enabled="true">
+            <stringProp name="ConstantTimer.delay">1000</stringProp>
+            <stringProp name="RandomTimer.range">100</stringProp>
+          </UniformRandomTimer>
+          <hashTree/>
+        </hashTree>
+      </hashTree>
+      <com.blazemeter.jmeter.threads.concurrency.ConcurrencyThreadGroup guiclass="com.blazemeter.jmeter.threads.concurrency.ConcurrencyThreadGroupGui" testclass="com.blazemeter.jmeter.threads.concurrency.ConcurrencyThreadGroup" testname="bzm - Concurrency Thread Group" enabled="false">
+        <elementProp name="ThreadGroup.main_controller" elementType="com.blazemeter.jmeter.control.VirtualUserController"/>
+        <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
+        <stringProp name="TargetLevel">150</stringProp>
+        <stringProp name="RampUp">15</stringProp>
+        <stringProp name="Steps">6</stringProp>
+        <stringProp name="Hold">30</stringProp>
+        <stringProp name="LogFilename"></stringProp>
+        <stringProp name="Iterations"></stringProp>
+        <boolProp name="same_user_on_next_iteration">false</boolProp>
+        <stringProp name="Unit">M</stringProp>
+      </com.blazemeter.jmeter.threads.concurrency.ConcurrencyThreadGroup>
+      <hashTree>
+        <eu.luminis.jmeter.wssampler.OpenWebSocketSampler guiclass="eu.luminis.jmeter.wssampler.OpenWebSocketSamplerGui" testclass="eu.luminis.jmeter.wssampler.OpenWebSocketSampler" testname="AI_Chat_01_WebSocket_Open_Connection" enabled="true">
+          <boolProp name="TLS">true</boolProp>
+          <stringProp name="server">${HOST}</stringProp>
+          <stringProp name="port">443</stringProp>
+          <stringProp name="path">/agent?chat_id=${chatId}&amp;client_source=askmdbrowser</stringProp>
+          <stringProp name="connectTimeout">30000</stringProp>
+          <stringProp name="readTimeout">30000</stringProp>
+        </eu.luminis.jmeter.wssampler.OpenWebSocketSampler>
+        <hashTree>
+          <JSR223PostProcessor guiclass="TestBeanGUI" testclass="JSR223PostProcessor" testname="Register WebSocket Connection" enabled="true">
+            <stringProp name="scriptLanguage">groovy</stringProp>
+            <stringProp name="parameters"></stringProp>
+            <stringProp name="filename"></stringProp>
+            <stringProp name="cacheKey">true</stringProp>
+            <stringProp name="script">import java.net.URLDecoder
+import java.util.UUID
+
+long receivedTimestamp =
+    prev.getEndTime() &gt; 0L
+        ? prev.getEndTime()
+        : System.currentTimeMillis()
+
+if (prev.isSuccessful()) {
+
+    vars.put(
+        &apos;websocket_connection_id&apos;,
+        UUID.randomUUID().toString()
+    )
+
+    vars.put(
+        &apos;websocket_open_timestamp&apos;,
+        String.valueOf(receivedTimestamp)
+    )
+
+    vars.put(
+        &apos;websocket_open_success&apos;,
+        &apos;true&apos;
+    )
+
+    String samplerData =
+        prev.getSamplerData() ?: &apos;&apos;
+
+    vars.put(
+        &apos;websocket_sampler_data&apos;,
+        samplerData
+    )
+
+    def chatIdMatcher =
+        samplerData =~ /[?&amp;]chat_id=([^&amp;\s]+)/
+
+    if (chatIdMatcher.find()) {
+
+        vars.put(
+            &apos;chat_id&apos;,
+            URLDecoder.decode(
+                chatIdMatcher.group(1),
+                &apos;UTF-8&apos;
+            )
+        )
+
+    } else {
+
+        vars.put(&apos;chat_id&apos;, &apos;&apos;)
+    }
+
+    def urlMatcher =
+        samplerData =~ /(wss?:\/\/[^\s]+)/
+
+    if (urlMatcher.find()) {
+
+        vars.put(
+            &apos;websocket_url&apos;,
+            urlMatcher.group(1)
+        )
+
+    } else {
+
+        vars.put(&apos;websocket_url&apos;, &apos;&apos;)
+    }
+
+} else {
+
+    vars.put(
+        &apos;websocket_open_success&apos;,
+        &apos;false&apos;
+    )
+
+    vars.put(
+        &apos;websocket_connection_id&apos;,
+        &apos;&apos;
+    )
+
+    vars.put(&apos;chat_id&apos;, &apos;&apos;)
+    vars.put(&apos;websocket_url&apos;, &apos;&apos;)
+}</stringProp>
+          </JSR223PostProcessor>
+          <hashTree/>
+        </hashTree>
+        <JSR223Sampler guiclass="TestBeanGUI" testclass="JSR223Sampler" testname="zJSR223 Sampler - Initialize Variables" enabled="true">
+          <stringProp name="cacheKey">true</stringProp>
+          <stringProp name="filename"></stringProp>
+          <stringProp name="parameters"></stringProp>
+          <stringProp name="script">vars.put(&quot;last_message&quot;, &quot;START&quot;)
+vars.put(&apos;request_start&apos;, String.valueOf(System.currentTimeMillis()))
+vars.put(&apos;first_token_received&apos;, &apos;false&apos;)
+vars.put(&quot;loop_counter&quot;, &quot;0&quot;)</stringProp>
+          <stringProp name="scriptLanguage">groovy</stringProp>
+        </JSR223Sampler>
+        <hashTree/>
+        <JSR223Sampler guiclass="TestBeanGUI" testclass="JSR223Sampler" testname="Register WebSocket Connection" enabled="true">
+          <stringProp name="scriptLanguage">groovy</stringProp>
+          <stringProp name="parameters"></stringProp>
+          <stringProp name="filename"></stringProp>
+          <stringProp name="cacheKey">true</stringProp>
+          <stringProp name="script">import java.time.Instant
+import java.util.UUID
+
+/*
+ * ============================================================
+ * Run identification
+ * ============================================================
+ *
+ * TESTSTART.MS is shared by all threads in the same JMeter
+ * execution. A new test execution receives a new run ID.
+ */
+
+String testStartValue =
+    props.getProperty(&apos;TESTSTART.MS&apos;) ?:
+    String.valueOf(System.currentTimeMillis())
+
+long testStartEpochMs
+
+try {
+
+    testStartEpochMs =
+        testStartValue.toLong()
+
+} catch (Exception ignored) {
+
+    testStartEpochMs =
+        System.currentTimeMillis()
+}
+
+String runId =
+    Instant
+        .ofEpochMilli(testStartEpochMs)
+        .toString()
+        .replace(&apos;:&apos;, &apos;-&apos;)
+        .replace(&apos;.&apos;, &apos;-&apos;)
+
+vars.put(
+    &apos;askmd_run_id&apos;,
+    runId
+)
+
+/*
+ * ============================================================
+ * Request identification
+ * ============================================================
+ */
+
+long requestStart =
+    System.currentTimeMillis()
+
+String healthQuestion =
+    vars.get(&apos;health_question&apos;) ?: &apos;&apos;
+
+vars.put(
+    &apos;chatbot_record_id&apos;,
+    UUID.randomUUID().toString()
+)
+
+vars.put(
+    &apos;chatbot_question&apos;,
+    healthQuestion
+)
+
+vars.put(
+    &apos;scenario_name&apos;,
+    vars.get(&apos;scenario_name&apos;) ?:
+    &apos;Clinical-Reasoning&apos;
+)
+
+vars.put(
+    &apos;transaction_name&apos;,
+    vars.get(&apos;transaction_name&apos;) ?:
+    &apos;AI Chat Question&apos;
+)
+
+/*
+ * ============================================================
+ * Main timing
+ * ============================================================
+ */
+
+vars.put(
+    &apos;request_start&apos;,
+    String.valueOf(requestStart)
+)
+
+vars.put(&apos;first_progress_timestamp&apos;, &apos;&apos;)
+vars.put(&apos;first_token_timestamp&apos;, &apos;&apos;)
+vars.put(&apos;last_token_timestamp&apos;, &apos;&apos;)
+vars.put(&apos;message_complete_timestamp&apos;, &apos;&apos;)
+
+/*
+ * ============================================================
+ * Loop control
+ * ============================================================
+ */
+
+vars.put(&apos;stream_stop&apos;, &apos;false&apos;)
+vars.put(&apos;message_complete_received&apos;, &apos;false&apos;)
+vars.put(&apos;last_message_type&apos;, &apos;&apos;)
+vars.put(&apos;last_message&apos;, &apos;START&apos;)
+vars.put(&apos;loop_counter&apos;, &apos;0&apos;)
+
+/*
+ * ============================================================
+ * TTFT state
+ * ============================================================
+ */
+
+vars.put(&apos;first_token_received&apos;, &apos;false&apos;)
+vars.put(&apos;ttft&apos;, &apos;&apos;)
+
+/*
+ * ============================================================
+ * Message counters
+ * ============================================================
+ */
+
+vars.put(&apos;total_message_count&apos;, &apos;0&apos;)
+vars.put(&apos;total_response_bytes&apos;, &apos;0&apos;)
+
+vars.put(&apos;progress_message_count&apos;, &apos;0&apos;)
+vars.put(&apos;delta_message_count&apos;, &apos;0&apos;)
+vars.put(&apos;empty_delta_count&apos;, &apos;0&apos;)
+
+vars.put(&apos;llm_end_count&apos;, &apos;0&apos;)
+
+vars.put(&apos;tool_start_count&apos;, &apos;0&apos;)
+vars.put(&apos;tool_end_count&apos;, &apos;0&apos;)
+vars.put(&apos;message_content_count&apos;, &apos;0&apos;)
+
+vars.put(&apos;citation_message_count&apos;, &apos;0&apos;)
+vars.put(&apos;citation_count&apos;, &apos;0&apos;)
+
+vars.put(&apos;ping_message_count&apos;, &apos;0&apos;)
+vars.put(&apos;pong_message_count&apos;, &apos;0&apos;)
+
+vars.put(&apos;malformed_message_count&apos;, &apos;0&apos;)
+vars.put(&apos;processing_error_count&apos;, &apos;0&apos;)
+vars.put(&apos;unknown_message_count&apos;, &apos;0&apos;)
+
+vars.put(&apos;application_error_count&apos;, &apos;0&apos;)
+vars.put(&apos;application_error_received&apos;, &apos;false&apos;)
+
+/*
+ * ============================================================
+ * Streaming timing
+ * ============================================================
+ */
+
+vars.put(&apos;previous_delta_timestamp&apos;, &apos;&apos;)
+vars.put(&apos;inter_delta_gap_sum_ms&apos;, &apos;0&apos;)
+vars.put(&apos;inter_delta_gap_count&apos;, &apos;0&apos;)
+vars.put(&apos;max_inter_delta_gap_ms&apos;, &apos;0&apos;)
+
+/*
+ * ============================================================
+ * Phase and tool state
+ * ============================================================
+ */
+
+vars.put(&apos;current_llm_phase&apos;, &apos;1&apos;)
+vars.put(&apos;active_tool_index&apos;, &apos;-1&apos;)
+
+/*
+ * ============================================================
+ * Structured objects
+ * ============================================================
+ */
+
+vars.putObject(
+    &apos;message_type_counts&apos;,
+    new LinkedHashMap()
+)
+
+vars.putObject(
+    &apos;progress_events&apos;,
+    new ArrayList()
+)
+
+vars.putObject(
+    &apos;llm_phases&apos;,
+    new ArrayList()
+)
+
+vars.putObject(
+    &apos;tool_calls&apos;,
+    new ArrayList()
+)
+
+vars.putObject(
+    &apos;content_items&apos;,
+    new ArrayList()
+)
+
+vars.putObject(
+    &apos;citations&apos;,
+    new ArrayList()
+)
+
+vars.putObject(
+    &apos;application_errors&apos;,
+    new ArrayList()
+)
+
+vars.putObject(
+    &apos;processing_errors&apos;,
+    new ArrayList()
+)
+
+SampleResult.setResponseCode(&apos;200&apos;)
+
+SampleResult.setResponseMessage(
+    &apos;Chat transaction initialised&apos;
+)
+
+SampleResult.setSuccessful(true)</stringProp>
+        </JSR223Sampler>
+        <hashTree/>
+        <eu.luminis.jmeter.wssampler.RequestResponseWebSocketSampler guiclass="eu.luminis.jmeter.wssampler.RequestResponseWebSocketSamplerGui" testclass="eu.luminis.jmeter.wssampler.RequestResponseWebSocketSampler" testname="AI_Chat_02_WebSocket_request-response_Sampler" enabled="true">
+          <boolProp name="createNewConnection">false</boolProp>
+          <boolProp name="TLS">false</boolProp>
+          <stringProp name="server"></stringProp>
+          <stringProp name="port">80</stringProp>
+          <stringProp name="path"></stringProp>
+          <stringProp name="payloadType">Text</stringProp>
+          <stringProp name="requestData">{
+    &quot;user_message&quot;: &quot;${health_question}&quot;,
+    &quot;debug&quot;: true
+}</stringProp>
+          <stringProp name="readTimeout">30000</stringProp>
+          <boolProp name="loadDataFromFile">false</boolProp>
+          <stringProp name="dataFile"></stringProp>
+          <boolProp name="binaryPayload">false</boolProp>
+          <stringProp name="connectTimeout">20000</stringProp>
+        </eu.luminis.jmeter.wssampler.RequestResponseWebSocketSampler>
+        <hashTree>
+          <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Response Assertion" enabled="true">
+            <collectionProp name="Asserion.test_strings">
+              <stringProp name="-564821680">&quot;type&quot;: &quot;error&quot;</stringProp>
+            </collectionProp>
+            <stringProp name="Assertion.custom_message"></stringProp>
+            <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+            <boolProp name="Assertion.assume_success">false</boolProp>
+            <intProp name="Assertion.test_type">6</intProp>
+          </ResponseAssertion>
+          <hashTree/>
+          <JSR223PostProcessor guiclass="TestBeanGUI" testclass="JSR223PostProcessor" testname="AI_Chat_02_WebSocket_Request-Response" enabled="true">
+            <stringProp name="scriptLanguage">groovy</stringProp>
+            <stringProp name="parameters"></stringProp>
+            <stringProp name="filename"></stringProp>
+            <stringProp name="cacheKey">true</stringProp>
+            <stringProp name="script">import groovy.json.JsonSlurper
+
+/*
+ * ============================================================
+ * Helper functions
+ * ============================================================
+ */
+
+def toLongSafe = {
+    Object value,
+    long defaultValue = 0L -&gt;
+
+    if (
+        value == null ||
+        value.toString().trim().isEmpty()
+    ) {
+        return defaultValue
+    }
+
+    try {
+
+        return value
+            .toString()
+            .toLong()
+
+    } catch (Exception ignored) {
+
+        return defaultValue
+    }
+}
+
+def toIntSafe = {
+    Object value,
+    int defaultValue = 0 -&gt;
+
+    if (
+        value == null ||
+        value.toString().trim().isEmpty()
+    ) {
+        return defaultValue
+    }
+
+    try {
+
+        return value
+            .toString()
+            .toInteger()
+
+    } catch (Exception ignored) {
+
+        return defaultValue
+    }
+}
+
+def increment = {
+    String variableName,
+    long amount = 1L -&gt;
+
+    long currentValue =
+        toLongSafe(
+            vars.get(variableName),
+            0L
+        )
+
+    vars.put(
+        variableName,
+        String.valueOf(
+            currentValue + amount
+        )
+    )
+}
+
+/*
+ * Find or create an LLM phase.
+ */
+def getOrCreatePhase = {
+    int phaseNumber -&gt;
+
+    Object phaseListObject =
+        vars.getObject(&apos;llm_phases&apos;)
+
+    List phases =
+        phaseListObject instanceof List
+            ? (List) phaseListObject
+            : new ArrayList()
+
+    if (!(phaseListObject instanceof List)) {
+
+        vars.putObject(
+            &apos;llm_phases&apos;,
+            phases
+        )
+    }
+
+    Map matchedPhase = null
+
+    for (Object phaseObject : phases) {
+
+        if (!(phaseObject instanceof Map)) {
+            continue
+        }
+
+        Map phase =
+            (Map) phaseObject
+
+        int storedPhaseNumber =
+            toIntSafe(
+                phase.get(&apos;phaseNumber&apos;),
+                0
+            )
+
+        if (storedPhaseNumber == phaseNumber) {
+
+            matchedPhase = phase
+            break
+        }
+    }
+
+    if (matchedPhase == null) {
+
+        matchedPhase = [
+            phaseNumber         : phaseNumber,
+            deltaCount          : 0L,
+            firstDeltaTimestamp : null,
+            lastDeltaTimestamp  : null,
+            llmDurationMs       : null,
+            llmEndTimestamp     : null,
+            deltaParts          : new ArrayList()
+        ]
+
+        phases.add(matchedPhase)
+    }
+
+    return matchedPhase
+}
+
+/*
+ * ============================================================
+ * Read WebSocket response
+ * ============================================================
+ */
+
+String response =
+    prev.getResponseDataAsString()
+
+response =
+    response == null
+        ? &apos;&apos;
+        : response.trim()
+
+vars.put(
+    &apos;last_message&apos;,
+    response
+)
+
+String samplerName =
+    prev.getSampleLabel() ?: &apos;&apos;
+
+/*
+ * Increment the read-loop counter only for Single Read.
+ */
+if (samplerName.contains(&apos;Single_Read&apos;)) {
+
+    increment(&apos;loop_counter&apos;)
+}
+
+if (response.isEmpty()) {
+    return
+}
+
+long receivedTimestamp =
+    prev.getEndTime() &gt; 0L
+        ? prev.getEndTime()
+        : System.currentTimeMillis()
+
+/*
+ * ============================================================
+ * Early message_complete detection
+ * ============================================================
+ *
+ * This executes before JSON parsing and metric processing.
+ */
+
+String compactResponse =
+    response.replaceAll(
+        &apos;\\s+&apos;,
+        &apos;&apos;
+    )
+
+if (
+    compactResponse.contains(
+        &apos;&quot;type&quot;:&quot;message_complete&quot;&apos;
+    )
+) {
+
+    vars.put(
+        &apos;stream_stop&apos;,
+        &apos;true&apos;
+    )
+
+    vars.put(
+        &apos;message_complete_received&apos;,
+        &apos;true&apos;
+    )
+
+    vars.put(
+        &apos;last_message_type&apos;,
+        &apos;message_complete&apos;
+    )
+
+    vars.put(
+        &apos;message_complete_timestamp&apos;,
+        String.valueOf(
+            receivedTimestamp
+        )
+    )
+
+    log.info(
+        &apos;AskMD message_complete detected from raw response.&apos;
+    )
+}
+
+increment(
+    &apos;total_message_count&apos;
+)
+
+increment(
+    &apos;total_response_bytes&apos;,
+    response.getBytes(&apos;UTF-8&apos;).length
+)
+
+/*
+ * ============================================================
+ * Parse JSON
+ * ============================================================
+ */
+
+Object parsedResponse
+
+try {
+
+    parsedResponse =
+        new JsonSlurper()
+            .parseText(response)
+
+} catch (Exception parseException) {
+
+    increment(
+        &apos;malformed_message_count&apos;
+    )
+
+    log.error(
+        &apos;Malformed WebSocket JSON. &apos; +
+        &apos;Sampler=&apos; + samplerName +
+        &apos;, response=&apos; + response,
+        parseException
+    )
+
+    return
+}
+
+if (!(parsedResponse instanceof Map)) {
+
+    increment(
+        &apos;malformed_message_count&apos;
+    )
+
+    log.error(
+        &apos;WebSocket response is not a JSON object. &apos; +
+        &apos;Sampler=&apos; + samplerName +
+        &apos;, response=&apos; + response
+    )
+
+    return
+}
+
+Map json =
+    (Map) parsedResponse
+
+String messageType =
+    json.get(&apos;type&apos;)
+        ?.toString() ?: &apos;unknown&apos;
+
+vars.put(
+    &apos;last_message_type&apos;,
+    messageType
+)
+
+/*
+ * ============================================================
+ * Dynamic message-type count
+ * ============================================================
+ */
+
+Object countsObject =
+    vars.getObject(
+        &apos;message_type_counts&apos;
+    )
+
+Map messageTypeCounts =
+    countsObject instanceof Map
+        ? (Map) countsObject
+        : new LinkedHashMap()
+
+if (!(countsObject instanceof Map)) {
+
+    vars.putObject(
+        &apos;message_type_counts&apos;,
+        messageTypeCounts
+    )
+}
+
+int currentTypeCount =
+    toIntSafe(
+        messageTypeCounts.get(messageType),
+        0
+    )
+
+messageTypeCounts.put(
+    messageType,
+    currentTypeCount + 1
+)
+
+/*
+ * ============================================================
+ * Process WebSocket message
+ * ============================================================
+ */
+
+try {
+
+    switch (messageType) {
+
+        case &apos;message_progress&apos;:
+
+            increment(
+                &apos;progress_message_count&apos;
+            )
+
+            if (
+                !vars.get(
+                    &apos;first_progress_timestamp&apos;
+                )
+            ) {
+
+                vars.put(
+                    &apos;first_progress_timestamp&apos;,
+                    String.valueOf(
+                        receivedTimestamp
+                    )
+                )
+            }
+
+            Object progressObject =
+                vars.getObject(
+                    &apos;progress_events&apos;
+                )
+
+            List progressEvents =
+                progressObject instanceof List
+                    ? (List) progressObject
+                    : new ArrayList()
+
+            if (!(progressObject instanceof List)) {
+
+                vars.putObject(
+                    &apos;progress_events&apos;,
+                    progressEvents
+                )
+            }
+
+            progressEvents.add([
+                timestamp:
+                    receivedTimestamp,
+
+                title:
+                    json.get(&apos;title&apos;)
+                        ?.toString() ?: &apos;&apos;,
+
+                status:
+                    json.get(&apos;status&apos;)
+                        ?.toString() ?: &apos;&apos;,
+
+                showTimer:
+                    json.get(&apos;show_timer&apos;) == true
+            ])
+
+            break
+
+        case &apos;message_delta&apos;:
+
+            increment(
+                &apos;delta_message_count&apos;
+            )
+
+            String delta =
+                json.get(&apos;delta&apos;) == null
+                    ? &apos;&apos;
+                    : json.get(&apos;delta&apos;).toString()
+
+            if (delta.isEmpty()) {
+
+                increment(
+                    &apos;empty_delta_count&apos;
+                )
+            }
+
+            int currentPhaseNumber =
+                toIntSafe(
+                    vars.get(
+                        &apos;current_llm_phase&apos;
+                    ),
+                    1
+                )
+
+            Map currentPhase =
+                getOrCreatePhase(
+                    currentPhaseNumber
+                )
+
+            long phaseDeltaCount =
+                toLongSafe(
+                    currentPhase.get(
+                        &apos;deltaCount&apos;
+                    ),
+                    0L
+                )
+
+            currentPhase.put(
+                &apos;deltaCount&apos;,
+                phaseDeltaCount + 1L
+            )
+
+            if (
+                currentPhase.get(
+                    &apos;firstDeltaTimestamp&apos;
+                ) == null
+            ) {
+
+                currentPhase.put(
+                    &apos;firstDeltaTimestamp&apos;,
+                    receivedTimestamp
+                )
+            }
+
+            currentPhase.put(
+                &apos;lastDeltaTimestamp&apos;,
+                receivedTimestamp
+            )
+
+            Object deltaPartsObject =
+                currentPhase.get(
+                    &apos;deltaParts&apos;
+                )
+
+            List deltaParts =
+                deltaPartsObject instanceof List
+                    ? (List) deltaPartsObject
+                    : new ArrayList()
+
+            if (!(deltaPartsObject instanceof List)) {
+
+                currentPhase.put(
+                    &apos;deltaParts&apos;,
+                    deltaParts
+                )
+            }
+
+            deltaParts.add(delta)
+
+            /*
+             * Overall TTFT
+             */
+            if (
+                vars.get(
+                    &apos;first_token_received&apos;
+                ) != &apos;true&apos;
+            ) {
+
+                long requestStart =
+                    toLongSafe(
+                        vars.get(
+                            &apos;request_start&apos;
+                        ),
+                        0L
+                    )
+
+                if (requestStart &gt; 0L) {
+
+                    long ttft =
+                        Math.max(
+                            0L,
+                            receivedTimestamp -
+                            requestStart
+                        )
+
+                    vars.put(
+                        &apos;ttft&apos;,
+                        String.valueOf(ttft)
+                    )
+
+                    vars.put(
+                        &apos;first_token_timestamp&apos;,
+                        String.valueOf(
+                            receivedTimestamp
+                        )
+                    )
+                }
+
+                vars.put(
+                    &apos;first_token_received&apos;,
+                    &apos;true&apos;
+                )
+            }
+
+            vars.put(
+                &apos;last_token_timestamp&apos;,
+                String.valueOf(
+                    receivedTimestamp
+                )
+            )
+
+            /*
+             * Inter-delta gap
+             */
+            long previousDeltaTimestamp =
+                toLongSafe(
+                    vars.get(
+                        &apos;previous_delta_timestamp&apos;
+                    ),
+                    0L
+                )
+
+            if (previousDeltaTimestamp &gt; 0L) {
+
+                long gap =
+                    receivedTimestamp -
+                    previousDeltaTimestamp
+
+                if (gap &gt;= 0L) {
+
+                    increment(
+                        &apos;inter_delta_gap_sum_ms&apos;,
+                        gap
+                    )
+
+                    increment(
+                        &apos;inter_delta_gap_count&apos;
+                    )
+
+                    long currentMaximum =
+                        toLongSafe(
+                            vars.get(
+                                &apos;max_inter_delta_gap_ms&apos;
+                            ),
+                            0L
+                        )
+
+                    if (gap &gt; currentMaximum) {
+
+                        vars.put(
+                            &apos;max_inter_delta_gap_ms&apos;,
+                            String.valueOf(gap)
+                        )
+                    }
+                }
+            }
+
+            vars.put(
+                &apos;previous_delta_timestamp&apos;,
+                String.valueOf(
+                    receivedTimestamp
+                )
+            )
+
+            break
+
+        case &apos;llm_end&apos;:
+
+            increment(
+                &apos;llm_end_count&apos;
+            )
+
+            int currentPhaseNumber =
+                toIntSafe(
+                    vars.get(
+                        &apos;current_llm_phase&apos;
+                    ),
+                    1
+                )
+
+            Map currentPhase =
+                getOrCreatePhase(
+                    currentPhaseNumber
+                )
+
+            if (
+                json.get(&apos;duration_ms&apos;) != null
+            ) {
+
+                currentPhase.put(
+                    &apos;llmDurationMs&apos;,
+                    toLongSafe(
+                        json.get(&apos;duration_ms&apos;),
+                        0L
+                    )
+                )
+            }
+
+            currentPhase.put(
+                &apos;llmEndTimestamp&apos;,
+                receivedTimestamp
+            )
+
+            vars.put(
+                &apos;current_llm_phase&apos;,
+                String.valueOf(
+                    currentPhaseNumber + 1
+                )
+            )
+
+            /*
+             * Do not include the pause between phases
+             * in token-stream gap metrics.
+             */
+            vars.put(
+                &apos;previous_delta_timestamp&apos;,
+                &apos;&apos;
+            )
+
+            break
+
+        case &apos;tool_start&apos;:
+
+            increment(
+                &apos;tool_start_count&apos;
+            )
+
+            Object toolListObject =
+                vars.getObject(&apos;tool_calls&apos;)
+
+            List toolCalls =
+                toolListObject instanceof List
+                    ? (List) toolListObject
+                    : new ArrayList()
+
+            if (!(toolListObject instanceof List)) {
+
+                vars.putObject(
+                    &apos;tool_calls&apos;,
+                    toolCalls
+                )
+            }
+
+            Map toolInput =
+                json.get(&apos;tool_input&apos;)
+                    instanceof Map
+                    ? new LinkedHashMap(
+                        (Map) json.get(
+                            &apos;tool_input&apos;
+                        )
+                    )
+                    : [:]
+
+            Map toolCall = [
+                toolIndex:
+                    toolCalls.size() + 1,
+
+                toolName:
+                    json.get(&apos;tool_name&apos;)
+                        ?.toString() ?: &apos;&apos;,
+
+                startTimestamp:
+                    receivedTimestamp,
+
+                endTimestamp:
+                    null,
+
+                durationMs:
+                    null,
+
+                status:
+                    &apos;&apos;,
+
+                input:
+                    toolInput,
+
+                output:
+                    [:],
+
+                contentItems:
+                    new ArrayList()
+            ]
+
+            toolCalls.add(toolCall)
+
+            vars.put(
+                &apos;active_tool_index&apos;,
+                String.valueOf(
+                    toolCalls.size() - 1
+                )
+            )
+
+            break
+
+        case &apos;message_content&apos;:
+
+            increment(
+                &apos;message_content_count&apos;
+            )
+
+            Object contentListObject =
+                vars.getObject(
+                    &apos;content_items&apos;
+                )
+
+            List contentItems =
+                contentListObject instanceof List
+                    ? (List) contentListObject
+                    : new ArrayList()
+
+            if (!(contentListObject instanceof List)) {
+
+                vars.putObject(
+                    &apos;content_items&apos;,
+                    contentItems
+                )
+            }
+
+            Object toolListObject =
+                vars.getObject(&apos;tool_calls&apos;)
+
+            List toolCalls =
+                toolListObject instanceof List
+                    ? (List) toolListObject
+                    : []
+
+            int activeToolIndex =
+                toIntSafe(
+                    vars.get(
+                        &apos;active_tool_index&apos;
+                    ),
+                    -1
+                )
+
+            Object responseContent =
+                json.get(&apos;content&apos;)
+
+            if (
+                responseContent
+                    instanceof Collection
+            ) {
+
+                for (
+                    Object itemObject :
+                    (Collection) responseContent
+                ) {
+
+                    if (!(itemObject instanceof Map)) {
+                        continue
+                    }
+
+                    Map item =
+                        (Map) itemObject
+
+                    Map contentSummary = [
+                        id:
+                            item.get(&apos;id&apos;)
+                                ?.toString() ?: &apos;&apos;,
+
+                        score:
+                            item.get(&apos;score&apos;),
+
+                        contentType:
+                            item.get(&apos;type&apos;)
+                                ?.toString() ?: &apos;&apos;,
+
+                        title:
+                            item.get(&apos;title&apos;)
+                                ?.toString() ?: &apos;&apos;,
+
+                        description:
+                            item.get(&apos;description&apos;)
+                                ?.toString() ?: &apos;&apos;,
+
+                        url:
+                            item.get(&apos;url&apos;)
+                                ?.toString() ?: &apos;&apos;,
+
+                        duration:
+                            item.get(&apos;duration&apos;)
+                    ]
+
+                    contentItems.add(
+                        contentSummary
+                    )
+
+                    if (
+                        activeToolIndex &gt;= 0 &amp;&amp;
+                        activeToolIndex &lt;
+                            toolCalls.size()
+                    ) {
+
+                        Object activeToolObject =
+                            toolCalls.get(
+                                activeToolIndex
+                            )
+
+                        if (
+                            activeToolObject
+                                instanceof Map
+                        ) {
+
+                            Map activeTool =
+                                (Map) activeToolObject
+
+                            Object toolContentObject =
+                                activeTool.get(
+                                    &apos;contentItems&apos;
+                                )
+
+                            List toolContentItems =
+                                toolContentObject instanceof List
+                                    ? (List) toolContentObject
+                                    : new ArrayList()
+
+                            if (
+                                !(toolContentObject
+                                    instanceof List)
+                            ) {
+
+                                activeTool.put(
+                                    &apos;contentItems&apos;,
+                                    toolContentItems
+                                )
+                            }
+
+                            toolContentItems.add(
+                                contentSummary
+                            )
+                        }
+                    }
+                }
+            }
+
+            break
+
+        case &apos;tool_end&apos;:
+
+            increment(
+                &apos;tool_end_count&apos;
+            )
+
+            Object toolListObject =
+                vars.getObject(&apos;tool_calls&apos;)
+
+            List toolCalls =
+                toolListObject instanceof List
+                    ? (List) toolListObject
+                    : []
+
+            int activeToolIndex =
+                toIntSafe(
+                    vars.get(
+                        &apos;active_tool_index&apos;
+                    ),
+                    -1
+                )
+
+            Map activeTool = null
+
+            if (
+                activeToolIndex &gt;= 0 &amp;&amp;
+                activeToolIndex &lt;
+                    toolCalls.size()
+            ) {
+
+                Object activeToolObject =
+                    toolCalls.get(
+                        activeToolIndex
+                    )
+
+                if (
+                    activeToolObject
+                        instanceof Map
+                ) {
+
+                    activeTool =
+                        (Map) activeToolObject
+                }
+            }
+
+            if (activeTool == null) {
+
+                for (
+                    int index =
+                        toolCalls.size() - 1;
+                    index &gt;= 0;
+                    index--
+                ) {
+
+                    Object candidateObject =
+                        toolCalls.get(index)
+
+                    if (
+                        !(candidateObject
+                            instanceof Map)
+                    ) {
+                        continue
+                    }
+
+                    Map candidate =
+                        (Map) candidateObject
+
+                    if (
+                        candidate.get(
+                            &apos;endTimestamp&apos;
+                        ) == null
+                    ) {
+
+                        activeTool = candidate
+                        break
+                    }
+                }
+            }
+
+            if (activeTool != null) {
+
+                activeTool.put(
+                    &apos;endTimestamp&apos;,
+                    receivedTimestamp
+                )
+
+                activeTool.put(
+                    &apos;durationMs&apos;,
+                    json.get(&apos;duration_ms&apos;) != null
+                        ? toLongSafe(
+                            json.get(&apos;duration_ms&apos;),
+                            0L
+                        )
+                        : null
+                )
+
+                Map toolOutput =
+                    json.get(&apos;tool_output&apos;)
+                        instanceof Map
+                        ? new LinkedHashMap(
+                            (Map) json.get(
+                                &apos;tool_output&apos;
+                            )
+                        )
+                        : [:]
+
+                activeTool.put(
+                    &apos;output&apos;,
+                    toolOutput
+                )
+
+                activeTool.put(
+                    &apos;status&apos;,
+                    toolOutput.get(&apos;status&apos;)
+                        ?.toString() ?: &apos;&apos;
+                )
+            }
+
+            vars.put(
+                &apos;active_tool_index&apos;,
+                &apos;-1&apos;
+            )
+
+            break
+
+        case &apos;message_citation&apos;:
+
+            increment(
+                &apos;citation_message_count&apos;
+            )
+
+            Object citationListObject =
+                vars.getObject(&apos;citations&apos;)
+
+            List capturedCitations =
+                citationListObject instanceof List
+                    ? (List) citationListObject
+                    : new ArrayList()
+
+            if (!(citationListObject instanceof List)) {
+
+                vars.putObject(
+                    &apos;citations&apos;,
+                    capturedCitations
+                )
+            }
+
+            Object citationResponseObject =
+                json.get(&apos;citations&apos;)
+
+            Collection responseCitations =
+                citationResponseObject instanceof Collection
+                    ? (Collection) citationResponseObject
+                    : []
+
+            increment(
+                &apos;citation_count&apos;,
+                responseCitations.size()
+            )
+
+            for (
+                Object citationObject :
+                responseCitations
+            ) {
+
+                if (!(citationObject instanceof Map)) {
+                    continue
+                }
+
+                Map citation =
+                    (Map) citationObject
+
+                Map source =
+                    citation.get(&apos;source&apos;)
+                        instanceof Map
+                        ? (Map) citation.get(
+                            &apos;source&apos;
+                        )
+                        : [:]
+
+                Collection spans =
+                    citation.get(&apos;spans&apos;)
+                        instanceof Collection
+                        ? (Collection) citation.get(
+                            &apos;spans&apos;
+                        )
+                        : []
+
+                Map firstSpan = [:]
+
+                if (!spans.isEmpty()) {
+
+                    Object firstSpanObject =
+                        spans.iterator().next()
+
+                    if (
+                        firstSpanObject
+                            instanceof Map
+                    ) {
+
+                        firstSpan =
+                            (Map) firstSpanObject
+                    }
+                }
+
+                Map location =
+                    firstSpan.get(&apos;location&apos;)
+                        instanceof Map
+                        ? (Map) firstSpan.get(
+                            &apos;location&apos;
+                        )
+                        : [:]
+
+                capturedCitations.add([
+                    citationId:
+                        citation.get(&apos;id&apos;),
+
+                    sourceId:
+                        source.get(&apos;source_id&apos;)
+                            ?.toString() ?: &apos;&apos;,
+
+                    sourceType:
+                        source.get(&apos;source_type&apos;)
+                            ?.toString() ?: &apos;&apos;,
+
+                    title:
+                        source.get(&apos;title&apos;)
+                            ?.toString() ?: &apos;&apos;,
+
+                    organisation:
+                        source.get(&apos;organization&apos;)
+                            ?.toString() ?: &apos;&apos;,
+
+                    url:
+                        source.get(&apos;url&apos;)
+                            ?.toString() ?: &apos;&apos;,
+
+                    heading:
+                        location.get(&apos;heading&apos;)
+                            ?.toString() ?: &apos;&apos;,
+
+                    sectionId:
+                        location.get(&apos;section_id&apos;)
+                            ?.toString() ?: &apos;&apos;,
+
+                    icd10Code:
+                        location.get(&apos;icd10_code&apos;)
+                            ?.toString() ?: &apos;&apos;,
+
+                    conditionName:
+                        location.get(&apos;condition_name&apos;)
+                            ?.toString() ?: &apos;&apos;,
+
+                    score:
+                        location.get(&apos;score&apos;)
+                ])
+            }
+
+            break
+
+        case &apos;ping&apos;:
+
+            increment(
+                &apos;ping_message_count&apos;
+            )
+
+            break
+
+        case &apos;pong&apos;:
+
+            increment(
+                &apos;pong_message_count&apos;
+            )
+
+            break
+
+        case &apos;error&apos;:
+        case &apos;message_error&apos;:
+
+            increment(
+                &apos;application_error_count&apos;
+            )
+
+            vars.put(
+                &apos;application_error_received&apos;,
+                &apos;true&apos;
+            )
+
+            Object errorListObject =
+                vars.getObject(
+                    &apos;application_errors&apos;
+                )
+
+            List applicationErrors =
+                errorListObject instanceof List
+                    ? (List) errorListObject
+                    : new ArrayList()
+
+            if (!(errorListObject instanceof List)) {
+
+                vars.putObject(
+                    &apos;application_errors&apos;,
+                    applicationErrors
+                )
+            }
+
+            applicationErrors.add([
+                timestamp:
+                    receivedTimestamp,
+
+                type:
+                    messageType,
+
+                message:
+                    json.get(&apos;message&apos;)
+                        ?.toString() ?:
+                    json.get(&apos;error&apos;)
+                        ?.toString() ?:
+                    response
+            ])
+
+            break
+
+        case &apos;message_complete&apos;:
+
+            vars.put(
+                &apos;stream_stop&apos;,
+                &apos;true&apos;
+            )
+
+            vars.put(
+                &apos;message_complete_received&apos;,
+                &apos;true&apos;
+            )
+
+            vars.put(
+                &apos;last_message_type&apos;,
+                &apos;message_complete&apos;
+            )
+
+            vars.put(
+                &apos;message_complete_timestamp&apos;,
+                String.valueOf(
+                    receivedTimestamp
+                )
+            )
+
+            log.info(
+                &apos;AskMD message_complete received. &apos; +
+                &apos;Stopping WebSocket read loop.&apos;
+            )
+
+            break
+
+        default:
+
+            increment(
+                &apos;unknown_message_count&apos;
+            )
+
+            log.warn(
+                &apos;Unknown WebSocket message type. &apos; +
+                &apos;Type=&apos; + messageType +
+                &apos;, response=&apos; + response
+            )
+
+            break
+    }
+
+} catch (Exception processingException) {
+
+    increment(
+        &apos;processing_error_count&apos;
+    )
+
+    Object processingErrorListObject =
+        vars.getObject(
+            &apos;processing_errors&apos;
+        )
+
+    List processingErrors =
+        processingErrorListObject instanceof List
+            ? (List) processingErrorListObject
+            : new ArrayList()
+
+    if (
+        !(processingErrorListObject
+            instanceof List)
+    ) {
+
+        vars.putObject(
+            &apos;processing_errors&apos;,
+            processingErrors
+        )
+    }
+
+    if (processingErrors.size() &lt; 20) {
+
+        processingErrors.add([
+            timestamp:
+                receivedTimestamp,
+
+            type:
+                messageType,
+
+            exception:
+                processingException
+                    .getClass()
+                    .getName(),
+
+            message:
+                processingException
+                    .getMessage() ?: &apos;&apos;
+        ])
+    }
+
+    log.error(
+        &apos;WebSocket metric processing error. &apos; +
+        &apos;Type=&apos; + messageType +
+        &apos;, sampler=&apos; + samplerName +
+        &apos;, response=&apos; + response,
+        processingException
+    )
+}</stringProp>
+          </JSR223PostProcessor>
+          <hashTree/>
+        </hashTree>
+        <WhileController guiclass="WhileControllerGui" testclass="WhileController" testname="While Controller" enabled="true">
+          <stringProp name="WhileController.condition">${__groovy(def stop=(vars.get(&apos;stream_stop&apos;) ?: &apos;false&apos;).equalsIgnoreCase(&apos;true&apos;); def completed=(vars.get(&apos;message_complete_received&apos;) ?: &apos;false&apos;).equalsIgnoreCase(&apos;true&apos;); def lastType=vars.get(&apos;last_message_type&apos;) ?: &apos;&apos;; def loops=(vars.get(&apos;loop_counter&apos;) ?: &apos;0&apos;).toInteger(); def start=(vars.get(&apos;request_start&apos;) ?: &apos;0&apos;).toLong(); return !stop &amp;&amp; !completed &amp;&amp; lastType != &apos;message_complete&apos; &amp;&amp; loops &lt; 1000 &amp;&amp; start &gt; 0L &amp;&amp; (System.currentTimeMillis()-start) &lt; 90000L)}</stringProp>
+        </WhileController>
+        <hashTree>
+          <eu.luminis.jmeter.wssampler.SingleReadWebSocketSampler guiclass="eu.luminis.jmeter.wssampler.SingleReadWebSocketSamplerGui" testclass="eu.luminis.jmeter.wssampler.SingleReadWebSocketSampler" testname="AI_Chat_03_WebSocket_Single_Read_Sampler" enabled="true">
+            <boolProp name="TLS">false</boolProp>
+            <stringProp name="server"></stringProp>
+            <stringProp name="port">80</stringProp>
+            <stringProp name="path"></stringProp>
+            <stringProp name="dataType">Text</stringProp>
+            <boolProp name="createNewConnection">false</boolProp>
+            <stringProp name="readTimeout">4000</stringProp>
+            <boolProp name="optional">true</boolProp>
+            <boolProp name="binaryPayload">false</boolProp>
+            <stringProp name="connectTimeout">20000</stringProp>
+          </eu.luminis.jmeter.wssampler.SingleReadWebSocketSampler>
+          <hashTree>
+            <JSONPostProcessor guiclass="JSONPostProcessorGui" testclass="JSONPostProcessor" testname="JSON Extractor" enabled="true">
+              <stringProp name="JSONPostProcessor.referenceNames">current_duration</stringProp>
+              <stringProp name="JSONPostProcessor.jsonPathExprs">$.duration_ms</stringProp>
+              <stringProp name="JSONPostProcessor.match_numbers">1</stringProp>
+              <stringProp name="JSONPostProcessor.defaultValues">NOT_FOUND</stringProp>
+            </JSONPostProcessor>
+            <hashTree/>
+            <JSR223PostProcessor guiclass="TestBeanGUI" testclass="JSR223PostProcessor" testname="JSR223 PostProcessor" enabled="false">
+              <stringProp name="cacheKey">true</stringProp>
+              <stringProp name="filename"></stringProp>
+              <stringProp name="parameters"></stringProp>
+              <stringProp name="script">def currentVal = vars.get(&quot;current_duration&quot;)
+
+// If we found the duration chunk, save it to a permanent variable
+if (currentVal &amp;&amp; currentVal != &quot;NOT_FOUND&quot;) {
+    vars.put(&apos;final_llm_duration&apos;, currentVal)
+}
+
+int count = Integer.parseInt(vars.get(&quot;loop_counter&quot;)) + 1
+vars.put(&quot;loop_counter&quot;, String.valueOf(count))
+
+//To capture response message into last_message variable
+//vars.put(&apos;last_message&apos;, prev.getResponseDataAsString().trim())
+
+//Script to calculate ttft - time to first token.
+
+def response = prev.getResponseDataAsString().trim()
+vars.put(&apos;last_message&apos;, response)
+     if (response.contains(&apos;message_delta&apos;) &amp;&amp; vars.get(&apos;first_token_received&apos;) == &apos;false&apos;) 
+     {
+         def ttft = System.currentTimeMillis() - vars.get(&apos;request_start&apos;).toLong()
+         vars.put(&apos;ttft&apos;, String.valueOf(ttft))
+         vars.put(&apos;first_token_received&apos;, &apos;true&apos;)
+     }</stringProp>
+              <stringProp name="scriptLanguage">groovy</stringProp>
+            </JSR223PostProcessor>
+            <hashTree/>
+            <JSR223PostProcessor guiclass="TestBeanGUI" testclass="JSR223PostProcessor" testname="AI_Chat_03_WebSocket_Single_Read" enabled="true">
+              <stringProp name="scriptLanguage">groovy</stringProp>
+              <stringProp name="parameters"></stringProp>
+              <stringProp name="filename"></stringProp>
+              <stringProp name="cacheKey">true</stringProp>
+              <stringProp name="script">import groovy.json.JsonSlurper
+
+/*
+ * ============================================================
+ * Helper functions
+ * ============================================================
+ */
+
+def toLongSafe = {
+    Object value,
+    long defaultValue = 0L -&gt;
+
+    if (
+        value == null ||
+        value.toString().trim().isEmpty()
+    ) {
+        return defaultValue
+    }
+
+    try {
+
+        return value
+            .toString()
+            .toLong()
+
+    } catch (Exception ignored) {
+
+        return defaultValue
+    }
+}
+
+def toIntSafe = {
+    Object value,
+    int defaultValue = 0 -&gt;
+
+    if (
+        value == null ||
+        value.toString().trim().isEmpty()
+    ) {
+        return defaultValue
+    }
+
+    try {
+
+        return value
+            .toString()
+            .toInteger()
+
+    } catch (Exception ignored) {
+
+        return defaultValue
+    }
+}
+
+def increment = {
+    String variableName,
+    long amount = 1L -&gt;
+
+    long currentValue =
+        toLongSafe(
+            vars.get(variableName),
+            0L
+        )
+
+    vars.put(
+        variableName,
+        String.valueOf(
+            currentValue + amount
+        )
+    )
+}
+
+/*
+ * Find or create an LLM phase.
+ */
+def getOrCreatePhase = {
+    int phaseNumber -&gt;
+
+    Object phaseListObject =
+        vars.getObject(&apos;llm_phases&apos;)
+
+    List phases =
+        phaseListObject instanceof List
+            ? (List) phaseListObject
+            : new ArrayList()
+
+    if (!(phaseListObject instanceof List)) {
+
+        vars.putObject(
+            &apos;llm_phases&apos;,
+            phases
+        )
+    }
+
+    Map matchedPhase = null
+
+    for (Object phaseObject : phases) {
+
+        if (!(phaseObject instanceof Map)) {
+            continue
+        }
+
+        Map phase =
+            (Map) phaseObject
+
+        int storedPhaseNumber =
+            toIntSafe(
+                phase.get(&apos;phaseNumber&apos;),
+                0
+            )
+
+        if (storedPhaseNumber == phaseNumber) {
+
+            matchedPhase = phase
+            break
+        }
+    }
+
+    if (matchedPhase == null) {
+
+        matchedPhase = [
+            phaseNumber         : phaseNumber,
+            deltaCount          : 0L,
+            firstDeltaTimestamp : null,
+            lastDeltaTimestamp  : null,
+            llmDurationMs       : null,
+            llmEndTimestamp     : null,
+            deltaParts          : new ArrayList()
+        ]
+
+        phases.add(matchedPhase)
+    }
+
+    return matchedPhase
+}
+
+/*
+ * ============================================================
+ * Read WebSocket response
+ * ============================================================
+ */
+
+String response =
+    prev.getResponseDataAsString()
+
+response =
+    response == null
+        ? &apos;&apos;
+        : response.trim()
+
+vars.put(
+    &apos;last_message&apos;,
+    response
+)
+
+String samplerName =
+    prev.getSampleLabel() ?: &apos;&apos;
+
+/*
+ * Increment the read-loop counter only for Single Read.
+ */
+if (samplerName.contains(&apos;Single_Read&apos;)) {
+
+    increment(&apos;loop_counter&apos;)
+}
+
+if (response.isEmpty()) {
+    return
+}
+
+long receivedTimestamp =
+    prev.getEndTime() &gt; 0L
+        ? prev.getEndTime()
+        : System.currentTimeMillis()
+
+/*
+ * ============================================================
+ * Early message_complete detection
+ * ============================================================
+ *
+ * This executes before JSON parsing and metric processing.
+ */
+
+String compactResponse =
+    response.replaceAll(
+        &apos;\\s+&apos;,
+        &apos;&apos;
+    )
+
+if (
+    compactResponse.contains(
+        &apos;&quot;type&quot;:&quot;message_complete&quot;&apos;
+    )
+) {
+
+    vars.put(
+        &apos;stream_stop&apos;,
+        &apos;true&apos;
+    )
+
+    vars.put(
+        &apos;message_complete_received&apos;,
+        &apos;true&apos;
+    )
+
+    vars.put(
+        &apos;last_message_type&apos;,
+        &apos;message_complete&apos;
+    )
+
+    vars.put(
+        &apos;message_complete_timestamp&apos;,
+        String.valueOf(
+            receivedTimestamp
+        )
+    )
+
+    log.info(
+        &apos;AskMD message_complete detected from raw response.&apos;
+    )
+}
+
+increment(
+    &apos;total_message_count&apos;
+)
+
+increment(
+    &apos;total_response_bytes&apos;,
+    response.getBytes(&apos;UTF-8&apos;).length
+)
+
+/*
+ * ============================================================
+ * Parse JSON
+ * ============================================================
+ */
+
+Object parsedResponse
+
+try {
+
+    parsedResponse =
+        new JsonSlurper()
+            .parseText(response)
+
+} catch (Exception parseException) {
+
+    increment(
+        &apos;malformed_message_count&apos;
+    )
+
+    log.error(
+        &apos;Malformed WebSocket JSON. &apos; +
+        &apos;Sampler=&apos; + samplerName +
+        &apos;, response=&apos; + response,
+        parseException
+    )
+
+    return
+}
+
+if (!(parsedResponse instanceof Map)) {
+
+    increment(
+        &apos;malformed_message_count&apos;
+    )
+
+    log.error(
+        &apos;WebSocket response is not a JSON object. &apos; +
+        &apos;Sampler=&apos; + samplerName +
+        &apos;, response=&apos; + response
+    )
+
+    return
+}
+
+Map json =
+    (Map) parsedResponse
+
+String messageType =
+    json.get(&apos;type&apos;)
+        ?.toString() ?: &apos;unknown&apos;
+
+vars.put(
+    &apos;last_message_type&apos;,
+    messageType
+)
+
+/*
+ * ============================================================
+ * Dynamic message-type count
+ * ============================================================
+ */
+
+Object countsObject =
+    vars.getObject(
+        &apos;message_type_counts&apos;
+    )
+
+Map messageTypeCounts =
+    countsObject instanceof Map
+        ? (Map) countsObject
+        : new LinkedHashMap()
+
+if (!(countsObject instanceof Map)) {
+
+    vars.putObject(
+        &apos;message_type_counts&apos;,
+        messageTypeCounts
+    )
+}
+
+int currentTypeCount =
+    toIntSafe(
+        messageTypeCounts.get(messageType),
+        0
+    )
+
+messageTypeCounts.put(
+    messageType,
+    currentTypeCount + 1
+)
+
+/*
+ * ============================================================
+ * Process WebSocket message
+ * ============================================================
+ */
+
+try {
+
+    switch (messageType) {
+
+        case &apos;message_progress&apos;:
+
+            increment(
+                &apos;progress_message_count&apos;
+            )
+
+            if (
+                !vars.get(
+                    &apos;first_progress_timestamp&apos;
+                )
+            ) {
+
+                vars.put(
+                    &apos;first_progress_timestamp&apos;,
+                    String.valueOf(
+                        receivedTimestamp
+                    )
+                )
+            }
+
+            Object progressObject =
+                vars.getObject(
+                    &apos;progress_events&apos;
+                )
+
+            List progressEvents =
+                progressObject instanceof List
+                    ? (List) progressObject
+                    : new ArrayList()
+
+            if (!(progressObject instanceof List)) {
+
+                vars.putObject(
+                    &apos;progress_events&apos;,
+                    progressEvents
+                )
+            }
+
+            progressEvents.add([
+                timestamp:
+                    receivedTimestamp,
+
+                title:
+                    json.get(&apos;title&apos;)
+                        ?.toString() ?: &apos;&apos;,
+
+                status:
+                    json.get(&apos;status&apos;)
+                        ?.toString() ?: &apos;&apos;,
+
+                showTimer:
+                    json.get(&apos;show_timer&apos;) == true
+            ])
+
+            break
+
+        case &apos;message_delta&apos;:
+
+            increment(
+                &apos;delta_message_count&apos;
+            )
+
+            String delta =
+                json.get(&apos;delta&apos;) == null
+                    ? &apos;&apos;
+                    : json.get(&apos;delta&apos;).toString()
+
+            if (delta.isEmpty()) {
+
+                increment(
+                    &apos;empty_delta_count&apos;
+                )
+            }
+
+            int currentPhaseNumber =
+                toIntSafe(
+                    vars.get(
+                        &apos;current_llm_phase&apos;
+                    ),
+                    1
+                )
+
+            Map currentPhase =
+                getOrCreatePhase(
+                    currentPhaseNumber
+                )
+
+            long phaseDeltaCount =
+                toLongSafe(
+                    currentPhase.get(
+                        &apos;deltaCount&apos;
+                    ),
+                    0L
+                )
+
+            currentPhase.put(
+                &apos;deltaCount&apos;,
+                phaseDeltaCount + 1L
+            )
+
+            if (
+                currentPhase.get(
+                    &apos;firstDeltaTimestamp&apos;
+                ) == null
+            ) {
+
+                currentPhase.put(
+                    &apos;firstDeltaTimestamp&apos;,
+                    receivedTimestamp
+                )
+            }
+
+            currentPhase.put(
+                &apos;lastDeltaTimestamp&apos;,
+                receivedTimestamp
+            )
+
+            Object deltaPartsObject =
+                currentPhase.get(
+                    &apos;deltaParts&apos;
+                )
+
+            List deltaParts =
+                deltaPartsObject instanceof List
+                    ? (List) deltaPartsObject
+                    : new ArrayList()
+
+            if (!(deltaPartsObject instanceof List)) {
+
+                currentPhase.put(
+                    &apos;deltaParts&apos;,
+                    deltaParts
+                )
+            }
+
+            deltaParts.add(delta)
+
+            /*
+             * Overall TTFT
+             */
+            if (
+                vars.get(
+                    &apos;first_token_received&apos;
+                ) != &apos;true&apos;
+            ) {
+
+                long requestStart =
+                    toLongSafe(
+                        vars.get(
+                            &apos;request_start&apos;
+                        ),
+                        0L
+                    )
+
+                if (requestStart &gt; 0L) {
+
+                    long ttft =
+                        Math.max(
+                            0L,
+                            receivedTimestamp -
+                            requestStart
+                        )
+
+                    vars.put(
+                        &apos;ttft&apos;,
+                        String.valueOf(ttft)
+                    )
+
+                    vars.put(
+                        &apos;first_token_timestamp&apos;,
+                        String.valueOf(
+                            receivedTimestamp
+                        )
+                    )
+                }
+
+                vars.put(
+                    &apos;first_token_received&apos;,
+                    &apos;true&apos;
+                )
+            }
+
+            vars.put(
+                &apos;last_token_timestamp&apos;,
+                String.valueOf(
+                    receivedTimestamp
+                )
+            )
+
+            /*
+             * Inter-delta gap
+             */
+            long previousDeltaTimestamp =
+                toLongSafe(
+                    vars.get(
+                        &apos;previous_delta_timestamp&apos;
+                    ),
+                    0L
+                )
+
+            if (previousDeltaTimestamp &gt; 0L) {
+
+                long gap =
+                    receivedTimestamp -
+                    previousDeltaTimestamp
+
+                if (gap &gt;= 0L) {
+
+                    increment(
+                        &apos;inter_delta_gap_sum_ms&apos;,
+                        gap
+                    )
+
+                    increment(
+                        &apos;inter_delta_gap_count&apos;
+                    )
+
+                    long currentMaximum =
+                        toLongSafe(
+                            vars.get(
+                                &apos;max_inter_delta_gap_ms&apos;
+                            ),
+                            0L
+                        )
+
+                    if (gap &gt; currentMaximum) {
+
+                        vars.put(
+                            &apos;max_inter_delta_gap_ms&apos;,
+                            String.valueOf(gap)
+                        )
+                    }
+                }
+            }
+
+            vars.put(
+                &apos;previous_delta_timestamp&apos;,
+                String.valueOf(
+                    receivedTimestamp
+                )
+            )
+
+            break
+
+        case &apos;llm_end&apos;:
+
+            increment(
+                &apos;llm_end_count&apos;
+            )
+
+            int currentPhaseNumber =
+                toIntSafe(
+                    vars.get(
+                        &apos;current_llm_phase&apos;
+                    ),
+                    1
+                )
+
+            Map currentPhase =
+                getOrCreatePhase(
+                    currentPhaseNumber
+                )
+
+            if (
+                json.get(&apos;duration_ms&apos;) != null
+            ) {
+
+                currentPhase.put(
+                    &apos;llmDurationMs&apos;,
+                    toLongSafe(
+                        json.get(&apos;duration_ms&apos;),
+                        0L
+                    )
+                )
+            }
+
+            currentPhase.put(
+                &apos;llmEndTimestamp&apos;,
+                receivedTimestamp
+            )
+
+            vars.put(
+                &apos;current_llm_phase&apos;,
+                String.valueOf(
+                    currentPhaseNumber + 1
+                )
+            )
+
+            /*
+             * Do not include the pause between phases
+             * in token-stream gap metrics.
+             */
+            vars.put(
+                &apos;previous_delta_timestamp&apos;,
+                &apos;&apos;
+            )
+
+            break
+
+        case &apos;tool_start&apos;:
+
+            increment(
+                &apos;tool_start_count&apos;
+            )
+
+            Object toolListObject =
+                vars.getObject(&apos;tool_calls&apos;)
+
+            List toolCalls =
+                toolListObject instanceof List
+                    ? (List) toolListObject
+                    : new ArrayList()
+
+            if (!(toolListObject instanceof List)) {
+
+                vars.putObject(
+                    &apos;tool_calls&apos;,
+                    toolCalls
+                )
+            }
+
+            Map toolInput =
+                json.get(&apos;tool_input&apos;)
+                    instanceof Map
+                    ? new LinkedHashMap(
+                        (Map) json.get(
+                            &apos;tool_input&apos;
+                        )
+                    )
+                    : [:]
+
+            Map toolCall = [
+                toolIndex:
+                    toolCalls.size() + 1,
+
+                toolName:
+                    json.get(&apos;tool_name&apos;)
+                        ?.toString() ?: &apos;&apos;,
+
+                startTimestamp:
+                    receivedTimestamp,
+
+                endTimestamp:
+                    null,
+
+                durationMs:
+                    null,
+
+                status:
+                    &apos;&apos;,
+
+                input:
+                    toolInput,
+
+                output:
+                    [:],
+
+                contentItems:
+                    new ArrayList()
+            ]
+
+            toolCalls.add(toolCall)
+
+            vars.put(
+                &apos;active_tool_index&apos;,
+                String.valueOf(
+                    toolCalls.size() - 1
+                )
+            )
+
+            break
+
+        case &apos;message_content&apos;:
+
+            increment(
+                &apos;message_content_count&apos;
+            )
+
+            Object contentListObject =
+                vars.getObject(
+                    &apos;content_items&apos;
+                )
+
+            List contentItems =
+                contentListObject instanceof List
+                    ? (List) contentListObject
+                    : new ArrayList()
+
+            if (!(contentListObject instanceof List)) {
+
+                vars.putObject(
+                    &apos;content_items&apos;,
+                    contentItems
+                )
+            }
+
+            Object toolListObject =
+                vars.getObject(&apos;tool_calls&apos;)
+
+            List toolCalls =
+                toolListObject instanceof List
+                    ? (List) toolListObject
+                    : []
+
+            int activeToolIndex =
+                toIntSafe(
+                    vars.get(
+                        &apos;active_tool_index&apos;
+                    ),
+                    -1
+                )
+
+            Object responseContent =
+                json.get(&apos;content&apos;)
+
+            if (
+                responseContent
+                    instanceof Collection
+            ) {
+
+                for (
+                    Object itemObject :
+                    (Collection) responseContent
+                ) {
+
+                    if (!(itemObject instanceof Map)) {
+                        continue
+                    }
+
+                    Map item =
+                        (Map) itemObject
+
+                    Map contentSummary = [
+                        id:
+                            item.get(&apos;id&apos;)
+                                ?.toString() ?: &apos;&apos;,
+
+                        score:
+                            item.get(&apos;score&apos;),
+
+                        contentType:
+                            item.get(&apos;type&apos;)
+                                ?.toString() ?: &apos;&apos;,
+
+                        title:
+                            item.get(&apos;title&apos;)
+                                ?.toString() ?: &apos;&apos;,
+
+                        description:
+                            item.get(&apos;description&apos;)
+                                ?.toString() ?: &apos;&apos;,
+
+                        url:
+                            item.get(&apos;url&apos;)
+                                ?.toString() ?: &apos;&apos;,
+
+                        duration:
+                            item.get(&apos;duration&apos;)
+                    ]
+
+                    contentItems.add(
+                        contentSummary
+                    )
+
+                    if (
+                        activeToolIndex &gt;= 0 &amp;&amp;
+                        activeToolIndex &lt;
+                            toolCalls.size()
+                    ) {
+
+                        Object activeToolObject =
+                            toolCalls.get(
+                                activeToolIndex
+                            )
+
+                        if (
+                            activeToolObject
+                                instanceof Map
+                        ) {
+
+                            Map activeTool =
+                                (Map) activeToolObject
+
+                            Object toolContentObject =
+                                activeTool.get(
+                                    &apos;contentItems&apos;
+                                )
+
+                            List toolContentItems =
+                                toolContentObject instanceof List
+                                    ? (List) toolContentObject
+                                    : new ArrayList()
+
+                            if (
+                                !(toolContentObject
+                                    instanceof List)
+                            ) {
+
+                                activeTool.put(
+                                    &apos;contentItems&apos;,
+                                    toolContentItems
+                                )
+                            }
+
+                            toolContentItems.add(
+                                contentSummary
+                            )
+                        }
+                    }
+                }
+            }
+
+            break
+
+        case &apos;tool_end&apos;:
+
+            increment(
+                &apos;tool_end_count&apos;
+            )
+
+            Object toolListObject =
+                vars.getObject(&apos;tool_calls&apos;)
+
+            List toolCalls =
+                toolListObject instanceof List
+                    ? (List) toolListObject
+                    : []
+
+            int activeToolIndex =
+                toIntSafe(
+                    vars.get(
+                        &apos;active_tool_index&apos;
+                    ),
+                    -1
+                )
+
+            Map activeTool = null
+
+            if (
+                activeToolIndex &gt;= 0 &amp;&amp;
+                activeToolIndex &lt;
+                    toolCalls.size()
+            ) {
+
+                Object activeToolObject =
+                    toolCalls.get(
+                        activeToolIndex
+                    )
+
+                if (
+                    activeToolObject
+                        instanceof Map
+                ) {
+
+                    activeTool =
+                        (Map) activeToolObject
+                }
+            }
+
+            if (activeTool == null) {
+
+                for (
+                    int index =
+                        toolCalls.size() - 1;
+                    index &gt;= 0;
+                    index--
+                ) {
+
+                    Object candidateObject =
+                        toolCalls.get(index)
+
+                    if (
+                        !(candidateObject
+                            instanceof Map)
+                    ) {
+                        continue
+                    }
+
+                    Map candidate =
+                        (Map) candidateObject
+
+                    if (
+                        candidate.get(
+                            &apos;endTimestamp&apos;
+                        ) == null
+                    ) {
+
+                        activeTool = candidate
+                        break
+                    }
+                }
+            }
+
+            if (activeTool != null) {
+
+                activeTool.put(
+                    &apos;endTimestamp&apos;,
+                    receivedTimestamp
+                )
+
+                activeTool.put(
+                    &apos;durationMs&apos;,
+                    json.get(&apos;duration_ms&apos;) != null
+                        ? toLongSafe(
+                            json.get(&apos;duration_ms&apos;),
+                            0L
+                        )
+                        : null
+                )
+
+                Map toolOutput =
+                    json.get(&apos;tool_output&apos;)
+                        instanceof Map
+                        ? new LinkedHashMap(
+                            (Map) json.get(
+                                &apos;tool_output&apos;
+                            )
+                        )
+                        : [:]
+
+                activeTool.put(
+                    &apos;output&apos;,
+                    toolOutput
+                )
+
+                activeTool.put(
+                    &apos;status&apos;,
+                    toolOutput.get(&apos;status&apos;)
+                        ?.toString() ?: &apos;&apos;
+                )
+            }
+
+            vars.put(
+                &apos;active_tool_index&apos;,
+                &apos;-1&apos;
+            )
+
+            break
+
+        case &apos;message_citation&apos;:
+
+            increment(
+                &apos;citation_message_count&apos;
+            )
+
+            Object citationListObject =
+                vars.getObject(&apos;citations&apos;)
+
+            List capturedCitations =
+                citationListObject instanceof List
+                    ? (List) citationListObject
+                    : new ArrayList()
+
+            if (!(citationListObject instanceof List)) {
+
+                vars.putObject(
+                    &apos;citations&apos;,
+                    capturedCitations
+                )
+            }
+
+            Object citationResponseObject =
+                json.get(&apos;citations&apos;)
+
+            Collection responseCitations =
+                citationResponseObject instanceof Collection
+                    ? (Collection) citationResponseObject
+                    : []
+
+            increment(
+                &apos;citation_count&apos;,
+                responseCitations.size()
+            )
+
+            for (
+                Object citationObject :
+                responseCitations
+            ) {
+
+                if (!(citationObject instanceof Map)) {
+                    continue
+                }
+
+                Map citation =
+                    (Map) citationObject
+
+                Map source =
+                    citation.get(&apos;source&apos;)
+                        instanceof Map
+                        ? (Map) citation.get(
+                            &apos;source&apos;
+                        )
+                        : [:]
+
+                Collection spans =
+                    citation.get(&apos;spans&apos;)
+                        instanceof Collection
+                        ? (Collection) citation.get(
+                            &apos;spans&apos;
+                        )
+                        : []
+
+                Map firstSpan = [:]
+
+                if (!spans.isEmpty()) {
+
+                    Object firstSpanObject =
+                        spans.iterator().next()
+
+                    if (
+                        firstSpanObject
+                            instanceof Map
+                    ) {
+
+                        firstSpan =
+                            (Map) firstSpanObject
+                    }
+                }
+
+                Map location =
+                    firstSpan.get(&apos;location&apos;)
+                        instanceof Map
+                        ? (Map) firstSpan.get(
+                            &apos;location&apos;
+                        )
+                        : [:]
+
+                capturedCitations.add([
+                    citationId:
+                        citation.get(&apos;id&apos;),
+
+                    sourceId:
+                        source.get(&apos;source_id&apos;)
+                            ?.toString() ?: &apos;&apos;,
+
+                    sourceType:
+                        source.get(&apos;source_type&apos;)
+                            ?.toString() ?: &apos;&apos;,
+
+                    title:
+                        source.get(&apos;title&apos;)
+                            ?.toString() ?: &apos;&apos;,
+
+                    organisation:
+                        source.get(&apos;organization&apos;)
+                            ?.toString() ?: &apos;&apos;,
+
+                    url:
+                        source.get(&apos;url&apos;)
+                            ?.toString() ?: &apos;&apos;,
+
+                    heading:
+                        location.get(&apos;heading&apos;)
+                            ?.toString() ?: &apos;&apos;,
+
+                    sectionId:
+                        location.get(&apos;section_id&apos;)
+                            ?.toString() ?: &apos;&apos;,
+
+                    icd10Code:
+                        location.get(&apos;icd10_code&apos;)
+                            ?.toString() ?: &apos;&apos;,
+
+                    conditionName:
+                        location.get(&apos;condition_name&apos;)
+                            ?.toString() ?: &apos;&apos;,
+
+                    score:
+                        location.get(&apos;score&apos;)
+                ])
+            }
+
+            break
+
+        case &apos;ping&apos;:
+
+            increment(
+                &apos;ping_message_count&apos;
+            )
+
+            break
+
+        case &apos;pong&apos;:
+
+            increment(
+                &apos;pong_message_count&apos;
+            )
+
+            break
+
+        case &apos;error&apos;:
+        case &apos;message_error&apos;:
+
+            increment(
+                &apos;application_error_count&apos;
+            )
+
+            vars.put(
+                &apos;application_error_received&apos;,
+                &apos;true&apos;
+            )
+
+            Object errorListObject =
+                vars.getObject(
+                    &apos;application_errors&apos;
+                )
+
+            List applicationErrors =
+                errorListObject instanceof List
+                    ? (List) errorListObject
+                    : new ArrayList()
+
+            if (!(errorListObject instanceof List)) {
+
+                vars.putObject(
+                    &apos;application_errors&apos;,
+                    applicationErrors
+                )
+            }
+
+            applicationErrors.add([
+                timestamp:
+                    receivedTimestamp,
+
+                type:
+                    messageType,
+
+                message:
+                    json.get(&apos;message&apos;)
+                        ?.toString() ?:
+                    json.get(&apos;error&apos;)
+                        ?.toString() ?:
+                    response
+            ])
+
+            break
+
+        case &apos;message_complete&apos;:
+
+            vars.put(
+                &apos;stream_stop&apos;,
+                &apos;true&apos;
+            )
+
+            vars.put(
+                &apos;message_complete_received&apos;,
+                &apos;true&apos;
+            )
+
+            vars.put(
+                &apos;last_message_type&apos;,
+                &apos;message_complete&apos;
+            )
+
+            vars.put(
+                &apos;message_complete_timestamp&apos;,
+                String.valueOf(
+                    receivedTimestamp
+                )
+            )
+
+            log.info(
+                &apos;AskMD message_complete received. &apos; +
+                &apos;Stopping WebSocket read loop.&apos;
+            )
+
+            break
+
+        default:
+
+            increment(
+                &apos;unknown_message_count&apos;
+            )
+
+            log.warn(
+                &apos;Unknown WebSocket message type. &apos; +
+                &apos;Type=&apos; + messageType +
+                &apos;, response=&apos; + response
+            )
+
+            break
+    }
+
+} catch (Exception processingException) {
+
+    increment(
+        &apos;processing_error_count&apos;
+    )
+
+    Object processingErrorListObject =
+        vars.getObject(
+            &apos;processing_errors&apos;
+        )
+
+    List processingErrors =
+        processingErrorListObject instanceof List
+            ? (List) processingErrorListObject
+            : new ArrayList()
+
+    if (
+        !(processingErrorListObject
+            instanceof List)
+    ) {
+
+        vars.putObject(
+            &apos;processing_errors&apos;,
+            processingErrors
+        )
+    }
+
+    if (processingErrors.size() &lt; 20) {
+
+        processingErrors.add([
+            timestamp:
+                receivedTimestamp,
+
+            type:
+                messageType,
+
+            exception:
+                processingException
+                    .getClass()
+                    .getName(),
+
+            message:
+                processingException
+                    .getMessage() ?: &apos;&apos;
+        ])
+    }
+
+    log.error(
+        &apos;WebSocket metric processing error. &apos; +
+        &apos;Type=&apos; + messageType +
+        &apos;, sampler=&apos; + samplerName +
+        &apos;, response=&apos; + response,
+        processingException
+    )
+}</stringProp>
+            </JSR223PostProcessor>
+            <hashTree/>
+          </hashTree>
+        </hashTree>
+        <JSR223Sampler guiclass="TestBeanGUI" testclass="JSR223Sampler" testname="AI_Chat_Report_JSONL_Writer" enabled="true">
+          <stringProp name="scriptLanguage">groovy</stringProp>
+          <stringProp name="parameters"></stringProp>
+          <stringProp name="filename"></stringProp>
+          <stringProp name="cacheKey">true</stringProp>
+          <stringProp name="script">import groovy.json.JsonOutput
+import java.net.InetAddress
+import java.nio.charset.StandardCharsets
+import java.nio.file.Files
+import java.nio.file.Path
+import java.nio.file.Paths
+import java.nio.file.StandardOpenOption
+import java.time.Instant
+
+/*
+ * ============================================================
+ * AI_Chat_Report_JSONL_Writer
+ * ============================================================
+ *
+ * Writes a JSONL record per request for the automated
+ * performance report generator (generate_report.py).
+ *
+ * Output: report-results/askmd_report_&lt;runId&gt;_&lt;engine&gt;.jsonl
+ *
+ * This sampler is independent of the existing
+ * &quot;Final Validation and JSONL Writer&quot; which serves
+ * a different purpose.
+ * ============================================================
+ */
+
+// ---- Helpers ----
+
+def toLongSafe = { Object value, long defaultValue = 0L -&gt;
+    if (value == null || value.toString().trim().isEmpty()) return defaultValue
+    try { return value.toString().toLong() } catch (Exception e) { return defaultValue }
+}
+
+def toIsoTimestamp = { Long epochMs -&gt;
+    if (epochMs == null || epochMs &lt;= 0L) return null
+    return Instant.ofEpochMilli(epochMs).toString()
+}
+
+def getLong = { String varName -&gt;
+    String v = vars.get(varName)
+    if (v == null || v.trim().isEmpty()) return null
+    try { return v.toLong() } catch (Exception e) { return null }
+}
+
+def copyList = { String varName -&gt;
+    Object obj = vars.getObject(varName)
+    return obj instanceof List ? new ArrayList((List) obj) : []
+}
+
+def copyMap = { String varName -&gt;
+    Object obj = vars.getObject(varName)
+    return obj instanceof Map ? new LinkedHashMap((Map) obj) : [:]
+}
+
+// ---- Timestamps ----
+
+long now = System.currentTimeMillis()
+
+Long requestStart       = getLong(&apos;request_start&apos;)
+Long firstProgressTs    = getLong(&apos;first_progress_timestamp&apos;)
+Long firstTokenTs       = getLong(&apos;first_token_timestamp&apos;)
+Long lastTokenTs        = getLong(&apos;last_token_timestamp&apos;)
+Long messageCompleteTs  = getLong(&apos;message_complete_timestamp&apos;)
+Long wsOpenTs           = getLong(&apos;websocket_open_timestamp&apos;)
+
+// ---- Derived Timings ----
+
+boolean completed = vars.get(&apos;message_complete_received&apos;) == &apos;true&apos;
+Long effectiveEnd = messageCompleteTs ?: now
+
+Long responseTimeMs = requestStart != null
+    ? Math.max(0L, effectiveEnd - requestStart) : null
+
+Long timeToFirstProgressMs = (requestStart != null &amp;&amp; firstProgressTs != null)
+    ? Math.max(0L, firstProgressTs - requestStart) : null
+
+Long timeToFirstTokenMs = (requestStart != null &amp;&amp; firstTokenTs != null)
+    ? Math.max(0L, firstTokenTs - requestStart) : null
+
+Long streamDurationMs = (firstTokenTs != null &amp;&amp; lastTokenTs != null)
+    ? Math.max(0L, lastTokenTs - firstTokenTs) : null
+
+Long lastTokenToCompleteMs = (lastTokenTs != null &amp;&amp; messageCompleteTs != null)
+    ? Math.max(0L, messageCompleteTs - lastTokenTs) : null
+
+// WebSocket connection time
+Long wsConnectionTimeMs = (wsOpenTs != null &amp;&amp; requestStart != null &amp;&amp; wsOpenTs &lt; requestStart)
+    ? Math.max(0L, requestStart - wsOpenTs) : null
+
+// Inter-delta gap stats
+long interDeltaGapSum   = toLongSafe(vars.get(&apos;inter_delta_gap_sum_ms&apos;), 0L)
+long interDeltaGapCount = toLongSafe(vars.get(&apos;inter_delta_gap_count&apos;), 0L)
+long maxInterDeltaGap   = toLongSafe(vars.get(&apos;max_inter_delta_gap_ms&apos;), 0L)
+Long avgInterDeltaGapMs = interDeltaGapCount &gt; 0
+    ? Math.round(interDeltaGapSum / (double) interDeltaGapCount) : null
+
+// ---- LLM Phase Metrics ----
+
+List llmPhases = copyList(&apos;llm_phases&apos;)
+List llmDurationsMs = []
+long totalLlmDurationMs = 0L
+int llmPhaseCount = 0
+
+for (Object phaseObj : llmPhases) {
+    if (!(phaseObj instanceof Map)) continue
+    Map phase = (Map) phaseObj
+    Long dur = phase.get(&apos;llmDurationMs&apos;) != null
+        ? toLongSafe(phase.get(&apos;llmDurationMs&apos;), 0L) : null
+    long deltaCount = toLongSafe(phase.get(&apos;deltaCount&apos;), 0L)
+    if (dur != null || deltaCount &gt; 0) {
+        llmPhaseCount++
+        if (dur != null &amp;&amp; dur &gt; 0) {
+            llmDurationsMs.add(dur)
+            totalLlmDurationMs += dur
+        }
+    }
+}
+
+// Final answer TTFT (last phase with text)
+Long finalAnswerTtftMs = null
+for (int i = llmPhases.size() - 1; i &gt;= 0; i--) {
+    Object phaseObj = llmPhases.get(i)
+    if (!(phaseObj instanceof Map)) continue
+    Map phase = (Map) phaseObj
+    Long firstDelta = phase.get(&apos;firstDeltaTimestamp&apos;) != null
+        ? toLongSafe(phase.get(&apos;firstDeltaTimestamp&apos;), 0L) : null
+    if (firstDelta != null &amp;&amp; firstDelta &gt; 0 &amp;&amp; requestStart != null) {
+        finalAnswerTtftMs = Math.max(0L, firstDelta - requestStart)
+        break
+    }
+}
+
+// ---- Tool Metrics ----
+
+List toolCalls = copyList(&apos;tool_calls&apos;)
+long toolStartCount = toLongSafe(vars.get(&apos;tool_start_count&apos;), 0L)
+long toolEndCount   = toLongSafe(vars.get(&apos;tool_end_count&apos;), 0L)
+List toolDurationsMs = []
+long totalToolDurationMs = 0L
+List toolNames = []
+long toolFailureCount = 0L
+
+for (Object toolObj : toolCalls) {
+    if (!(toolObj instanceof Map)) continue
+    Map tool = (Map) toolObj
+    String tName = tool.get(&apos;toolName&apos;)?.toString() ?: &apos;&apos;
+    if (tName &amp;&amp; !toolNames.contains(tName)) toolNames.add(tName)
+
+    Long dur = tool.get(&apos;durationMs&apos;) != null
+        ? toLongSafe(tool.get(&apos;durationMs&apos;), 0L) : null
+    if (dur != null &amp;&amp; dur &gt; 0) {
+        toolDurationsMs.add(dur)
+        totalToolDurationMs += dur
+    }
+
+    String status = tool.get(&apos;status&apos;)?.toString()?.trim() ?: &apos;&apos;
+    if (status &amp;&amp; !status.equalsIgnoreCase(&apos;ok&apos;) &amp;&amp;
+        !status.equalsIgnoreCase(&apos;success&apos;) &amp;&amp;
+        !status.equalsIgnoreCase(&apos;completed&apos;)) {
+        toolFailureCount++
+    }
+}
+
+// Post-tool TTFT
+Long lastToolEnd = null
+for (Object toolObj : toolCalls) {
+    if (!(toolObj instanceof Map)) continue
+    Long te = ((Map) toolObj).get(&apos;endTimestamp&apos;) != null
+        ? toLongSafe(((Map) toolObj).get(&apos;endTimestamp&apos;), 0L) : null
+    if (te != null &amp;&amp; (lastToolEnd == null || te &gt; lastToolEnd)) lastToolEnd = te
+}
+
+Long postToolTtftMs = null
+if (lastToolEnd != null &amp;&amp; finalAnswerTtftMs != null &amp;&amp; requestStart != null) {
+    Long finalAnswerAbsTs = requestStart + finalAnswerTtftMs
+    if (finalAnswerAbsTs &gt;= lastToolEnd) {
+        postToolTtftMs = finalAnswerAbsTs - lastToolEnd
+    }
+}
+
+// ---- Counters ----
+
+long totalMessageCount    = toLongSafe(vars.get(&apos;total_message_count&apos;), 0L)
+long progressMessageCount = toLongSafe(vars.get(&apos;progress_message_count&apos;), 0L)
+long deltaMessageCount    = toLongSafe(vars.get(&apos;delta_message_count&apos;), 0L)
+long emptyDeltaCount      = toLongSafe(vars.get(&apos;empty_delta_count&apos;), 0L)
+long llmEndCount          = toLongSafe(vars.get(&apos;llm_end_count&apos;), 0L)
+long citationCount        = toLongSafe(vars.get(&apos;citation_count&apos;), 0L)
+long appErrorCount        = toLongSafe(vars.get(&apos;application_error_count&apos;), 0L)
+long malformedCount       = toLongSafe(vars.get(&apos;malformed_message_count&apos;), 0L)
+long processingErrCount   = toLongSafe(vars.get(&apos;processing_error_count&apos;), 0L)
+long totalResponseBytes   = toLongSafe(vars.get(&apos;total_response_bytes&apos;), 0L)
+long loopCount            = toLongSafe(vars.get(&apos;loop_counter&apos;), 0L)
+
+// ---- Status Classification ----
+
+boolean timeout = !completed &amp;&amp; requestStart != null &amp;&amp; (now - requestStart) &gt;= 60000L
+boolean readLimitReached = !completed &amp;&amp; loopCount &gt;= 200L
+
+String businessStatus
+String technicalStatus
+
+if (!completed || timeout || readLimitReached) {
+    businessStatus = &apos;Incomplete&apos;
+    technicalStatus = &apos;Failed&apos;
+} else if (appErrorCount &gt; 0 || malformedCount &gt; 0 || toolFailureCount &gt; 0) {
+    businessStatus = &apos;Completed&apos;
+    technicalStatus = &apos;Failed&apos;
+} else {
+    businessStatus = &apos;Completed&apos;
+    technicalStatus = &apos;Passed&apos;
+}
+
+// ---- Run Identification ----
+
+String engineName
+try { engineName = InetAddress.localHost.hostName }
+catch (Exception e) { engineName = &apos;unknown&apos; }
+
+String runId = vars.get(&apos;askmd_run_id&apos;)
+if (!runId) {
+    String tsMs = props.getProperty(&apos;TESTSTART.MS&apos;) ?: String.valueOf(System.currentTimeMillis())
+    long startMs
+    try { startMs = tsMs.toLong() } catch (Exception e) { startMs = System.currentTimeMillis() }
+    runId = Instant.ofEpochMilli(startMs).toString().replace(&apos;:&apos;, &apos;-&apos;).replace(&apos;.&apos;, &apos;-&apos;)
+    vars.put(&apos;askmd_run_id&apos;, runId)
+}
+
+// ---- Build JSONL Record ----
+
+Map record = [
+    schemaVersion              : &apos;2.0&apos;,
+    runId                      : runId,
+    timestamp                  : toIsoTimestamp(now),
+    timestampEpochMs           : now,
+    engine                     : engineName,
+    threadName                 : ctx.getThread().getThreadName(),
+    threadNumber               : ctx.getThreadNum(),
+    threadGroup                : ctx.getThreadGroup().getName(),
+    scenario                   : vars.get(&apos;scenario_name&apos;) ?: &apos;Clinical-Reasoning&apos;,
+    chatId                     : vars.get(&apos;chat_id&apos;) ?: vars.get(&apos;chatId&apos;) ?: &apos;&apos;,
+    question                   : vars.get(&apos;health_question&apos;) ?: &apos;&apos;,
+
+    // WebSocket
+    websocketOpenSuccess       : vars.get(&apos;websocket_open_success&apos;) == &apos;true&apos;,
+    websocketConnectionTimeMs  : wsConnectionTimeMs,
+
+    // Core timing (ms)
+    requestStartTimestampEpochMs : requestStart,
+    responseTimeMs             : responseTimeMs,
+    timeToFirstProgressMs      : timeToFirstProgressMs,
+    timeToFirstTokenMs         : timeToFirstTokenMs,
+    finalAnswerTimeToFirstTokenMs : finalAnswerTtftMs,
+    postToolTimeToFirstTokenMs : postToolTtftMs,
+    streamDurationMs           : streamDurationMs,
+    lastTokenToCompleteMs      : lastTokenToCompleteMs,
+    averageInterDeltaGapMs     : avgInterDeltaGapMs,
+    maxInterDeltaGapMs         : maxInterDeltaGap &gt; 0 ? maxInterDeltaGap : null,
+
+    // LLM metrics
+    llmPhaseCount              : llmPhaseCount,
+    llmEndCount                : llmEndCount,
+    llmDurationsMs             : llmDurationsMs,
+    totalLlmDurationMs         : totalLlmDurationMs &gt; 0 ? totalLlmDurationMs : null,
+
+    // Tool/RAG metrics
+    toolUsed                   : !toolCalls.isEmpty(),
+    toolCallCount              : toolCalls.size(),
+    toolStartCount             : toolStartCount,
+    toolEndCount               : toolEndCount,
+    toolNames                  : toolNames,
+    toolDurationsMs            : toolDurationsMs,
+    totalToolDurationMs        : totalToolDurationMs &gt; 0 ? totalToolDurationMs : null,
+    toolFailureCount           : toolFailureCount,
+
+    // Message counters
+    totalMessageCount          : totalMessageCount,
+    progressMessageCount       : progressMessageCount,
+    messageDeltaCount          : deltaMessageCount,
+    emptyDeltaCount            : emptyDeltaCount,
+    citationCount              : citationCount,
+    totalResponseBytes         : totalResponseBytes,
+
+    // Error counters
+    applicationErrorCount      : appErrorCount,
+    malformedMessageCount      : malformedCount,
+    processingErrorCount       : processingErrCount,
+
+    // Concurrency context
+    activeThreadsInGroup       : ctx.getThreadGroup().getNumberOfThreads(),
+    activeThreadsTotal         : org.apache.jmeter.threads.JMeterContextService.getTotalThreads(),
+
+    // Status
+    messageCompleteReceived    : completed,
+    timeout                    : timeout,
+    readLimitReached           : readLimitReached,
+    businessStatus             : businessStatus,
+    technicalStatus            : technicalStatus
+]
+
+String jsonLine = JsonOutput.toJson(record)
+
+// ---- Write to File ----
+
+String outputDir = props.getProperty(&apos;report.output.dir&apos;)
+if (!outputDir) {
+    outputDir = System.getProperty(&apos;user.dir&apos;) + File.separator + &apos;report-results&apos;
+}
+
+String safeRunId = runId.replaceAll(&apos;[^A-Za-z0-9._-]&apos;, &apos;_&apos;)
+String safeEngine = engineName.replaceAll(&apos;[^A-Za-z0-9._-]&apos;, &apos;_&apos;)
+String fileName = &quot;askmd_report_${safeRunId}.jsonl&quot;
+
+Path outputPath = Paths.get(outputDir, fileName)
+Path parentDir = outputPath.getParent()
+if (parentDir != null) Files.createDirectories(parentDir)
+
+String absPath = outputPath.toAbsolutePath().normalize().toString()
+String lockKey = &apos;REPORT_JSONL_LOCK_&apos; + absPath
+
+Object fileLock = props.get(lockKey)
+if (fileLock == null) {
+    synchronized (props) {
+        fileLock = props.get(lockKey)
+        if (fileLock == null) {
+            fileLock = new Object()
+            props.put(lockKey, fileLock)
+        }
+    }
+}
+
+synchronized (fileLock) {
+    Files.write(
+        outputPath,
+        (jsonLine + System.lineSeparator()).getBytes(StandardCharsets.UTF_8),
+        StandardOpenOption.CREATE,
+        StandardOpenOption.APPEND
+    )
+}
+
+// ---- Sampler Result ----
+
+SampleResult.setResponseData(jsonLine, &apos;UTF-8&apos;)
+SampleResult.setResponseCode(&apos;200&apos;)
+SampleResult.setResponseMessage(
+    &quot;Report JSONL written | TTFT: ${timeToFirstTokenMs ?: &apos;N/A&apos;}ms | &quot; +
+    &quot;Response: ${responseTimeMs ?: &apos;N/A&apos;}ms | Status: ${technicalStatus} | &quot; +
+    &quot;File: ${absPath}&quot;
+)
+SampleResult.setSuccessful(true)
+
+log.info(&quot;Report JSONL written to: ${absPath}&quot;)</stringProp>
+        </JSR223Sampler>
+        <hashTree/>
+        <eu.luminis.jmeter.wssampler.CloseWebSocketSampler guiclass="eu.luminis.jmeter.wssampler.CloseWebSocketSamplerGui" testclass="eu.luminis.jmeter.wssampler.CloseWebSocketSampler" testname="AI_Chat_04_WebSocket_Close" enabled="true">
+          <stringProp name="statusCode">1000</stringProp>
+          <stringProp name="readTimeout">20000</stringProp>
+        </eu.luminis.jmeter.wssampler.CloseWebSocketSampler>
+        <hashTree/>
+        <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Think Time" enabled="true">
+          <intProp name="ActionProcessor.action">1</intProp>
+          <intProp name="ActionProcessor.target">0</intProp>
+          <stringProp name="ActionProcessor.duration">2000</stringProp>
+        </TestAction>
+        <hashTree>
+          <UniformRandomTimer guiclass="UniformRandomTimerGui" testclass="UniformRandomTimer" testname="Pause" enabled="true">
+            <stringProp name="ConstantTimer.delay">1000</stringProp>
+            <stringProp name="RandomTimer.range">100</stringProp>
+          </UniformRandomTimer>
+          <hashTree/>
+        </hashTree>
+      </hashTree>
+      <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree" enabled="true">
+        <boolProp name="ResultCollector.error_logging">false</boolProp>
+        <objProp>
+          <name>saveConfig</name>
+          <value class="SampleSaveConfiguration">
+            <time>true</time>
+            <latency>true</latency>
+            <timestamp>true</timestamp>
+            <success>true</success>
+            <label>true</label>
+            <code>true</code>
+            <message>true</message>
+            <threadName>true</threadName>
+            <dataType>true</dataType>
+            <encoding>false</encoding>
+            <assertions>true</assertions>
+            <subresults>true</subresults>
+            <responseData>false</responseData>
+            <samplerData>false</samplerData>
+            <xml>false</xml>
+            <fieldNames>true</fieldNames>
+            <responseHeaders>false</responseHeaders>
+            <requestHeaders>false</requestHeaders>
+            <responseDataOnError>false</responseDataOnError>
+            <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+            <assertionsResultsToSave>0</assertionsResultsToSave>
+            <bytes>true</bytes>
+            <sentBytes>true</sentBytes>
+            <url>true</url>
+            <threadCounts>true</threadCounts>
+            <idleTime>true</idleTime>
+            <connectTime>true</connectTime>
+          </value>
+        </objProp>
+        <stringProp name="filename"></stringProp>
+      </ResultCollector>
+      <hashTree/>
+      <ResultCollector guiclass="StatVisualizer" testclass="ResultCollector" testname="Aggregate Report" enabled="true">
+        <boolProp name="ResultCollector.error_logging">false</boolProp>
+        <objProp>
+          <name>saveConfig</name>
+          <value class="SampleSaveConfiguration">
+            <time>true</time>
+            <latency>true</latency>
+            <timestamp>true</timestamp>
+            <success>true</success>
+            <label>true</label>
+            <code>true</code>
+            <message>true</message>
+            <threadName>true</threadName>
+            <dataType>true</dataType>
+            <encoding>false</encoding>
+            <assertions>true</assertions>
+            <subresults>true</subresults>
+            <responseData>false</responseData>
+            <samplerData>false</samplerData>
+            <xml>false</xml>
+            <fieldNames>true</fieldNames>
+            <responseHeaders>false</responseHeaders>
+            <requestHeaders>false</requestHeaders>
+            <responseDataOnError>false</responseDataOnError>
+            <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+            <assertionsResultsToSave>0</assertionsResultsToSave>
+            <bytes>true</bytes>
+            <sentBytes>true</sentBytes>
+            <url>true</url>
+            <threadCounts>true</threadCounts>
+            <idleTime>true</idleTime>
+            <connectTime>true</connectTime>
+          </value>
+        </objProp>
+        <stringProp name="filename"></stringProp>
+        <stringProp name="TestPlan.comments">C:\Projects\ShareCare\Results\Stage\ai-engine\ai-engine_stage_stepup_loadtest_150Users_8272026.jtl</stringProp>
+      </ResultCollector>
+      <hashTree/>
+    </hashTree>
+  </hashTree>
+</jmeterTestPlan>

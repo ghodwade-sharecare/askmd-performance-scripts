@@ -1,0 +1,41 @@
+payerName,planName,planType,state
+UnitedHealthcare,Choice Plus,PPO,TX
+UnitedHealthcare,Choice Plus,PPO,TX
+UnitedHealthcare,Choice Plus,PPO,IL
+UnitedHealthcare,Choice Plus,PPO,FL
+UnitedHealthcare,Options PPO,PPO,NY
+UnitedHealthcare,Options PPO,PPO,CA
+UnitedHealthcare,Navigate,HMO,TX
+UnitedHealthcare,Navigate,HMO,NC
+UnitedHealthcare,Select,HMO,FL
+UnitedHealthcare,AARP Medicare Advantage,HMO,AZ
+Cigna,Open Access Plus,PPO,TX
+Cigna,Open Access Plus,PPO,PA
+Cigna,Open Access Plus,PPO,GA
+Cigna,LocalPlus,HMO,FL
+Cigna,LocalPlus,HMO,TN
+Cigna,SureFit,HMO,TX
+Blue Cross Blue Shield,Blue Choice PPO,PPO,IL
+Blue Cross Blue Shield,Blue Choice PPO,PPO,TX
+Blue Cross Blue Shield,Blue Advantage HMO,HMO,IL
+Blue Cross Blue Shield,Blue Advantage HMO,HMO,TX
+Blue Cross Blue Shield,BlueCard PPO,PPO,FL
+Blue Cross Blue Shield,BlueCard PPO,PPO,NC
+Blue Cross Blue Shield,Blue Preferred,PPO,OK
+Anthem,Blue Access PPO,PPO,OH
+Anthem,Blue Access PPO,PPO,IN
+Anthem,Blue Access PPO,PPO,KY
+Anthem,Pathway HMO,HMO,CO
+Anthem,HealthKeepers,HMO,VA
+Anthem,National PPO,PPO,WI
+Anthem,Anthem Blue Preferred,PPO,CT
+Florida Blue,BlueOptions,PPO,FL
+Florida Blue,BlueCare HMO,HMO,FL
+Florida Blue,myBlue,HMO,FL
+Highmark,Community Blue PPO,PPO,PA
+Highmark,Community Blue HMO,HMO,PA
+Highmark,Freedom Blue PPO,PPO,WV
+Highmark,Security Blue HMO,HMO,PA
+Harvard Pilgrim,Harvard Pilgrim HMO,HMO,MA
+Harvard Pilgrim,Harvard Pilgrim PPO,PPO,NH
+UnitedHealthcare,Choice Plus,PPO,TX

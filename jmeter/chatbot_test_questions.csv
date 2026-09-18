@@ -1,0 +1,2 @@
+id,question,user_state,category,zip_code,expected_tools,expected_behavior
+1,"What are the common side effects of metformin and should I take it with food?",authenticated,medication_info,,get_medication_info,"Returns medication side effects and usage instructions without calling provider or pricing tools"

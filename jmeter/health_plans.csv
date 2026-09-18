@@ -1,0 +1,16 @@
+health_plan,plan_type
+UnitedHealthcare - Choice Plus,PPO
+UnitedHealthcare - Options PPO,PPO
+UnitedHealthcare - Navigate,EPO
+Cigna - Open Access Plus,PPO
+Cigna - Connect,EPO
+Cigna - LocalPlus,HMO
+Aetna - Open Access Managed Choice,POS
+Aetna - Aetna Choice POS II,POS
+Aetna - Elect Choice EPO,EPO
+Blue Cross Blue Shield - Blue Choice PPO,PPO
+Blue Cross Blue Shield - Blue Advantage HMO,HMO
+Blue Cross Blue Shield - BlueCard PPO,PPO
+Anthem - Pathway X Enhanced,EPO
+Anthem - Blue Access PPO,PPO
+Anthem - HealthKeepers,HMO

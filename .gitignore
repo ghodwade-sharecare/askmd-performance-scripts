@@ -1,0 +1,27 @@
+# Allowlist strategy: ignore everything, then re-include only the JMeter
+# .jmx scripts and their associated .csv data files under jmeter/.
+
+# 1) Ignore everything by default
+*
+
+# 2) But descend into directories so nested allowlisted files can match
+!*/
+
+# 3) Re-include this ignore file (root only, not nested .gitignore files)
+!/.gitignore
+
+# 4) Re-include the JMeter scripts and their associated CSV data
+!jmeter/**/*.jmx
+!jmeter/**/*.csv
+
+# 4b) Credentials: commit the template only, never the real file
+!jmeter/**/credentials.properties.example
+jmeter/**/credentials.properties
+
+# 5) Safety: never commit JMeter run outputs / generated dashboards even
+#    though they live under jmeter/ (these are not source data)
+jmeter/Scalability/
+jmeter/report/
+jmeter/backups/
+jmeter/**/*.jtl
+jmeter/**/*.log

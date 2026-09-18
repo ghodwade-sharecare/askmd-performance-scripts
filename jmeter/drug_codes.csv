@@ -1,0 +1,241 @@
+drugName,drugCode,codeSystem,codeSystemURI,strength,dosageForm
+Metformin,861004,RxNorm,http://www.nlm.nih.gov/research/umls/rxnorm,500mg,Tablet
+Metformin,0093-7212-01,NDC,http://hl7.org/fhir/sid/ndc,500mg,Tablet
+Metformin,A10BA02,ATC,http://www.whocc.no/atc,500mg,Tablet
+Metformin,109081006,SNOMED CT,http://snomed.info/sct,500mg,Tablet
+Lisinopril,314076,RxNorm,http://www.nlm.nih.gov/research/umls/rxnorm,10mg,Tablet
+Lisinopril,0071-0530-23,NDC,http://hl7.org/fhir/sid/ndc,10mg,Tablet
+Lisinopril,C09AA03,ATC,http://www.whocc.no/atc,10mg,Tablet
+Lisinopril,386873009,SNOMED CT,http://snomed.info/sct,10mg,Tablet
+Atorvastatin,259255,RxNorm,http://www.nlm.nih.gov/research/umls/rxnorm,20mg,Tablet
+Atorvastatin,0591-3775-01,NDC,http://hl7.org/fhir/sid/ndc,20mg,Tablet
+Atorvastatin,C10AA05,ATC,http://www.whocc.no/atc,20mg,Tablet
+Atorvastatin,373444002,SNOMED CT,http://snomed.info/sct,20mg,Tablet
+Omeprazole,198053,RxNorm,http://www.nlm.nih.gov/research/umls/rxnorm,20mg,Capsule
+Omeprazole,0186-5020-31,NDC,http://hl7.org/fhir/sid/ndc,20mg,Capsule
+Omeprazole,A02BC01,ATC,http://www.whocc.no/atc,20mg,Capsule
+Omeprazole,387137007,SNOMED CT,http://snomed.info/sct,20mg,Capsule
+Amlodipine,197361,RxNorm,http://www.nlm.nih.gov/research/umls/rxnorm,5mg,Tablet
+Amlodipine,0069-1530-66,NDC,http://hl7.org/fhir/sid/ndc,5mg,Tablet
+Amlodipine,C08CA01,ATC,http://www.whocc.no/atc,5mg,Tablet
+Amlodipine,386864001,SNOMED CT,http://snomed.info/sct,5mg,Tablet
+Sertraline,312940,RxNorm,http://www.nlm.nih.gov/research/umls/rxnorm,50mg,Tablet
+Sertraline,0049-4900-66,NDC,http://hl7.org/fhir/sid/ndc,50mg,Tablet
+Sertraline,N06AB06,ATC,http://www.whocc.no/atc,50mg,Tablet
+Sertraline,372594008,SNOMED CT,http://snomed.info/sct,50mg,Tablet
+Losartan,979480,RxNorm,http://www.nlm.nih.gov/research/umls/rxnorm,50mg,Tablet
+Losartan,0006-0952-31,NDC,http://hl7.org/fhir/sid/ndc,50mg,Tablet
+Losartan,C09CA01,ATC,http://www.whocc.no/atc,50mg,Tablet
+Losartan,373567002,SNOMED CT,http://snomed.info/sct,50mg,Tablet
+Levothyroxine,966222,RxNorm,http://www.nlm.nih.gov/research/umls/rxnorm,50mcg,Tablet
+Levothyroxine,0074-6182-13,NDC,http://hl7.org/fhir/sid/ndc,50mcg,Tablet
+Levothyroxine,H03AA01,ATC,http://www.whocc.no/atc,50mcg,Tablet
+Levothyroxine,710809002,SNOMED CT,http://snomed.info/sct,50mcg,Tablet
+Ibuprofen,310965,RxNorm,http://www.nlm.nih.gov/research/umls/rxnorm,200mg,Tablet
+Ibuprofen,0573-0150-20,NDC,http://hl7.org/fhir/sid/ndc,200mg,Tablet
+Ibuprofen,M01AE01,ATC,http://www.whocc.no/atc,200mg,Tablet
+Ibuprofen,387207008,SNOMED CT,http://snomed.info/sct,200mg,Tablet
+Acetaminophen,198440,RxNorm,http://www.nlm.nih.gov/research/umls/rxnorm,500mg,Tablet
+Acetaminophen,0045-0449-10,NDC,http://hl7.org/fhir/sid/ndc,500mg,Tablet
+Acetaminophen,N02BE01,ATC,http://www.whocc.no/atc,500mg,Tablet
+Acetaminophen,387517004,SNOMED CT,http://snomed.info/sct,500mg,Tablet
+Amoxicillin,308182,RxNorm,http://www.nlm.nih.gov/research/umls/rxnorm,500mg,Capsule
+Amoxicillin,0093-4150-01,NDC,http://hl7.org/fhir/sid/ndc,500mg,Capsule
+Amoxicillin,J01CA04,ATC,http://www.whocc.no/atc,500mg,Capsule
+Amoxicillin,372687004,SNOMED CT,http://snomed.info/sct,500mg,Capsule
+Gabapentin,310431,RxNorm,http://www.nlm.nih.gov/research/umls/rxnorm,300mg,Capsule
+Gabapentin,0071-0803-24,NDC,http://hl7.org/fhir/sid/ndc,300mg,Capsule
+Gabapentin,N03AX12,ATC,http://www.whocc.no/atc,300mg,Capsule
+Gabapentin,386845007,SNOMED CT,http://snomed.info/sct,300mg,Capsule
+Hydrochlorothiazide,310798,RxNorm,http://www.nlm.nih.gov/research/umls/rxnorm,25mg,Tablet
+Hydrochlorothiazide,0603-3856-21,NDC,http://hl7.org/fhir/sid/ndc,25mg,Tablet
+Hydrochlorothiazide,C03AA03,ATC,http://www.whocc.no/atc,25mg,Tablet
+Hydrochlorothiazide,387525002,SNOMED CT,http://snomed.info/sct,25mg,Tablet
+Metoprolol,866924,RxNorm,http://www.nlm.nih.gov/research/umls/rxnorm,50mg,Tablet
+Metoprolol,0186-1092-05,NDC,http://hl7.org/fhir/sid/ndc,50mg,Tablet
+Metoprolol,C07AB02,ATC,http://www.whocc.no/atc,50mg,Tablet
+Metoprolol,372826007,SNOMED CT,http://snomed.info/sct,50mg,Tablet
+Simvastatin,314231,RxNorm,http://www.nlm.nih.gov/research/umls/rxnorm,20mg,Tablet
+Simvastatin,0006-0740-31,NDC,http://hl7.org/fhir/sid/ndc,20mg,Tablet
+Simvastatin,C10AA01,ATC,http://www.whocc.no/atc,20mg,Tablet
+Simvastatin,387584000,SNOMED CT,http://snomed.info/sct,20mg,Tablet
+Pantoprazole,283742,RxNorm,http://www.nlm.nih.gov/research/umls/rxnorm,40mg,Tablet
+Pantoprazole,0008-0841-81,NDC,http://hl7.org/fhir/sid/ndc,40mg,Tablet
+Pantoprazole,A02BC02,ATC,http://www.whocc.no/atc,40mg,Tablet
+Pantoprazole,395908001,SNOMED CT,http://snomed.info/sct,40mg,Tablet
+Clopidogrel,309362,RxNorm,http://www.nlm.nih.gov/research/umls/rxnorm,75mg,Tablet
+Clopidogrel,0024-5851-10,NDC,http://hl7.org/fhir/sid/ndc,75mg,Tablet
+Clopidogrel,B01AC04,ATC,http://www.whocc.no/atc,75mg,Tablet
+Clopidogrel,386952008,SNOMED CT,http://snomed.info/sct,75mg,Tablet
+Furosemide,310429,RxNorm,http://www.nlm.nih.gov/research/umls/rxnorm,40mg,Tablet
+Furosemide,0039-0060-10,NDC,http://hl7.org/fhir/sid/ndc,40mg,Tablet
+Furosemide,C03CA01,ATC,http://www.whocc.no/atc,40mg,Tablet
+Furosemide,387475002,SNOMED CT,http://snomed.info/sct,40mg,Tablet
+Prednisone,312617,RxNorm,http://www.nlm.nih.gov/research/umls/rxnorm,10mg,Tablet
+Prednisone,0054-4728-25,NDC,http://hl7.org/fhir/sid/ndc,10mg,Tablet
+Prednisone,H02AB07,ATC,http://www.whocc.no/atc,10mg,Tablet
+Prednisone,116601002,SNOMED CT,http://snomed.info/sct,10mg,Tablet
+Warfarin,855332,RxNorm,http://www.nlm.nih.gov/research/umls/rxnorm,5mg,Tablet
+Warfarin,0056-0172-70,NDC,http://hl7.org/fhir/sid/ndc,5mg,Tablet
+Warfarin,B01AA03,ATC,http://www.whocc.no/atc,5mg,Tablet
+Warfarin,372756006,SNOMED CT,http://snomed.info/sct,5mg,Tablet
+Albuterol,245314,RxNorm,http://www.nlm.nih.gov/research/umls/rxnorm,90mcg/actuation,Inhaler
+Albuterol,0173-0682-20,NDC,http://hl7.org/fhir/sid/ndc,90mcg/actuation,Inhaler
+Albuterol,R03AC02,ATC,http://www.whocc.no/atc,90mcg/actuation,Inhaler
+Albuterol,372897005,SNOMED CT,http://snomed.info/sct,90mcg/actuation,Inhaler
+Fluoxetine,310385,RxNorm,http://www.nlm.nih.gov/research/umls/rxnorm,20mg,Capsule
+Fluoxetine,0777-3105-02,NDC,http://hl7.org/fhir/sid/ndc,20mg,Capsule
+Fluoxetine,N06AB03,ATC,http://www.whocc.no/atc,20mg,Capsule
+Fluoxetine,372767007,SNOMED CT,http://snomed.info/sct,20mg,Capsule
+Ciprofloxacin,309309,RxNorm,http://www.nlm.nih.gov/research/umls/rxnorm,500mg,Tablet
+Ciprofloxacin,0093-0862-01,NDC,http://hl7.org/fhir/sid/ndc,500mg,Tablet
+Ciprofloxacin,J01MA02,ATC,http://www.whocc.no/atc,500mg,Tablet
+Ciprofloxacin,372840008,SNOMED CT,http://snomed.info/sct,500mg,Tablet
+Azithromycin,248656,RxNorm,http://www.nlm.nih.gov/research/umls/rxnorm,250mg,Tablet
+Azithromycin,0069-3060-30,NDC,http://hl7.org/fhir/sid/ndc,250mg,Tablet
+Azithromycin,J01FA10,ATC,http://www.whocc.no/atc,250mg,Tablet
+Azithromycin,396001008,SNOMED CT,http://snomed.info/sct,250mg,Tablet
+Tramadol,835603,RxNorm,http://www.nlm.nih.gov/research/umls/rxnorm,50mg,Tablet
+Tramadol,0045-0220-60,NDC,http://hl7.org/fhir/sid/ndc,50mg,Tablet
+Tramadol,N02AX02,ATC,http://www.whocc.no/atc,50mg,Tablet
+Tramadol,386858008,SNOMED CT,http://snomed.info/sct,50mg,Tablet
+Escitalopram,352741,RxNorm,http://www.nlm.nih.gov/research/umls/rxnorm,10mg,Tablet
+Escitalopram,0456-2010-01,NDC,http://hl7.org/fhir/sid/ndc,10mg,Tablet
+Escitalopram,N06AB10,ATC,http://www.whocc.no/atc,10mg,Tablet
+Escitalopram,400447003,SNOMED CT,http://snomed.info/sct,10mg,Tablet
+Duloxetine,596926,RxNorm,http://www.nlm.nih.gov/research/umls/rxnorm,30mg,Capsule
+Duloxetine,0002-3240-30,NDC,http://hl7.org/fhir/sid/ndc,30mg,Capsule
+Duloxetine,N06AX21,ATC,http://www.whocc.no/atc,30mg,Capsule
+Duloxetine,407032004,SNOMED CT,http://snomed.info/sct,30mg,Capsule
+Rosuvastatin,859747,RxNorm,http://www.nlm.nih.gov/research/umls/rxnorm,10mg,Tablet
+Rosuvastatin,0310-0751-90,NDC,http://hl7.org/fhir/sid/ndc,10mg,Tablet
+Rosuvastatin,C10AA07,ATC,http://www.whocc.no/atc,10mg,Tablet
+Rosuvastatin,700067006,SNOMED CT,http://snomed.info/sct,10mg,Tablet
+Montelukast,359455,RxNorm,http://www.nlm.nih.gov/research/umls/rxnorm,10mg,Tablet
+Montelukast,0006-0117-31,NDC,http://hl7.org/fhir/sid/ndc,10mg,Tablet
+Montelukast,R03DC03,ATC,http://www.whocc.no/atc,10mg,Tablet
+Montelukast,373728005,SNOMED CT,http://snomed.info/sct,10mg,Tablet
+Venlafaxine,313585,RxNorm,http://www.nlm.nih.gov/research/umls/rxnorm,75mg,Capsule
+Venlafaxine,0008-0833-01,NDC,http://hl7.org/fhir/sid/ndc,75mg,Capsule
+Venlafaxine,N06AX16,ATC,http://www.whocc.no/atc,75mg,Capsule
+Venlafaxine,372490001,SNOMED CT,http://snomed.info/sct,75mg,Capsule
+Trazodone,312827,RxNorm,http://www.nlm.nih.gov/research/umls/rxnorm,50mg,Tablet
+Trazodone,0093-0738-01,NDC,http://hl7.org/fhir/sid/ndc,50mg,Tablet
+Trazodone,N06AX05,ATC,http://www.whocc.no/atc,50mg,Tablet
+Trazodone,372829000,SNOMED CT,http://snomed.info/sct,50mg,Tablet
+Alprazolam,308047,RxNorm,http://www.nlm.nih.gov/research/umls/rxnorm,0.5mg,Tablet
+Alprazolam,0009-0029-01,NDC,http://hl7.org/fhir/sid/ndc,0.5mg,Tablet
+Alprazolam,N05BA12,ATC,http://www.whocc.no/atc,0.5mg,Tablet
+Alprazolam,386983007,SNOMED CT,http://snomed.info/sct,0.5mg,Tablet
+Diazepam,197589,RxNorm,http://www.nlm.nih.gov/research/umls/rxnorm,5mg,Tablet
+Diazepam,0140-0004-01,NDC,http://hl7.org/fhir/sid/ndc,5mg,Tablet
+Diazepam,N05BA01,ATC,http://www.whocc.no/atc,5mg,Tablet
+Diazepam,387264003,SNOMED CT,http://snomed.info/sct,5mg,Tablet
+Cetirizine,1014676,RxNorm,http://www.nlm.nih.gov/research/umls/rxnorm,10mg,Tablet
+Cetirizine,0573-0165-20,NDC,http://hl7.org/fhir/sid/ndc,10mg,Tablet
+Cetirizine,R06AE07,ATC,http://www.whocc.no/atc,10mg,Tablet
+Cetirizine,372523007,SNOMED CT,http://snomed.info/sct,10mg,Tablet
+Loratadine,311372,RxNorm,http://www.nlm.nih.gov/research/umls/rxnorm,10mg,Tablet
+Loratadine,0085-1264-01,NDC,http://hl7.org/fhir/sid/ndc,10mg,Tablet
+Loratadine,R06AX13,ATC,http://www.whocc.no/atc,10mg,Tablet
+Loratadine,386884002,SNOMED CT,http://snomed.info/sct,10mg,Tablet
+Ranitidine,198185,RxNorm,http://www.nlm.nih.gov/research/umls/rxnorm,150mg,Tablet
+Ranitidine,0173-0393-40,NDC,http://hl7.org/fhir/sid/ndc,150mg,Tablet
+Ranitidine,A02BA02,ATC,http://www.whocc.no/atc,150mg,Tablet
+Ranitidine,372755005,SNOMED CT,http://snomed.info/sct,150mg,Tablet
+Insulin Glargine,261551,RxNorm,http://www.nlm.nih.gov/research/umls/rxnorm,100units/mL,Injection
+Insulin Glargine,0088-2220-33,NDC,http://hl7.org/fhir/sid/ndc,100units/mL,Injection
+Insulin Glargine,A10AE04,ATC,http://www.whocc.no/atc,100units/mL,Injection
+Insulin Glargine,411529005,SNOMED CT,http://snomed.info/sct,100units/mL,Injection
+Aspirin,243670,RxNorm,http://www.nlm.nih.gov/research/umls/rxnorm,81mg,Tablet
+Aspirin,0280-1000-10,NDC,http://hl7.org/fhir/sid/ndc,81mg,Tablet
+Aspirin,B01AC06,ATC,http://www.whocc.no/atc,81mg,Tablet
+Aspirin,387458008,SNOMED CT,http://snomed.info/sct,81mg,Tablet
+Citalopram,309313,RxNorm,http://www.nlm.nih.gov/research/umls/rxnorm,20mg,Tablet
+Citalopram,0456-4020-01,NDC,http://hl7.org/fhir/sid/ndc,20mg,Tablet
+Citalopram,N06AB04,ATC,http://www.whocc.no/atc,20mg,Tablet
+Citalopram,372596005,SNOMED CT,http://snomed.info/sct,20mg,Tablet
+Naproxen,849574,RxNorm,http://www.nlm.nih.gov/research/umls/rxnorm,500mg,Tablet
+Naproxen,0093-0537-01,NDC,http://hl7.org/fhir/sid/ndc,500mg,Tablet
+Naproxen,M01AE02,ATC,http://www.whocc.no/atc,500mg,Tablet
+Naproxen,372588000,SNOMED CT,http://snomed.info/sct,500mg,Tablet
+Doxycycline,308459,RxNorm,http://www.nlm.nih.gov/research/umls/rxnorm,100mg,Capsule
+Doxycycline,0143-9816-01,NDC,http://hl7.org/fhir/sid/ndc,100mg,Capsule
+Doxycycline,J01AA02,ATC,http://www.whocc.no/atc,100mg,Capsule
+Doxycycline,372478003,SNOMED CT,http://snomed.info/sct,100mg,Capsule
+Tamsulosin,311971,RxNorm,http://www.nlm.nih.gov/research/umls/rxnorm,0.4mg,Capsule
+Tamsulosin,0597-0058-01,NDC,http://hl7.org/fhir/sid/ndc,0.4mg,Capsule
+Tamsulosin,G04CA02,ATC,http://www.whocc.no/atc,0.4mg,Capsule
+Tamsulosin,372509005,SNOMED CT,http://snomed.info/sct,0.4mg,Capsule
+Carvedilol,200031,RxNorm,http://www.nlm.nih.gov/research/umls/rxnorm,25mg,Tablet
+Carvedilol,0007-4140-20,NDC,http://hl7.org/fhir/sid/ndc,25mg,Tablet
+Carvedilol,C07AG02,ATC,http://www.whocc.no/atc,25mg,Tablet
+Carvedilol,386870006,SNOMED CT,http://snomed.info/sct,25mg,Tablet
+Spironolactone,313096,RxNorm,http://www.nlm.nih.gov/research/umls/rxnorm,25mg,Tablet
+Spironolactone,0025-1001-31,NDC,http://hl7.org/fhir/sid/ndc,25mg,Tablet
+Spironolactone,C03DA01,ATC,http://www.whocc.no/atc,25mg,Tablet
+Spironolactone,387078006,SNOMED CT,http://snomed.info/sct,25mg,Tablet
+Pregabalin,636827,RxNorm,http://www.nlm.nih.gov/research/umls/rxnorm,75mg,Capsule
+Pregabalin,0071-1014-68,NDC,http://hl7.org/fhir/sid/ndc,75mg,Capsule
+Pregabalin,N03AX16,ATC,http://www.whocc.no/atc,75mg,Capsule
+Pregabalin,415160008,SNOMED CT,http://snomed.info/sct,75mg,Capsule
+Meloxicam,311461,RxNorm,http://www.nlm.nih.gov/research/umls/rxnorm,15mg,Tablet
+Meloxicam,0597-0089-01,NDC,http://hl7.org/fhir/sid/ndc,15mg,Tablet
+Meloxicam,M01AC06,ATC,http://www.whocc.no/atc,15mg,Tablet
+Meloxicam,387135004,SNOMED CT,http://snomed.info/sct,15mg,Tablet
+Clonazepam,349195,RxNorm,http://www.nlm.nih.gov/research/umls/rxnorm,0.5mg,Tablet
+Clonazepam,0004-0058-01,NDC,http://hl7.org/fhir/sid/ndc,0.5mg,Tablet
+Clonazepam,N03AE01,ATC,http://www.whocc.no/atc,0.5mg,Tablet
+Clonazepam,387383007,SNOMED CT,http://snomed.info/sct,0.5mg,Tablet
+Bupropion,993503,RxNorm,http://www.nlm.nih.gov/research/umls/rxnorm,150mg,Tablet
+Bupropion,0173-0177-55,NDC,http://hl7.org/fhir/sid/ndc,150mg,Tablet
+Bupropion,N06AX12,ATC,http://www.whocc.no/atc,150mg,Tablet
+Bupropion,387564004,SNOMED CT,http://snomed.info/sct,150mg,Tablet
+Ramipril,312748,RxNorm,http://www.nlm.nih.gov/research/umls/rxnorm,5mg,Capsule
+Ramipril,0075-0300-01,NDC,http://hl7.org/fhir/sid/ndc,5mg,Capsule
+Ramipril,C09AA05,ATC,http://www.whocc.no/atc,5mg,Capsule
+Ramipril,386872004,SNOMED CT,http://snomed.info/sct,5mg,Capsule
+Valsartan,349483,RxNorm,http://www.nlm.nih.gov/research/umls/rxnorm,160mg,Tablet
+Valsartan,0078-0359-05,NDC,http://hl7.org/fhir/sid/ndc,160mg,Tablet
+Valsartan,C09CA03,ATC,http://www.whocc.no/atc,160mg,Tablet
+Valsartan,386876001,SNOMED CT,http://snomed.info/sct,160mg,Tablet
+Quetiapine,312819,RxNorm,http://www.nlm.nih.gov/research/umls/rxnorm,100mg,Tablet
+Quetiapine,0310-0271-10,NDC,http://hl7.org/fhir/sid/ndc,100mg,Tablet
+Quetiapine,N05AH04,ATC,http://www.whocc.no/atc,100mg,Tablet
+Quetiapine,386849001,SNOMED CT,http://snomed.info/sct,100mg,Tablet
+Lamotrigine,311280,RxNorm,http://www.nlm.nih.gov/research/umls/rxnorm,100mg,Tablet
+Lamotrigine,0173-0642-55,NDC,http://hl7.org/fhir/sid/ndc,100mg,Tablet
+Lamotrigine,N03AX09,ATC,http://www.whocc.no/atc,100mg,Tablet
+Lamotrigine,387562000,SNOMED CT,http://snomed.info/sct,100mg,Tablet
+Finasteride,314279,RxNorm,http://www.nlm.nih.gov/research/umls/rxnorm,5mg,Tablet
+Finasteride,0006-0072-31,NDC,http://hl7.org/fhir/sid/ndc,5mg,Tablet
+Finasteride,G04CB01,ATC,http://www.whocc.no/atc,5mg,Tablet
+Finasteride,386963006,SNOMED CT,http://snomed.info/sct,5mg,Tablet
+Methotrexate,105586,RxNorm,http://www.nlm.nih.gov/research/umls/rxnorm,2.5mg,Tablet
+Methotrexate,0005-5550-18,NDC,http://hl7.org/fhir/sid/ndc,2.5mg,Tablet
+Methotrexate,L04AX03,ATC,http://www.whocc.no/atc,2.5mg,Tablet
+Methotrexate,387381009,SNOMED CT,http://snomed.info/sct,2.5mg,Tablet
+Apixaban,1364430,RxNorm,http://www.nlm.nih.gov/research/umls/rxnorm,5mg,Tablet
+Apixaban,0003-0894-21,NDC,http://hl7.org/fhir/sid/ndc,5mg,Tablet
+Apixaban,B01AF02,ATC,http://www.whocc.no/atc,5mg,Tablet
+Apixaban,698090000,SNOMED CT,http://snomed.info/sct,5mg,Tablet
+Rivaroxaban,1114195,RxNorm,http://www.nlm.nih.gov/research/umls/rxnorm,20mg,Tablet
+Rivaroxaban,50458-0578-30,NDC,http://hl7.org/fhir/sid/ndc,20mg,Tablet
+Rivaroxaban,B01AF01,ATC,http://www.whocc.no/atc,20mg,Tablet
+Rivaroxaban,442031002,SNOMED CT,http://snomed.info/sct,20mg,Tablet
+Empagliflozin,1545653,RxNorm,http://www.nlm.nih.gov/research/umls/rxnorm,10mg,Tablet
+Empagliflozin,0597-0152-30,NDC,http://hl7.org/fhir/sid/ndc,10mg,Tablet
+Empagliflozin,A10BK03,ATC,http://www.whocc.no/atc,10mg,Tablet
+Empagliflozin,703894008,SNOMED CT,http://snomed.info/sct,10mg,Tablet
+Sitagliptin,857974,RxNorm,http://www.nlm.nih.gov/research/umls/rxnorm,100mg,Tablet
+Sitagliptin,0006-0277-31,NDC,http://hl7.org/fhir/sid/ndc,100mg,Tablet
+Sitagliptin,A10BH01,ATC,http://www.whocc.no/atc,100mg,Tablet
+Sitagliptin,423307000,SNOMED CT,http://snomed.info/sct,100mg,Tablet
+Liraglutide,897122,RxNorm,http://www.nlm.nih.gov/research/umls/rxnorm,1.8mg,Injection
+Liraglutide,0169-4060-12,NDC,http://hl7.org/fhir/sid/ndc,1.8mg,Injection
+Liraglutide,A10BJ02,ATC,http://www.whocc.no/atc,1.8mg,Injection
+Liraglutide,444828003,SNOMED CT,http://snomed.info/sct,1.8mg,Injection
+Tiotropium,485028,RxNorm,http://www.nlm.nih.gov/research/umls/rxnorm,18mcg,Inhaler
+Tiotropium,0597-0075-41,NDC,http://hl7.org/fhir/sid/ndc,18mcg,Inhaler
+Tiotropium,R03BB04,ATC,http://www.whocc.no/atc,18mcg,Inhaler
+Tiotropium,407030007,SNOMED CT,http://snomed.info/sct,18mcg,Inhaler
