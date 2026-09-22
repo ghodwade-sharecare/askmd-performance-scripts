@@ -18,7 +18,7 @@
           </elementProp>
           <elementProp name="password" elementType="Argument">
             <stringProp name="Argument.name">password</stringProp>
-            <stringProp name="Argument.value">${__P(test.password,)}</stringProp>
+            <stringProp name="Argument.value">Qwerty12345!</stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
           </elementProp>
           <elementProp name="random" elementType="Argument">
@@ -208,14 +208,14 @@
                 <elementProp name="client_secret" elementType="HTTPArgument">
                   <boolProp name="HTTPArgument.always_encode">false</boolProp>
                   <stringProp name="Argument.name">client_secret</stringProp>
-                  <stringProp name="Argument.value">${__P(stage.client_secret,)}</stringProp>
+                  <stringProp name="Argument.value">_-BzUfEoQ1PGzgZtvO7Tv4m6tQI_1UlO9mMIUSfeqze_hzgMGjCFT0MSe3daXKV8</stringProp>
                   <stringProp name="Argument.metadata">=</stringProp>
                   <boolProp name="HTTPArgument.use_equals">true</boolProp>
                 </elementProp>
                 <elementProp name="client_id" elementType="HTTPArgument">
                   <boolProp name="HTTPArgument.always_encode">false</boolProp>
                   <stringProp name="Argument.name">client_id</stringProp>
-                  <stringProp name="Argument.value">${__P(stage.client_id,)}</stringProp>
+                  <stringProp name="Argument.value">rEOa9yI264SxiYFbSBVLsX1VXoH9Bh4m</stringProp>
                   <stringProp name="Argument.metadata">=</stringProp>
                   <boolProp name="HTTPArgument.use_equals">true</boolProp>
                 </elementProp>
@@ -443,14 +443,14 @@ file.append(&quot;${username},${userId}\n&quot;)</stringProp>
                 <elementProp name="client_secret" elementType="HTTPArgument">
                   <boolProp name="HTTPArgument.always_encode">false</boolProp>
                   <stringProp name="Argument.name">client_secret</stringProp>
-                  <stringProp name="Argument.value">${__P(uat.client_secret,)}</stringProp>
+                  <stringProp name="Argument.value">Dax9LMhmShT6Vleg7RDcvKvOzxcbU1gcIi4nVq7vsBcIpjagWrt-QdZnYE2gzEtq</stringProp>
                   <stringProp name="Argument.metadata">=</stringProp>
                   <boolProp name="HTTPArgument.use_equals">true</boolProp>
                 </elementProp>
                 <elementProp name="client_id" elementType="HTTPArgument">
                   <boolProp name="HTTPArgument.always_encode">false</boolProp>
                   <stringProp name="Argument.name">client_id</stringProp>
-                  <stringProp name="Argument.value">${__P(uat.client_id,)}</stringProp>
+                  <stringProp name="Argument.value">uCi95lVT6AI935Pq17tf6Q56I8VxM8uS</stringProp>
                   <stringProp name="Argument.metadata">=</stringProp>
                   <boolProp name="HTTPArgument.use_equals">true</boolProp>
                 </elementProp>
@@ -1381,14 +1381,14 @@ try {
                 <elementProp name="client_secret" elementType="HTTPArgument">
                   <boolProp name="HTTPArgument.always_encode">false</boolProp>
                   <stringProp name="Argument.name">client_secret</stringProp>
-                  <stringProp name="Argument.value">${__P(uat.client_secret,)}</stringProp>
+                  <stringProp name="Argument.value">Dax9LMhmShT6Vleg7RDcvKvOzxcbU1gcIi4nVq7vsBcIpjagWrt-QdZnYE2gzEtq</stringProp>
                   <stringProp name="Argument.metadata">=</stringProp>
                   <boolProp name="HTTPArgument.use_equals">true</boolProp>
                 </elementProp>
                 <elementProp name="client_id" elementType="HTTPArgument">
                   <boolProp name="HTTPArgument.always_encode">false</boolProp>
                   <stringProp name="Argument.name">client_id</stringProp>
-                  <stringProp name="Argument.value">${__P(uat.client_id,)}</stringProp>
+                  <stringProp name="Argument.value">uCi95lVT6AI935Pq17tf6Q56I8VxM8uS</stringProp>
                   <stringProp name="Argument.metadata">=</stringProp>
                   <boolProp name="HTTPArgument.use_equals">true</boolProp>
                 </elementProp>
