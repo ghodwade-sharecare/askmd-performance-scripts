@@ -5,6 +5,8 @@
       <elementProp name="TestPlan.user_defined_variables" elementType="Arguments" guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables">
         <collectionProp name="Arguments.arguments"/>
       </elementProp>
+      <boolProp name="TestPlan.functional_mode">false</boolProp>
+      <boolProp name="TestPlan.serialize_threadgroups">false</boolProp>
     </TestPlan>
     <hashTree>
       <Arguments guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables">
@@ -22,7 +24,7 @@
         </collectionProp>
       </Arguments>
       <hashTree/>
-      <ConfigTestElement guiclass="HttpDefaultsGui" testclass="ConfigTestElement" testname="HTTP Request Defaults">
+      <ConfigTestElement guiclass="HttpDefaultsGui" testclass="ConfigTestElement" testname="HTTP Request Defaults" enabled="true">
         <stringProp name="HTTPSampler.domain">askmd-api.uat.sharecare.com</stringProp>
         <stringProp name="HTTPSampler.protocol">https</stringProp>
         <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables">
@@ -31,19 +33,19 @@
         <stringProp name="HTTPSampler.implementation"></stringProp>
       </ConfigTestElement>
       <hashTree/>
-      <CacheManager guiclass="CacheManagerGui" testclass="CacheManager" testname="HTTP Cache Manager">
+      <CacheManager guiclass="CacheManagerGui" testclass="CacheManager" testname="HTTP Cache Manager" enabled="true">
         <boolProp name="clearEachIteration">true</boolProp>
         <boolProp name="useExpires">true</boolProp>
         <boolProp name="CacheManager.controlledByThread">false</boolProp>
       </CacheManager>
       <hashTree/>
-      <CookieManager guiclass="CookiePanel" testclass="CookieManager" testname="HTTP Cookie Manager">
+      <CookieManager guiclass="CookiePanel" testclass="CookieManager" testname="HTTP Cookie Manager" enabled="true">
         <collectionProp name="CookieManager.cookies"/>
         <boolProp name="CookieManager.clearEachIteration">true</boolProp>
         <boolProp name="CookieManager.controlledByThreadGroup">false</boolProp>
       </CookieManager>
       <hashTree/>
-      <com.di.jmeter.config.ExtendedCsvDataSetConfig guiclass="com.di.jmeter.config.gui.ExtendedCsvDataSetConfigGui" testclass="com.di.jmeter.config.ExtendedCsvDataSetConfig" testname="Extended CSV Data Set Config">
+      <com.di.jmeter.config.ExtendedCsvDataSetConfig guiclass="com.di.jmeter.config.gui.ExtendedCsvDataSetConfigGui" testclass="com.di.jmeter.config.ExtendedCsvDataSetConfig" testname="Extended CSV Data Set Config" enabled="true">
         <stringProp name="filename">health_questions_uat.csv</stringProp>
         <stringProp name="fileEncoding">UTF-8</stringProp>
         <stringProp name="variableNames">health_question</stringProp>
@@ -59,7 +61,7 @@
         <stringProp name="blockSize"></stringProp>
       </com.di.jmeter.config.ExtendedCsvDataSetConfig>
       <hashTree/>
-      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="Clinical-Reasoning" enabled="false">
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="Clinical-Reasoning">
         <intProp name="ThreadGroup.num_threads">1</intProp>
         <intProp name="ThreadGroup.ramp_time">1</intProp>
         <longProp name="ThreadGroup.duration">1800</longProp>
@@ -3429,7 +3431,7 @@ log.info(&quot;Report JSONL written to: ${absPath}&quot;)</stringProp>
           <hashTree/>
         </hashTree>
       </hashTree>
-      <kg.apc.jmeter.threads.SteppingThreadGroup guiclass="kg.apc.jmeter.threads.SteppingThreadGroupGui" testclass="kg.apc.jmeter.threads.SteppingThreadGroup" testname="jp@gc - Stepping Thread Group">
+      <kg.apc.jmeter.threads.SteppingThreadGroup guiclass="kg.apc.jmeter.threads.SteppingThreadGroupGui" testclass="kg.apc.jmeter.threads.SteppingThreadGroup" testname="jp@gc - Stepping Thread Group" enabled="false">
         <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
         <stringProp name="ThreadGroup.num_threads">50</stringProp>
         <stringProp name="Threads initial delay">0</stringProp>
@@ -3446,7 +3448,7 @@ log.info(&quot;Report JSONL written to: ${absPath}&quot;)</stringProp>
         </elementProp>
       </kg.apc.jmeter.threads.SteppingThreadGroup>
       <hashTree>
-        <eu.luminis.jmeter.wssampler.OpenWebSocketSampler guiclass="eu.luminis.jmeter.wssampler.OpenWebSocketSamplerGui" testclass="eu.luminis.jmeter.wssampler.OpenWebSocketSampler" testname="AI_Chat_01_WebSocket_Open_Connection">
+        <eu.luminis.jmeter.wssampler.OpenWebSocketSampler guiclass="eu.luminis.jmeter.wssampler.OpenWebSocketSamplerGui" testclass="eu.luminis.jmeter.wssampler.OpenWebSocketSampler" testname="AI_Chat_01_WebSocket_Open_Connection" enabled="true">
           <boolProp name="TLS">true</boolProp>
           <stringProp name="server">${HOST}</stringProp>
           <stringProp name="port">443</stringProp>
@@ -6428,7 +6430,7 @@ try {
             <hashTree/>
           </hashTree>
         </hashTree>
-        <JSR223Sampler guiclass="TestBeanGUI" testclass="JSR223Sampler" testname="AI_Chat_Report_JSONL_Writer">
+        <JSR223Sampler guiclass="TestBeanGUI" testclass="JSR223Sampler" testname="AI_Chat_Report_JSONL_Writer" enabled="true">
           <stringProp name="scriptLanguage">groovy</stringProp>
           <stringProp name="parameters"></stringProp>
           <stringProp name="filename"></stringProp>
@@ -6791,7 +6793,7 @@ log.info(&quot;Report JSONL written to: ${absPath}&quot;)</stringProp>
           <stringProp name="readTimeout">20000</stringProp>
         </eu.luminis.jmeter.wssampler.CloseWebSocketSampler>
         <hashTree/>
-        <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Think Time">
+        <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Think Time" enabled="true">
           <intProp name="ActionProcessor.action">1</intProp>
           <intProp name="ActionProcessor.target">0</intProp>
           <stringProp name="ActionProcessor.duration">2000</stringProp>
@@ -6805,7 +6807,7 @@ log.info(&quot;Report JSONL written to: ${absPath}&quot;)</stringProp>
         </hashTree>
       </hashTree>
       <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree">
-        <boolProp name="ResultCollector.error_logging">true</boolProp>
+        <boolProp name="ResultCollector.error_logging">false</boolProp>
         <objProp>
           <name>saveConfig</name>
           <value class="SampleSaveConfiguration">
@@ -6875,7 +6877,7 @@ log.info(&quot;Report JSONL written to: ${absPath}&quot;)</stringProp>
             <connectTime>true</connectTime>
           </value>
         </objProp>
-        <stringProp name="filename">C:\Projects\ShareCare\Results\UAT\ai-engine\askmd_report_ai-engine_50users_uat_stepup_loadtest1_09022026.jtl</stringProp>
+        <stringProp name="filename"></stringProp>
       </ResultCollector>
       <hashTree/>
     </hashTree>
