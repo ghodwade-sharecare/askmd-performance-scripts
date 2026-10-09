@@ -28,8 +28,9 @@
           </elementProp>
           <elementProp name="chatId" elementType="Argument">
             <stringProp name="Argument.name">chatId</stringProp>
-            <stringProp name="Argument.value">${__UUID}</stringProp>
+            <stringProp name="Argument.value">e3276d70-6558-42b1-8681-ee4b9e300a7d</stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
+            <stringProp name="Argument.desc">${__UUID}</stringProp>
           </elementProp>
           <elementProp name="RSC" elementType="Argument">
             <stringProp name="Argument.name">RSC</stringProp>
@@ -44,7 +45,7 @@
         </collectionProp>
       </Arguments>
       <hashTree/>
-      <ConfigTestElement guiclass="HttpDefaultsGui" testclass="ConfigTestElement" testname="HTTP Request Defaults" enabled="true">
+      <ConfigTestElement guiclass="HttpDefaultsGui" testclass="ConfigTestElement" testname="HTTP Request Defaults">
         <stringProp name="HTTPSampler.domain">askmd-api.stage.sharecare.com</stringProp>
         <stringProp name="HTTPSampler.protocol">https</stringProp>
         <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables">
@@ -65,14 +66,14 @@
         <boolProp name="CookieManager.controlledByThreadGroup">false</boolProp>
       </CookieManager>
       <hashTree/>
-      <com.di.jmeter.config.ExtendedCsvDataSetConfig guiclass="com.di.jmeter.config.gui.ExtendedCsvDataSetConfigGui" testclass="com.di.jmeter.config.ExtendedCsvDataSetConfig" testname="Extended CSV Data Set Config" enabled="true">
+      <com.di.jmeter.config.ExtendedCsvDataSetConfig guiclass="com.di.jmeter.config.gui.ExtendedCsvDataSetConfigGui" testclass="com.di.jmeter.config.ExtendedCsvDataSetConfig" testname="Extended CSV Data Set Config">
         <stringProp name="filename">registered_users_stage.csv</stringProp>
         <stringProp name="fileEncoding">UTF-8</stringProp>
         <stringProp name="variableNames">username,userId</stringProp>
         <boolProp name="ignoreFirstLine">false</boolProp>
         <stringProp name="delimiter">,</stringProp>
         <boolProp name="quotedData">false</boolProp>
-        <stringProp name="selectRow">Unique</stringProp>
+        <stringProp name="selectRow">Sequential</stringProp>
         <stringProp name="updateValue">Each Iteration</stringProp>
         <stringProp name="ooValue">Abort Thread</stringProp>
         <stringProp name="shareMode">All threads</stringProp>
@@ -81,7 +82,7 @@
         <stringProp name="blockSize"></stringProp>
       </com.di.jmeter.config.ExtendedCsvDataSetConfig>
       <hashTree/>
-      <com.di.jmeter.config.ExtendedCsvDataSetConfig guiclass="com.di.jmeter.config.gui.ExtendedCsvDataSetConfigGui" testclass="com.di.jmeter.config.ExtendedCsvDataSetConfig" testname="Extended CSV Data Set Config" enabled="true">
+      <com.di.jmeter.config.ExtendedCsvDataSetConfig guiclass="com.di.jmeter.config.gui.ExtendedCsvDataSetConfigGui" testclass="com.di.jmeter.config.ExtendedCsvDataSetConfig" testname="Extended CSV Data Set Config">
         <stringProp name="filename">health_questions_uat.csv</stringProp>
         <stringProp name="fileEncoding">UTF-8</stringProp>
         <stringProp name="variableNames">health_question</stringProp>
@@ -97,14 +98,14 @@
         <stringProp name="blockSize"></stringProp>
       </com.di.jmeter.config.ExtendedCsvDataSetConfig>
       <hashTree/>
-      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="Clinical-Reasoning" enabled="true">
-        <intProp name="ThreadGroup.num_threads">3</intProp>
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="Clinical-Reasoning">
+        <intProp name="ThreadGroup.num_threads">1</intProp>
         <intProp name="ThreadGroup.ramp_time">0</intProp>
         <longProp name="ThreadGroup.duration">1800</longProp>
         <boolProp name="ThreadGroup.same_user_on_next_iteration">true</boolProp>
         <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
         <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller">
-          <stringProp name="LoopController.loops">33</stringProp>
+          <stringProp name="LoopController.loops">5</stringProp>
           <boolProp name="LoopController.continue_forever">false</boolProp>
         </elementProp>
       </ThreadGroup>
@@ -217,7 +218,7 @@
           </JSONPostProcessor>
           <hashTree/>
         </hashTree>
-        <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Think Time">
+        <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Think Time" enabled="true">
           <intProp name="ActionProcessor.action">1</intProp>
           <intProp name="ActionProcessor.target">0</intProp>
           <stringProp name="ActionProcessor.duration">300</stringProp>
@@ -5634,7 +5635,7 @@ log.info(&quot;Report JSONL written to: ${absPath}&quot;)</stringProp>
           <hashTree/>
         </hashTree>
       </hashTree>
-      <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree" enabled="true">
+      <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree">
         <boolProp name="ResultCollector.error_logging">false</boolProp>
         <objProp>
           <name>saveConfig</name>
@@ -5671,7 +5672,7 @@ log.info(&quot;Report JSONL written to: ${absPath}&quot;)</stringProp>
         <stringProp name="filename"></stringProp>
       </ResultCollector>
       <hashTree/>
-      <ResultCollector guiclass="StatVisualizer" testclass="ResultCollector" testname="Aggregate Report" enabled="true">
+      <ResultCollector guiclass="StatVisualizer" testclass="ResultCollector" testname="Aggregate Report">
         <boolProp name="ResultCollector.error_logging">false</boolProp>
         <objProp>
           <name>saveConfig</name>
