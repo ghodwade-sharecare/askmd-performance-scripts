@@ -5,6 +5,8 @@
       <elementProp name="TestPlan.user_defined_variables" elementType="Arguments" guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables">
         <collectionProp name="Arguments.arguments"/>
       </elementProp>
+      <boolProp name="TestPlan.functional_mode">false</boolProp>
+      <boolProp name="TestPlan.serialize_threadgroups">false</boolProp>
     </TestPlan>
     <hashTree>
       <Arguments guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables">
@@ -62,54 +64,6 @@
         <boolProp name="CookieManager.controlledByThreadGroup">false</boolProp>
       </CookieManager>
       <hashTree/>
-      <com.di.jmeter.config.ExtendedCsvDataSetConfig guiclass="com.di.jmeter.config.gui.ExtendedCsvDataSetConfigGui" testclass="com.di.jmeter.config.ExtendedCsvDataSetConfig" testname="Extended CSV Data Set Config - medication_name" enabled="true">
-        <stringProp name="filename">medications.csv</stringProp>
-        <stringProp name="fileEncoding">UTF-8</stringProp>
-        <stringProp name="variableNames">medication_name</stringProp>
-        <boolProp name="ignoreFirstLine">true</boolProp>
-        <stringProp name="delimiter">,</stringProp>
-        <boolProp name="quotedData">false</boolProp>
-        <stringProp name="selectRow">Random</stringProp>
-        <stringProp name="updateValue">Each Iteration</stringProp>
-        <stringProp name="ooValue">Continue Cyclic</stringProp>
-        <stringProp name="shareMode">All threads</stringProp>
-        <boolProp name="autoAllocate">true</boolProp>
-        <boolProp name="allocate">false</boolProp>
-        <stringProp name="blockSize"></stringProp>
-      </com.di.jmeter.config.ExtendedCsvDataSetConfig>
-      <hashTree/>
-      <com.di.jmeter.config.ExtendedCsvDataSetConfig guiclass="com.di.jmeter.config.gui.ExtendedCsvDataSetConfigGui" testclass="com.di.jmeter.config.ExtendedCsvDataSetConfig" testname="Extended CSV Data Set Config - state, zip_codes">
-        <stringProp name="filename">zip_codes.csv</stringProp>
-        <stringProp name="fileEncoding">UTF-8</stringProp>
-        <stringProp name="variableNames">zip_code,state_code</stringProp>
-        <boolProp name="ignoreFirstLine">true</boolProp>
-        <stringProp name="delimiter">,</stringProp>
-        <boolProp name="quotedData">false</boolProp>
-        <stringProp name="selectRow">Random</stringProp>
-        <stringProp name="updateValue">Each Iteration</stringProp>
-        <stringProp name="ooValue">Continue Cyclic</stringProp>
-        <stringProp name="shareMode">All threads</stringProp>
-        <boolProp name="autoAllocate">true</boolProp>
-        <boolProp name="allocate">false</boolProp>
-        <stringProp name="blockSize"></stringProp>
-      </com.di.jmeter.config.ExtendedCsvDataSetConfig>
-      <hashTree/>
-      <com.di.jmeter.config.ExtendedCsvDataSetConfig guiclass="com.di.jmeter.config.gui.ExtendedCsvDataSetConfigGui" testclass="com.di.jmeter.config.ExtendedCsvDataSetConfig" testname="Extended CSV Data Set Config - pricing_query" enabled="true">
-        <stringProp name="filename">pricing_query.csv</stringProp>
-        <stringProp name="fileEncoding">UTF-8</stringProp>
-        <stringProp name="variableNames">pricing_query,billing_code,procedure_name,payer_network_id,npi,state,zip</stringProp>
-        <boolProp name="ignoreFirstLine">true</boolProp>
-        <stringProp name="delimiter">,</stringProp>
-        <boolProp name="quotedData">false</boolProp>
-        <stringProp name="selectRow">Random</stringProp>
-        <stringProp name="updateValue">Each Iteration</stringProp>
-        <stringProp name="ooValue">Continue Cyclic</stringProp>
-        <stringProp name="shareMode">All threads</stringProp>
-        <boolProp name="autoAllocate">true</boolProp>
-        <boolProp name="allocate">false</boolProp>
-        <stringProp name="blockSize"></stringProp>
-      </com.di.jmeter.config.ExtendedCsvDataSetConfig>
-      <hashTree/>
       <com.di.jmeter.config.ExtendedCsvDataSetConfig guiclass="com.di.jmeter.config.gui.ExtendedCsvDataSetConfigGui" testclass="com.di.jmeter.config.ExtendedCsvDataSetConfig" testname="Extended CSV Data Set Config - username - uat" enabled="false">
         <stringProp name="filename">username_uat.csv</stringProp>
         <stringProp name="fileEncoding">UTF-8</stringProp>
@@ -126,23 +80,7 @@
         <stringProp name="blockSize"></stringProp>
       </com.di.jmeter.config.ExtendedCsvDataSetConfig>
       <hashTree/>
-      <com.di.jmeter.config.ExtendedCsvDataSetConfig guiclass="com.di.jmeter.config.gui.ExtendedCsvDataSetConfigGui" testclass="com.di.jmeter.config.ExtendedCsvDataSetConfig" testname="Extended CSV Data Set Config - username - stage" enabled="true">
-        <stringProp name="filename">registered_users_stage.csv</stringProp>
-        <stringProp name="fileEncoding">UTF-8</stringProp>
-        <stringProp name="variableNames">username,userId</stringProp>
-        <boolProp name="ignoreFirstLine">false</boolProp>
-        <stringProp name="delimiter">,</stringProp>
-        <boolProp name="quotedData">false</boolProp>
-        <stringProp name="selectRow">Sequential</stringProp>
-        <stringProp name="updateValue">Each Iteration</stringProp>
-        <stringProp name="ooValue">Continue Cyclic</stringProp>
-        <stringProp name="shareMode">All threads</stringProp>
-        <boolProp name="autoAllocate">true</boolProp>
-        <boolProp name="allocate">false</boolProp>
-        <stringProp name="blockSize"></stringProp>
-      </com.di.jmeter.config.ExtendedCsvDataSetConfig>
-      <hashTree/>
-      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="Thread Group" enabled="false">
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="Thread Group">
         <intProp name="ThreadGroup.num_threads">2</intProp>
         <intProp name="ThreadGroup.ramp_time">1</intProp>
         <longProp name="ThreadGroup.duration">300</longProp>
@@ -154,6 +92,70 @@
         </elementProp>
       </ThreadGroup>
       <hashTree>
+        <com.di.jmeter.config.ExtendedCsvDataSetConfig guiclass="com.di.jmeter.config.gui.ExtendedCsvDataSetConfigGui" testclass="com.di.jmeter.config.ExtendedCsvDataSetConfig" testname="Extended CSV Data Set Config - medication_name">
+          <stringProp name="filename">medications.csv</stringProp>
+          <stringProp name="fileEncoding">UTF-8</stringProp>
+          <stringProp name="variableNames">medication_name</stringProp>
+          <boolProp name="ignoreFirstLine">true</boolProp>
+          <stringProp name="delimiter">,</stringProp>
+          <boolProp name="quotedData">false</boolProp>
+          <stringProp name="selectRow">Random</stringProp>
+          <stringProp name="updateValue">Each Iteration</stringProp>
+          <stringProp name="ooValue">Continue Cyclic</stringProp>
+          <stringProp name="shareMode">All threads</stringProp>
+          <boolProp name="autoAllocate">true</boolProp>
+          <boolProp name="allocate">false</boolProp>
+          <stringProp name="blockSize"></stringProp>
+        </com.di.jmeter.config.ExtendedCsvDataSetConfig>
+        <hashTree/>
+        <com.di.jmeter.config.ExtendedCsvDataSetConfig guiclass="com.di.jmeter.config.gui.ExtendedCsvDataSetConfigGui" testclass="com.di.jmeter.config.ExtendedCsvDataSetConfig" testname="Extended CSV Data Set Config - state, zip_codes" enabled="true">
+          <stringProp name="filename">zip_codes.csv</stringProp>
+          <stringProp name="fileEncoding">UTF-8</stringProp>
+          <stringProp name="variableNames">zip_code,state_code</stringProp>
+          <boolProp name="ignoreFirstLine">true</boolProp>
+          <stringProp name="delimiter">,</stringProp>
+          <boolProp name="quotedData">false</boolProp>
+          <stringProp name="selectRow">Random</stringProp>
+          <stringProp name="updateValue">Each Iteration</stringProp>
+          <stringProp name="ooValue">Continue Cyclic</stringProp>
+          <stringProp name="shareMode">All threads</stringProp>
+          <boolProp name="autoAllocate">true</boolProp>
+          <boolProp name="allocate">false</boolProp>
+          <stringProp name="blockSize"></stringProp>
+        </com.di.jmeter.config.ExtendedCsvDataSetConfig>
+        <hashTree/>
+        <com.di.jmeter.config.ExtendedCsvDataSetConfig guiclass="com.di.jmeter.config.gui.ExtendedCsvDataSetConfigGui" testclass="com.di.jmeter.config.ExtendedCsvDataSetConfig" testname="Extended CSV Data Set Config - pricing_query" enabled="true">
+          <stringProp name="filename">pricing_query.csv</stringProp>
+          <stringProp name="fileEncoding">UTF-8</stringProp>
+          <stringProp name="variableNames">pricing_query,billing_code,procedure_name,payer_network_id,npi,state,zip</stringProp>
+          <boolProp name="ignoreFirstLine">true</boolProp>
+          <stringProp name="delimiter">,</stringProp>
+          <boolProp name="quotedData">false</boolProp>
+          <stringProp name="selectRow">Random</stringProp>
+          <stringProp name="updateValue">Each Iteration</stringProp>
+          <stringProp name="ooValue">Continue Cyclic</stringProp>
+          <stringProp name="shareMode">All threads</stringProp>
+          <boolProp name="autoAllocate">true</boolProp>
+          <boolProp name="allocate">false</boolProp>
+          <stringProp name="blockSize"></stringProp>
+        </com.di.jmeter.config.ExtendedCsvDataSetConfig>
+        <hashTree/>
+        <com.di.jmeter.config.ExtendedCsvDataSetConfig guiclass="com.di.jmeter.config.gui.ExtendedCsvDataSetConfigGui" testclass="com.di.jmeter.config.ExtendedCsvDataSetConfig" testname="Extended CSV Data Set Config - username - stage">
+          <stringProp name="filename">registered_users_stage.csv</stringProp>
+          <stringProp name="fileEncoding">UTF-8</stringProp>
+          <stringProp name="variableNames">username,userId</stringProp>
+          <boolProp name="ignoreFirstLine">false</boolProp>
+          <stringProp name="delimiter">,</stringProp>
+          <boolProp name="quotedData">false</boolProp>
+          <stringProp name="selectRow">Sequential</stringProp>
+          <stringProp name="updateValue">Each Iteration</stringProp>
+          <stringProp name="ooValue">Continue Cyclic</stringProp>
+          <stringProp name="shareMode">All threads</stringProp>
+          <boolProp name="autoAllocate">true</boolProp>
+          <boolProp name="allocate">false</boolProp>
+          <stringProp name="blockSize"></stringProp>
+        </com.di.jmeter.config.ExtendedCsvDataSetConfig>
+        <hashTree/>
         <OnceOnlyController guiclass="OnceOnlyControllerGui" testclass="OnceOnlyController" testname="Once Only Controller - Stage" enabled="true"/>
         <hashTree>
           <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Auth0_Generate_Member_Token_POST" enabled="true">
@@ -512,7 +514,7 @@ file.append(&quot;${username},${userId}\n&quot;)</stringProp>
           </UniformRandomTimer>
           <hashTree/>
         </hashTree>
-        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Pricing_01_Medication-drug-suggestions">
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Pricing_01_Medication-drug-suggestions" enabled="true">
           <stringProp name="HTTPSampler.port">443</stringProp>
           <stringProp name="HTTPSampler.protocol">https</stringProp>
           <stringProp name="HTTPSampler.contentEncoding">UTF-8</stringProp>
@@ -577,7 +579,7 @@ file.append(&quot;${username},${userId}\n&quot;)</stringProp>
             </collectionProp>
           </HeaderManager>
           <hashTree/>
-          <JSONPostProcessor guiclass="JSONPostProcessorGui" testclass="JSONPostProcessor" testname="JSON Extractor" enabled="true">
+          <JSONPostProcessor guiclass="JSONPostProcessorGui" testclass="JSONPostProcessor" testname="JSON Extractor">
             <stringProp name="JSONPostProcessor.referenceNames">scMedicationCode</stringProp>
             <stringProp name="JSONPostProcessor.jsonPathExprs">$..matchCode.code</stringProp>
             <stringProp name="JSONPostProcessor.match_numbers">1</stringProp>
@@ -607,7 +609,7 @@ file.append(&quot;${username},${userId}\n&quot;)</stringProp>
           </UniformRandomTimer>
           <hashTree/>
         </hashTree>
-        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Pricing_02_Medication-dose-forms">
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Pricing_02_Medication-dose-forms" enabled="true">
           <stringProp name="HTTPSampler.port">443</stringProp>
           <stringProp name="HTTPSampler.protocol">https</stringProp>
           <stringProp name="HTTPSampler.contentEncoding">UTF-8</stringProp>
@@ -677,13 +679,13 @@ file.append(&quot;${username},${userId}\n&quot;)</stringProp>
             <intProp name="Assertion.test_type">2</intProp>
           </ResponseAssertion>
           <hashTree/>
-          <JSONPostProcessor guiclass="JSONPostProcessorGui" testclass="JSONPostProcessor" testname="code">
+          <JSONPostProcessor guiclass="JSONPostProcessorGui" testclass="JSONPostProcessor" testname="code" enabled="true">
             <stringProp name="JSONPostProcessor.referenceNames">code</stringProp>
             <stringProp name="JSONPostProcessor.jsonPathExprs">$..results[*].forms[*].strengths[*].code.code</stringProp>
             <stringProp name="JSONPostProcessor.match_numbers">0</stringProp>
           </JSONPostProcessor>
           <hashTree/>
-          <JSONPostProcessor guiclass="JSONPostProcessorGui" testclass="JSONPostProcessor" testname="codeSystem">
+          <JSONPostProcessor guiclass="JSONPostProcessorGui" testclass="JSONPostProcessor" testname="codeSystem" enabled="true">
             <stringProp name="JSONPostProcessor.referenceNames">codeSystem</stringProp>
             <stringProp name="JSONPostProcessor.jsonPathExprs">$..results[*].forms[*].strengths[*].code.codeSystem</stringProp>
             <stringProp name="JSONPostProcessor.match_numbers">0</stringProp>
@@ -702,7 +704,7 @@ file.append(&quot;${username},${userId}\n&quot;)</stringProp>
           </UniformRandomTimer>
           <hashTree/>
         </hashTree>
-        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Pricing_03_Medication-drug-info">
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Pricing_03_Medication-drug-info" enabled="true">
           <stringProp name="HTTPSampler.port">443</stringProp>
           <stringProp name="HTTPSampler.protocol">https</stringProp>
           <stringProp name="HTTPSampler.contentEncoding">UTF-8</stringProp>
@@ -773,7 +775,7 @@ file.append(&quot;${username},${userId}\n&quot;)</stringProp>
           </ResponseAssertion>
           <hashTree/>
         </hashTree>
-        <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Think Time" enabled="true">
+        <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Think Time">
           <intProp name="ActionProcessor.action">1</intProp>
           <intProp name="ActionProcessor.target">0</intProp>
           <stringProp name="ActionProcessor.duration">300</stringProp>
@@ -959,7 +961,7 @@ try {
           </ResponseAssertion>
           <hashTree/>
         </hashTree>
-        <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Think Time" enabled="true">
+        <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Think Time">
           <intProp name="ActionProcessor.action">1</intProp>
           <intProp name="ActionProcessor.target">0</intProp>
           <stringProp name="ActionProcessor.duration">300</stringProp>
@@ -986,7 +988,7 @@ try {
                 <boolProp name="HTTPArgument.always_encode">false</boolProp>
                 <stringProp name="Argument.value">{&#xd;
   &quot;search&quot;: {&#xd;
-    &quot;brand&quot;: true,&#xd;
+    &quot;brand&quot;: false,&#xd;
     &quot;generic&quot;: true,&#xd;
     &quot;ndc&quot;: ${ndc},&#xd;
     &quot;zip&quot;: &quot;${zip_code}&quot;&#xd;
@@ -1042,7 +1044,7 @@ try {
           </ResponseAssertion>
           <hashTree/>
         </hashTree>
-        <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Think Time" enabled="true">
+        <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Think Time">
           <intProp name="ActionProcessor.action">1</intProp>
           <intProp name="ActionProcessor.target">0</intProp>
           <stringProp name="ActionProcessor.duration">300</stringProp>
@@ -1125,7 +1127,7 @@ try {
           </ResponseAssertion>
           <hashTree/>
         </hashTree>
-        <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Think Time">
+        <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Think Time" enabled="true">
           <intProp name="ActionProcessor.action">1</intProp>
           <intProp name="ActionProcessor.target">0</intProp>
           <stringProp name="ActionProcessor.duration">300</stringProp>
@@ -1314,7 +1316,7 @@ try {
           </ResponseAssertion>
           <hashTree/>
         </hashTree>
-        <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Think Time" enabled="true">
+        <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Think Time">
           <intProp name="ActionProcessor.action">1</intProp>
           <intProp name="ActionProcessor.target">0</intProp>
           <stringProp name="ActionProcessor.duration">300</stringProp>
@@ -1327,7 +1329,7 @@ try {
           <hashTree/>
         </hashTree>
       </hashTree>
-      <kg.apc.jmeter.threads.SteppingThreadGroup guiclass="kg.apc.jmeter.threads.SteppingThreadGroupGui" testclass="kg.apc.jmeter.threads.SteppingThreadGroup" testname="jp@gc - Stepping Thread Group">
+      <kg.apc.jmeter.threads.SteppingThreadGroup guiclass="kg.apc.jmeter.threads.SteppingThreadGroupGui" testclass="kg.apc.jmeter.threads.SteppingThreadGroup" testname="jp@gc - Stepping Thread Group" enabled="false">
         <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
         <stringProp name="ThreadGroup.num_threads">100</stringProp>
         <stringProp name="Threads initial delay">0</stringProp>
@@ -1567,7 +1569,7 @@ file.append(&quot;${username},${userId}\n&quot;)</stringProp>
             <hashTree/>
           </hashTree>
         </hashTree>
-        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Pricing_01_Medication-drug-suggestions">
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Pricing_01_Medication-drug-suggestions" enabled="true">
           <stringProp name="HTTPSampler.port">443</stringProp>
           <stringProp name="HTTPSampler.protocol">https</stringProp>
           <stringProp name="HTTPSampler.contentEncoding">UTF-8</stringProp>
@@ -1662,7 +1664,7 @@ file.append(&quot;${username},${userId}\n&quot;)</stringProp>
           </UniformRandomTimer>
           <hashTree/>
         </hashTree>
-        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Pricing_02_Medication-dose-forms">
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Pricing_02_Medication-dose-forms" enabled="true">
           <stringProp name="HTTPSampler.port">443</stringProp>
           <stringProp name="HTTPSampler.protocol">https</stringProp>
           <stringProp name="HTTPSampler.contentEncoding">UTF-8</stringProp>
@@ -1732,14 +1734,14 @@ file.append(&quot;${username},${userId}\n&quot;)</stringProp>
             <intProp name="Assertion.test_type">2</intProp>
           </ResponseAssertion>
           <hashTree/>
-          <JSONPostProcessor guiclass="JSONPostProcessorGui" testclass="JSONPostProcessor" testname="code">
+          <JSONPostProcessor guiclass="JSONPostProcessorGui" testclass="JSONPostProcessor" testname="code" enabled="true">
             <stringProp name="JSONPostProcessor.referenceNames">code</stringProp>
             <stringProp name="JSONPostProcessor.jsonPathExprs">$..results[*].forms[*].strengths[*].code.code</stringProp>
             <stringProp name="JSONPostProcessor.match_numbers">0</stringProp>
             <stringProp name="JSONPostProcessor.defaultValues">749780</stringProp>
           </JSONPostProcessor>
           <hashTree/>
-          <JSONPostProcessor guiclass="JSONPostProcessorGui" testclass="JSONPostProcessor" testname="codeSystem">
+          <JSONPostProcessor guiclass="JSONPostProcessorGui" testclass="JSONPostProcessor" testname="codeSystem" enabled="true">
             <stringProp name="JSONPostProcessor.referenceNames">codeSystem</stringProp>
             <stringProp name="JSONPostProcessor.jsonPathExprs">$..results[*].forms[*].strengths[*].code.codeSystem</stringProp>
             <stringProp name="JSONPostProcessor.match_numbers">0</stringProp>
@@ -1759,7 +1761,7 @@ file.append(&quot;${username},${userId}\n&quot;)</stringProp>
           </UniformRandomTimer>
           <hashTree/>
         </hashTree>
-        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Pricing_03_Medication-drug-info">
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Pricing_03_Medication-drug-info" enabled="true">
           <stringProp name="HTTPSampler.port">443</stringProp>
           <stringProp name="HTTPSampler.protocol">https</stringProp>
           <stringProp name="HTTPSampler.contentEncoding">UTF-8</stringProp>
@@ -1786,7 +1788,7 @@ file.append(&quot;${username},${userId}\n&quot;)</stringProp>
           </elementProp>
         </HTTPSamplerProxy>
         <hashTree>
-          <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager">
+          <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="true">
             <collectionProp name="HeaderManager.headers">
               <elementProp name="Authorization" elementType="Header">
                 <stringProp name="Header.name">Authorization</stringProp>
@@ -1819,7 +1821,7 @@ file.append(&quot;${username},${userId}\n&quot;)</stringProp>
             </collectionProp>
           </HeaderManager>
           <hashTree/>
-          <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Response Assertion">
+          <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Response Assertion" enabled="true">
             <collectionProp name="Asserion.test_strings">
               <stringProp name="49586">200</stringProp>
             </collectionProp>
@@ -2028,7 +2030,7 @@ try {
           </UniformRandomTimer>
           <hashTree/>
         </hashTree>
-        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Pricing_05_drug/prices">
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Pricing_05_drug/prices" enabled="true">
           <stringProp name="HTTPSampler.port">443</stringProp>
           <stringProp name="HTTPSampler.protocol">https</stringProp>
           <stringProp name="HTTPSampler.contentEncoding">UTF-8</stringProp>
@@ -2111,7 +2113,7 @@ try {
           </UniformRandomTimer>
           <hashTree/>
         </hashTree>
-        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Pricing_06_Medication-drug-images">
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Pricing_06_Medication-drug-images" enabled="true">
           <stringProp name="HTTPSampler.port">443</stringProp>
           <stringProp name="HTTPSampler.protocol">https</stringProp>
           <stringProp name="HTTPSampler.contentEncoding">UTF-8</stringProp>
@@ -2182,7 +2184,7 @@ try {
           </ResponseAssertion>
           <hashTree/>
         </hashTree>
-        <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Think Time">
+        <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Think Time" enabled="true">
           <intProp name="ActionProcessor.action">1</intProp>
           <intProp name="ActionProcessor.target">0</intProp>
           <stringProp name="ActionProcessor.duration">300</stringProp>
@@ -2194,7 +2196,7 @@ try {
           </UniformRandomTimer>
           <hashTree/>
         </hashTree>
-        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Pricing_07_Procedure-Pricing-search-billing-codes">
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Pricing_07_Procedure-Pricing-search-billing-codes" enabled="true">
           <stringProp name="HTTPSampler.port">443</stringProp>
           <stringProp name="HTTPSampler.protocol">https</stringProp>
           <stringProp name="HTTPSampler.contentEncoding">UTF-8</stringProp>
@@ -2275,7 +2277,7 @@ try {
           </ResponseAssertion>
           <hashTree/>
         </hashTree>
-        <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Think Time">
+        <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Think Time" enabled="true">
           <intProp name="ActionProcessor.action">1</intProp>
           <intProp name="ActionProcessor.target">0</intProp>
           <stringProp name="ActionProcessor.duration">500</stringProp>
@@ -2287,7 +2289,7 @@ try {
           </UniformRandomTimer>
           <hashTree/>
         </hashTree>
-        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Pricing_08_Procedure-Pricing-Search">
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Pricing_08_Procedure-Pricing-Search" enabled="true">
           <stringProp name="HTTPSampler.port">443</stringProp>
           <stringProp name="HTTPSampler.protocol">https</stringProp>
           <stringProp name="HTTPSampler.contentEncoding">UTF-8</stringProp>
@@ -2371,7 +2373,7 @@ try {
           </ResponseAssertion>
           <hashTree/>
         </hashTree>
-        <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Think Time">
+        <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Think Time" enabled="true">
           <intProp name="ActionProcessor.action">1</intProp>
           <intProp name="ActionProcessor.target">0</intProp>
           <stringProp name="ActionProcessor.duration">500</stringProp>
@@ -2385,7 +2387,7 @@ try {
         </hashTree>
       </hashTree>
       <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree">
-        <boolProp name="ResultCollector.error_logging">true</boolProp>
+        <boolProp name="ResultCollector.error_logging">false</boolProp>
         <objProp>
           <name>saveConfig</name>
           <value class="SampleSaveConfiguration">
@@ -2453,8 +2455,8 @@ try {
             <connectTime>true</connectTime>
           </value>
         </objProp>
-        <stringProp name="filename">C:\Projects\ShareCare\Results\Stage\Pricing\askMD_Pricing_Medication_Fixndc_Stage_LoadTest3_WithCircuitBreakerUpdates_100Users_SimpleHealth_1082026.jtl</stringProp>
-        <stringProp name="TestPlan.comments">brand changed to false in dru prices endpoint</stringProp>
+        <stringProp name="filename"></stringProp>
+        <stringProp name="TestPlan.comments">brand changed to false in dru prices endpoint: C:\Projects\ShareCare\Results\Stage\Pricing\askMD_Pricing_Medication_Fixndc_Stage_LoadTest3_WithCircuitBreakerUpdates_100Users_SimpleHealth_1082026.jtl</stringProp>
       </ResultCollector>
       <hashTree/>
       <com.github.johrstrom.listener.PrometheusListener guiclass="com.github.johrstrom.listener.gui.PrometheusListenerGui" testclass="com.github.johrstrom.listener.PrometheusListener" testname="Prometheus Listener" enabled="true">
@@ -2494,7 +2496,7 @@ try {
         </collectionProp>
       </com.github.johrstrom.listener.PrometheusListener>
       <hashTree/>
-      <kg.apc.jmeter.vizualizers.CorrectedResultCollector guiclass="kg.apc.jmeter.vizualizers.MergeResultsGui" testclass="kg.apc.jmeter.vizualizers.CorrectedResultCollector" testname="jp@gc - Merge Results">
+      <kg.apc.jmeter.vizualizers.CorrectedResultCollector guiclass="kg.apc.jmeter.vizualizers.MergeResultsGui" testclass="kg.apc.jmeter.vizualizers.CorrectedResultCollector" testname="jp@gc - Merge Results" enabled="false">
         <boolProp name="ResultCollector.error_logging">false</boolProp>
         <objProp>
           <name>saveConfig</name>
